@@ -1,0 +1,11 @@
+mixin hero(text, label, sub, big)
+  .hero(class=big && 'hero--big' style='background-image: url(https://source.unsplash.com/random/1920x305?random&1)')
+    .c: .hero__inner
+      .hero__breadcrumbs
+        include ../breadcrumbs/breadcrumbs
+
+      if(label)
+        .hero__label=label
+      h1.hero__title #{text.toUpperCase()}
+      if(sub)
+        .hero__sub=sub

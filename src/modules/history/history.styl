@@ -1,0 +1,99 @@
+.history
+  //margin-top: -110px
+  position: relative
+  padding: 80px 0
+  @media (max-width: $breakpoint-sm)
+    padding: 40px 0
+
+  //&:before {
+  //  content: ''
+  //  display: block
+  //  position: relative
+  //  top: -110px
+  //  height: 110px
+  //}
+
+  &__title
+    margin-bottom: 37px
+    @media (max-width: $breakpoint-sm)
+      text-align: center
+      margin-bottom: 15px
+
+  //&__item
+  //  height: 100%
+
+  &__nav
+    display: flex
+    justify-content: flex-end
+    @media (max-width: $breakpoint-sm)
+      justify-content: center
+      overflow: auto
+      margin: 0 -20px 18px
+
+  &__years
+    position: absolute
+    top: 80px
+    margin-top: 9px
+    display: flex
+    @media (max-width: $breakpoint-sm)
+      position: static
+      margin-top: 0
+
+  &__year
+    position: relative
+    margin-right: 8px
+    padding: 5px 6px 6px
+    anim()
+
+    &:last-child
+      margin-right: 0
+
+    &:after
+      content: ''
+      display: block
+      position: absolute
+      top: 100%
+      left: 50%
+      margin-left: -5px
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 0px 5px 0 5px;
+      border-color: #50beda transparent transparent transparent;
+      anim()
+
+
+    &--active
+      background: $blue
+      color: $white
+
+      .link
+        color: $white
+
+      &:after
+        border-width: 5px 5px 0 5px;
+
+
+    .link
+      padding-bottom: 3px
+
+  &__sliders
+    position: relative
+
+  &__slider
+    top: 0
+    opacity: 0
+    z-index: -1
+    width: 100%
+    position: absolute
+    anim()
+
+    &--active
+      opacity: 1
+      z-index: 1
+      position: static
+
+  .card__head&__head
+    height: 220px
+    @media (max-width: $breakpoint-sm)
+      height: 160px

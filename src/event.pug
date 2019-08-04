@@ -1,0 +1,18 @@
+extends pug/_layout
+include modules/bulletsList/bulletsList
+
+block body
+  include modules/eventHead/eventHead
+  include modules/eventButtons/eventButtons
+  include modules/eventKeys/eventKeys
+  include modules/eventSpeakers/eventSpeakers
+  include modules/eventProgram/eventProgram
+  +bulletsList('ДЛЯ КОГО')
+  include modules/eventFormat/eventFormat
+  include modules/eventStream/eventStream
+  include modules/eventPartners/eventPartners
+  include modules/eventMap/eventMap
+  include modules/eventForm/eventForm
+
+  include modules/newsMenu/newsMenu
+  include modules/form/formNews

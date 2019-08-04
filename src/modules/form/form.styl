@@ -1,0 +1,71 @@
+.form
+  padding: 80px 0
+  @media (max-width: $breakpoint-sm)
+    padding: 40px 0
+
+  &__title
+    text-align: center
+    margin-bottom: 47px
+    @media (max-width: $breakpoint-sm)
+      line-height: 1.35
+
+  &__thank
+    text-align: center
+    font-size: 18px
+    line-height: 1.55
+
+  &__form
+    border: 7px solid $grey-middle
+    padding: 40px
+    @media (max-width: $breakpoint-md)
+      padding: 30px
+
+  &__text
+    margin-bottom: 24px
+    p
+      font-size: 14px
+      line-height: 1.55
+      margin-bottom: 5px
+
+    a
+      padding-bottom: 1px
+
+  &__row
+    display: flex
+    align-items: flex-start
+    @media (max-width: $breakpoint-md)
+      flex-direction: column
+      align-items stretch
+
+    & + &
+      margin-top: 25px
+      @media (max-width: $breakpoint-md)
+        margin-top: 0
+
+  &__input
+    margin-right: 20px
+    flex: 1
+    @media (max-width: $breakpoint-md)
+      margin-right: 0
+      margin-bottom: 20px
+
+  &__withoutLabel
+    margin-top: 24px
+    height: 49px
+    @media (max-width: $breakpoint-md)
+      height: 60px
+      margin-top: 0
+
+  &__personal
+    width: 250px
+    align-self: stretch
+    padding-left: 20px
+    display: flex
+    align-items:center
+    justify-content: center
+    @media (max-width: $breakpoint-md)
+      width: 100%
+      padding-left: 0px
+
+  &__col
+    flex: 1

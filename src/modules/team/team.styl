@@ -1,0 +1,135 @@
+.team
+  position: relative
+  padding: 80px 0
+  @media (max-width: $breakpoint-sm)
+    padding: 40px 0
+
+  &__headers
+    display: flex
+    margin-bottom: 50px
+    @media (max-width: $breakpoint-sm)
+      flex-direction: column
+      align-items: center
+      margin-bottom: 20px
+
+  &__title
+    padding-bottom: 0px
+    line-height: 1
+    margin-left: 50px
+    @media (max-width: $breakpoint-sm)
+      margin-left: 0
+      margin-bottom: 20px
+
+    &:first-child
+      margin-left: 0
+
+    &--primary
+      margin-right: auto
+      @media (max-width: $breakpoint-sm)
+        margin-right: 0
+
+    &--active
+      color: $blue
+
+  &__tabs
+    position: relative
+
+  &__tab
+    position: absolute
+    width: 100%
+    opacity: 0
+    top: 0
+    z-index: -1
+    anim()
+
+    &--active
+      position: static
+      opacity: 1
+
+  &__image
+    height: 365px
+    @media (max-width: $breakpoint-sm)
+      height: 300px
+    &--big
+      height: 505px
+      @media (max-width: $breakpoint-sm)
+        height: 155px
+
+  &__team
+    display: flex
+    margin: 0 -10px
+    align-items: flex-start
+    @media (max-width: $breakpoint-sm)
+      flex-direction: column
+      margin: 0
+
+  &__aside
+    flex: 1
+    margin: 0 10px
+    @media (max-width: $breakpoint-sm)
+      width: 100%
+      margin: 0 0 15px
+
+  &__items
+    flex: 2
+    display: flex
+    flex-wrap: wrap
+    @media (max-width: $breakpoint-sm)
+      flex-direction: column
+      flex-wrap: nowrap
+      width: 100%
+
+  &__item
+    //width: 50%
+    width: 33.3333%
+    padding: 0 10px 20px
+    @media (max-width: $breakpoint-sm)
+      width: 100%
+      padding: 0
+      margin: 0 0 15px
+      &:last-child
+        margin-bottom: 0
+
+  &__info
+    font-size: 13px
+    line-height: 21px
+    p
+      margin-bottom: 15px
+
+  &__work
+    margin-bottom: 20px
+
+  &__content
+    display: flex
+    align-items: center
+    padding: 24px
+    @media (max-width: $breakpoint-sm)
+      flex-direction: column
+      align-items: flex-start
+
+  &__name
+    flex: 3
+    .card__title
+      margin-bottom: 0
+    @media (max-width: $breakpoint-sm)
+      width: 100%
+      margin-bottom: 10px
+  &__salary
+    flex: 2
+    @media (max-width: $breakpoint-sm)
+      margin-bottom: 25px
+  &__location
+    flex: 1
+    @media (max-width: $breakpoint-sm)
+      margin-bottom: 30px
+
+  &__label
+    font-size: 11px
+    color: $grey-dark
+    margin-bottom: 6px
+    @media (max-width: $breakpoint-sm)
+      margin-bottom: 3px
+
+  &__button
+    @media (max-width: $breakpoint-sm)
+      width: 100%

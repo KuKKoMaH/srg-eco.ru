@@ -1,0 +1,13 @@
+extends pug/_layout
+include modules/cardsList/cardsList
+include modules/achievements/achievements
+
+block body
+  include modules/frontSlider/frontSlider
+  include modules/problems/problems
+  include modules/relatedEvents/relatedEvents
+  +achievements(true)
+  include modules/form/formEstimate1
+  include modules/clients/clients
+  +cardsList('НОВОСТИ ОТРАСЛИ', 'ВСЕ НОВОСТИ', true)
+  include modules/form/formEstimate2

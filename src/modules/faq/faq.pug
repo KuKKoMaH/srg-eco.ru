@@ -1,0 +1,38 @@
+include ../card/card
+
+.faq
+  .c
+    .faq__inner
+      h2.faq__title ЧАСТО ЗАДАВАЕМЫЕ ВОПРОСЫ
+
+      .faq__items
+        .faq__item: +card()
+          .faq__head
+            .faq__question Вопрос Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis
+          .faq__body: .faq__content
+            .faq__speaker
+              .faq__image.card__image(style='background-image: url(https://source.unsplash.com/random/95x95?random&1)')
+              .faq__info
+                .faq__name Екатерина Брюзгина
+                .faq__position должность
+
+            .faq__answer
+              p Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis
+              p natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt.
+
+        .faq__item: +card()
+          .faq__head
+            .faq__question Вопрос
+          .faq__body: .faq__content
+            .faq__speaker
+              .faq__image.card__image(style='background-image: url(https://source.unsplash.com/random/95x95?random&1)')
+              .faq__info
+                .faq__name Екатерина Брюзгина
+                .faq__position должность
+
+            .faq__answer
+              p Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis
+              p natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt.
+
+      .faq__link: a(href='#') ЗАДАТЬ ВОПРОС
+      

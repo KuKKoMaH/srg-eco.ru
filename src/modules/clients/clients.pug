@@ -1,0 +1,26 @@
+include ../slider/slider
+include ../card/card
+
+.clients
+  h2.outlineTitle КЛИЕНТЫ
+  
+  .c
+    +slider()(data-slider='{"0":{"items":2, "gutter":10},"768":{"items":2, "gutter":20},"992":{"items":3},"1200":{"items":4}}')
+      .clients__item: +card()
+        img.clients__image.card__image(src="modules/clients/1.png")
+        .clients__text ГАЗПРОМ
+      .clients__item: +card()
+        img.clients__image.card__image(src="modules/clients/2.png")
+        .clients__text МТС
+      .clients__item: +card()
+        img.clients__image.card__image(src="modules/clients/3.png")
+        .clients__text ADIDAS
+      .clients__item: +card()
+        img.clients__image.card__image(src="modules/clients/4.png")
+        .clients__text LEROY MERLIN
+      .clients__item: +card()
+        img.clients__image.card__image(src="modules/clients/5.png")
+        .clients__text РОСНЕФТЬ
+      .clients__item: +card()
+        img.clients__image.card__image(src="modules/clients/6.png")
+        .clients__text РУСАЛ

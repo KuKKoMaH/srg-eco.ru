@@ -1,0 +1,14 @@
+include ../clientCard/clientCard
+
+.clientsSlider
+  .c.clientsSlider__inner
+    h2.clientsSlider__title #[.link ОЗНАКОМЬТЕСЬ С ПРОЕКТАМИ] ПО ЭТОМУ НАПРАВЛЕНИЮ
+
+    .clientsSlider__items
+      div: +clientCard()
+      div: +clientCard()
+      div: +clientCard()
+
+    .clientsSlider__arrows
+      button.clientsSlider__arrow.clientsSlider__arrow--left: svg: use(xlink:href="#arrow_right")
+      button.clientsSlider__arrow.clientsSlider__arrow--right: svg: use(xlink:href="#arrow_right")

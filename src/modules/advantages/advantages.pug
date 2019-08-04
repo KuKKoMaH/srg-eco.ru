@@ -1,0 +1,23 @@
+include ../slider/slider
+
+.advantages
+  .c
+    .advantages__inner
+      h2.advantages__title #[.link ПРЕИМУЩЕСТВА РАБОТЫ] С НАМИ
+
+      +slider()(data-slider='{"0":{"items":1, "gutter":10},"768":{"items":2, "gutter":20},"992":{"items":3},"1200":{"items":4}}')
+        .advantages__item: +card()
+          .advantages__image: img(src="modules/problems/binoculars.png")
+          .advantages__text Название#[br] преимущества
+        .advantages__item: +card()
+          .advantages__image: img(src="modules/problems/binoculars.png")
+          .advantages__text Название#[br] преимущества
+        .advantages__item: +card()
+          .advantages__image: img(src="modules/problems/binoculars.png")
+          .advantages__text Название#[br] преимущества
+        .advantages__item: +card()
+          .advantages__image: img(src="modules/problems/binoculars.png")
+          .advantages__text Название#[br] преимущества
+        .advantages__item: +card()
+          .advantages__image: img(src="modules/problems/binoculars.png")
+          .advantages__text Название#[br] преимущества

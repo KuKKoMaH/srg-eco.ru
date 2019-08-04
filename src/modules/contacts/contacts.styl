@@ -1,0 +1,174 @@
+.contacts
+  padding: 80px 0
+  @media (max-width: $breakpoint-sm)
+    padding: 40px 0
+  &__item
+    border: 7px solid $grey-middle
+    margin-bottom: 80px
+    @media (max-width: $breakpoint-sm)
+      margin-bottom: 40px
+
+  &__primary
+    padding: 50px
+    display: flex
+    @media (max-width: $breakpoint-sm)
+      padding: 30px
+      flex-direction: column
+
+  &__row
+    display: flex
+    margin-bottom: 25px
+    &:last-child
+      margin-bottom: 0
+
+  &__content
+    max-width: 480px
+    margin-right: 20px
+    @media (max-width: $breakpoint-sm)
+      max-width: none
+      margin-right: 0
+
+  &__map
+    width: 420px
+    margin-left: auto
+
+  &__title
+    margin-bottom: 50px
+    @media (max-width: $breakpoint-sm)
+      margin-bottom: 30px
+
+  &__contact
+    margin-right: 25px
+    &:last-child
+      margin-right: 0
+
+    @media (max-width: $breakpoint-sm)
+      margin-right: 15px
+
+  &__label
+    font-size: 11px
+    margin-bottom: 4px
+    color: $grey-dark
+    @media (max-width: $breakpoint-sm)
+      font-size: 9px
+
+  &__text
+    font-size: 15px
+    line-height: 21px
+    @media (max-width: $breakpoint-sm)
+      font-size: 11px
+      line-height: 19px
+
+  &__link
+    font-weight: 500
+
+  &__gallery
+    padding: 0 30px 30px
+
+  &__gallery-items
+    display: flex
+    flex-wrap: wrap
+    margin: 0 -10px -20px
+    @media (max-width: $breakpoint-sm)
+      margin: 0
+
+  &__image
+    width: 25%
+    padding: 0 10px
+    background-image: none
+    margin-bottom: 20px
+    @media (max-width: $breakpoint-sm)
+      padding: 0
+      margin-bottom: 0
+
+    img
+      display: block
+      width: 100%
+
+  &__arrows
+    display: none
+    align-items: center
+    justify-content: center
+    @media (max-width: $breakpoint-sm)
+      display: flex
+
+  &__arrow
+    top: 0
+    bottom: 0
+    display: block
+    background: #ffffff
+    border: 1px solid $grey-middle
+    margin: 10px 5px 0
+    height: 40px
+    width: 70px
+    anim()
+
+    &:hover
+      border: 1px solid $blue
+
+    &--left
+      left: 0
+      svg
+        transform: rotate(180deg)
+
+    &--right
+      right: 0
+
+    svg
+      margin: 0 auto
+      display: block
+      width: 20px
+      height: 14px
+      fill: $blue
+
+  &__aside
+    margin-left: auto
+    width: 420px
+    height: 320px
+    @media (max-width: $breakpoint-sm)
+      margin-left: 0
+      margin-top: 30px
+      width: 100%
+      height: 160px
+
+  &__map
+    width: 100%
+    height: 100%
+
+  &__filials-title
+    margin-bottom: 45px
+    @media (max-width: $breakpoint-sm)
+      margin-bottom: 35px
+      text-align: center
+
+  &__filials
+    display: flex
+    margin: 0 -10px
+    @media (max-width: $breakpoint-sm)
+      flex-direction: column
+      margin: 0
+
+  &__filial
+    flex: 1
+    border: 7px solid $grey-middle
+    margin: 0 10px
+    padding: 50px
+    display: flex
+    flex-direction: column
+    @media (max-width: $breakpoint-sm)
+      margin: 0 0 15px
+      padding: 30px
+      &:last-child
+        margin-bottom: 0
+
+  &__filial-title
+    color: $blue
+    margin-bottom: 25px
+
+
+  &__filial-map
+    width: 100%
+    height: 240px
+    margin-top: auto
+    @media (max-width: $breakpoint-sm)
+      height: 160px

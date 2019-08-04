@@ -1,0 +1,18 @@
+.form
+  h2.form__title: a(href='#') Подготовка сметы по Вашему проекту
+
+  .c
+    .form__form
+      .form__row
+        .form__input.input
+          label.input__label Ваше имя
+          input.input__input
+        .form__input.input
+          label.input__label Ваша почта
+          input.input__input
+        .form__withoutLabel.form__personal
+          label.checkbox
+            input.checkbox__input(type='checkbox')
+            .checkbox__text Я согласен(а) на #[a(href='#') обработку персональных данных]
+        .form__withoutLabel
+          button.bigBtn ПОЛУЧИТЬ РАСЧЕТ

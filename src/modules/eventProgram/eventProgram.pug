@@ -1,0 +1,59 @@
+include ../card/card
+
+.eventProgram
+  .c
+    h2.eventProgram__title ПРОГРАММА СЕМИНАРА
+    .eventProgram__days
+      .eventProgram__day.eventProgram__day--active 1 ДЕНЬ
+      .eventProgram__day 2 ДЕНЬ
+
+    .eventProgram__tabs
+      .eventProgram__tab.eventProgram__tab--active
+        +card().eventProgram__item
+          .card__content.eventProgram__content
+            .eventProgram__left: .eventProgram__time 09:00 - 10:00
+            .eventProgram__inner
+              .eventProgram__head Регистрация участников семинара
+        +card().eventProgram__item
+          .card__content.eventProgram__content
+            .eventProgram__left: .eventProgram__time 09:00 - 10:00
+            .eventProgram__inner
+              .eventProgram__head Регистрация участников семинара
+
+              .eventProgram__speakers
+                .eventProgram__speaker
+                  .eventProgram__image.card__image(style='background-image: url(https://source.unsplash.com/random/95x95?random&1)')
+                  .eventProgram__info
+                    .eventProgram__name Екатерина Брюзгина
+                    .eventProgram__position должность должность должность должность должность должность
+                .eventProgram__speaker
+                  .eventProgram__image.card__image(style='background-image: url(https://source.unsplash.com/random/95x95?random&1)')
+                  .eventProgram__info
+                    .eventProgram__name Екатерина Брюзгина
+                    .eventProgram__position должность
+
+              .eventProgram__text
+                p Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis
+                p natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt.
+      .eventProgram__tab
+        +card().eventProgram__item
+          .card__content.eventProgram__content
+            .eventProgram__left: .eventProgram__time 09:00 - 10:00
+            .eventProgram__inner
+              .eventProgram__head Регистрация участников семинара
+
+              .eventProgram__speakers
+                .eventProgram__speaker
+                  .eventProgram__image.card__image(style='background-image: url(https://source.unsplash.com/random/95x95?random&1)')
+                  .eventProgram__info
+                    .eventProgram__name Екатерина Брюзгина
+                    .eventProgram__position должность должность должность должность должность должность
+                .eventProgram__speaker
+                  .eventProgram__image.card__image(style='background-image: url(https://source.unsplash.com/random/95x95?random&1)')
+                  .eventProgram__info
+                    .eventProgram__name Екатерина Брюзгина
+                    .eventProgram__position должность
+
+              .eventProgram__text
+                p Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis
+                p natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt.

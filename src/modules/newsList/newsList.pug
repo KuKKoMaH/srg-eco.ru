@@ -1,0 +1,30 @@
+include ../card/card
+
+mixin item(i)
+  a.newsList__item(href='#'): +card().card--withFooter
+    .card__head
+      .card__image(style='background-image: url(https://source.unsplash.com/random/380x213?random&' + i + ')')
+      .card__date
+        .card__day 30
+        .card__month мар
+      .card__label Корпоративные новости
+    .card__content
+      .card__title Заголовок новости
+      .card__text Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus.
+      .card__footer
+        | ЧИТАТЬ ПОЛНОСТЬЮ
+        svg: use(xlink:href="#arrow_right")
+
+.newsList
+  .c
+    .newsList__items
+      +item(1)
+      +item(2)
+      +item(3)
+      +item(4)
+      +item(5)
+      +item(6)
+      +item(7)
+      +item(8)
+
+  .newsList__more: button.link ЗАГРУЗИТЬ ЕЩЕ

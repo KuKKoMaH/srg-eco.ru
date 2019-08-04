@@ -1,0 +1,29 @@
+.aboutMenu
+  ul
+    display: flex
+    align-items: center
+    justify-content: center
+    height: 65px
+    background: $blue
+    @media (max-width: $breakpoint-sm)
+      flex-direction: column
+      padding: 40px 0
+      height: auto
+
+  li
+    margin: 0 12px
+    text-align: center
+    @media (max-width: $breakpoint-sm)
+      margin: 0 0 20px
+
+      &:last-child
+        margin-bottom: 0
+
+  a
+    color: $white
+    padding-bottom: 3px
+    line-height: 21px
+    &:hover
+      background-image: none
+    @media (max-width: $breakpoint-sm)
+      font-size: 11px

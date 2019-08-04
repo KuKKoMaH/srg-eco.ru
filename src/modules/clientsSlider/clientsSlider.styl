@@ -1,0 +1,56 @@
+.clientsSlider
+  padding: 80px 0
+  background: $grey-bright
+  @media (max-width: $breakpoint-sm)
+    padding: 40px 0
+  &__inner
+    position: relative
+
+  &__title
+    margin-bottom: 40px
+    @media (max-width: $breakpoint-sm)
+      text-align: center
+      margin-bottom: 35px
+
+  &__arrows
+    position: absolute
+    right: 10px
+    top: 4px
+    display: flex
+    align-items: center
+    justify-content: center
+    @media (max-width: $breakpoint-sm)
+      position: static
+
+  &__arrow
+    display: block
+    anim()
+    @media (max-width: $breakpoint-sm)
+      background: #ffffff
+      border: 1px solid $grey-middle
+      margin-top: 10px
+      margin: 10px 5px 0
+      position: static
+      height: 40px
+      width: 70px
+
+      &:hover
+        border: 1px solid $blue
+
+    &--left
+      //left: 0
+      margin-right: 20px
+      @media (max-width: $breakpoint-sm)
+        margin-right: 5px
+      svg
+        transform: rotate(180deg)
+
+    //&--right
+      //right: 0
+
+    svg
+      margin: 0 auto
+      display: block
+      width: 20px
+      height: 14px
+      fill: $blue

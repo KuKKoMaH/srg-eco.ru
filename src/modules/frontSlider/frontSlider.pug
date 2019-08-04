@@ -1,0 +1,47 @@
+.frontSlider
+  .frontSlider__slides
+    .frontSlider__slide(style='background-image: url(modules/frontSlider/slide.jpg)')
+      .frontSlider__footer-bg: .frontSlider__footer-img(style='background-image: url(modules/frontSlider/slide.jpg)')
+      .c
+        h2 Охрана труда 1
+        p Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+        a.btn(href='#')
+          | ПОДРОБНЕЕ#{' '}
+          svg: use(xlink:href="#arrow_right")
+    .frontSlider__slide(style='background-image: url(modules/frontSlider/slide.jpg)')
+      .frontSlider__footer-bg: .frontSlider__footer-img(style='background-image: url(modules/frontSlider/slide.jpg)')
+      .c
+        h2 Охрана труда 2
+        p Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+        a.btn(href='#')
+          | ПОДРОБНЕЕ#{' '}
+          svg: use(xlink:href="#arrow_right")
+    .frontSlider__slide(style='background-image: url(modules/frontSlider/slide.jpg)')
+      .frontSlider__footer-bg: .frontSlider__footer-img(style='background-image: url(modules/frontSlider/slide.jpg)')
+      .c
+        h2 Охрана труда 3
+        p Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+        a.btn(href='#')
+          | ПОДРОБНЕЕ#{' '}
+          svg: use(xlink:href="#arrow_right")
+
+  .c.frontSlider__controls: .frontSlider__controls-inner
+    button.frontSlider__arrow.frontSlider__arrow--left: svg: use(xlink:href="#arrow_right")
+    button.frontSlider__arrow.frontSlider__arrow--right: svg: use(xlink:href="#arrow_right")
+
+  .frontSlider__footer
+    .c.frontSlider__footer-inner
+      h3.frontSlider__footer-title КОМУ МЫ БУДЕМ ПОЛЕЗНЫ
+      .frontSlider__bullets
+        a.frontSlider__bullet
+          img(src='modules/frontSlider/1.png')
+          span Специалист по охране труда
+        a.frontSlider__bullet
+          img(src='modules/frontSlider/2.png')
+          span HR-директор
+        a.frontSlider__bullet
+          img(src='modules/frontSlider/3.png')
+          span ТОП-менеджмент
+        a.frontSlider__bullet
+          img(src='modules/frontSlider/4.png')
+          span Эколог

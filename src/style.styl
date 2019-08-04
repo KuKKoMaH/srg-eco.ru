@@ -1,0 +1,412 @@
+/*!!
+ * Theme Name: SRG
+ */
+
+@import "destyle.css/destyle.css"
+@import "magnific-popup/dist/magnific-popup.css";
+@import "tiny-slider/dist/tiny-slider.css";
+
+@import "stylus/_fonts.styl";
+@import "stylus/_vars.styl";
+@import "stylus/_mixins.styl";
+
+html
+  font-family: 'Montserrat', sans-serif;
+  color: $black
+  font-size: 13px
+
+body
+  overflow-x: hidden
+
+h1, h2, h3, h4, h5, h6
+  font-family: 'Bebas Neue', sans-serif;
+  font-weight: bold
+
+  a, .link
+    background-image: none;
+    padding-bottom: 0
+    border-bottom: 1px solid $blue
+
+h1
+  font-size: 70px
+  @media (max-width: $breakpoint-sm)
+    font-size: 40px
+
+h2
+  font-size: 35px
+  @media (max-width: $breakpoint-sm)
+    font-size: 25px
+
+h3
+  font-size: 30px
+  @media (max-width: $breakpoint-sm)
+    font-size: 20px
+
+h4
+  font-size: 25px
+  @media (max-width: $breakpoint-sm)
+    font-size: 20px
+
+a, .link
+  display: inline
+  padding-bottom: 5px
+  background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAABCAIAAAB7QOjdAAAAD0lEQVR4AWMI2H/r////AA8EBOeAbScJAAAAAElFTkSuQmCC') 0 100% repeat-x
+  cursor: pointer
+  anim()
+
+  &:hover
+    color $blue
+
+.btn
+  display: inline-block
+  font-size: 11px
+  line-height: 1.25
+  font-weight: 500
+  border: 1px solid $blue
+  padding: 13px 14px 12px
+  cursor: pointer
+  //background: #ffffff
+  background-image: none
+  user-select: none
+  text-align: center
+  anim()
+
+  &:hover
+    background: $blue
+    color: #ffffff
+
+  &--filled
+    background: $blue
+    color: $white
+
+    &:hover
+      color: $blue
+      background: transparent
+
+.input
+  &__label
+    display: block
+    font-size: 11px
+    font-weight: 500
+    margin-bottom: 12px
+
+  &__input
+    display: block
+    width: 100%
+    border: 1px solid $grey-middle
+    background: $white
+    font-size: 15px
+    font-weight: 500
+    color: #2c3439
+    padding: 16px 27px 15px
+    margin: 0 1px
+    transition: border-color .1s ease-out
+
+    &:focus
+      margin: 0
+      padding: 15px 27px 14px
+      border: 2px solid $blue
+    @media (max-width: $breakpoint-md)
+      padding: 12px 23px 11px
+      &:focus
+        padding: 11px 23px 10px
+
+.select
+  position: relative
+
+  .selectize-input
+    margin: 0 1px
+    padding: 16px 40px 15px 30px
+    border solid 1px $grey-middle
+    background: #ffffff
+    position: relative
+    white-space: nowrap
+    anim()
+
+    //@media (max-width: $breakpoint-sm - 1)
+    //  padding-top: 8px
+    //  padding-bottom: 8px
+
+    &:before,
+    &:after
+      content: ''
+      display: block
+      position: absolute
+      width: 6px
+      height: 1px
+      background: $blue
+      anim()
+      right: 20px
+      top: 22px
+
+    &:before
+      transform: rotate(-45deg) translateY(3px)
+
+    &:after
+      transform: rotate(45deg) translateY(3px)
+
+    &.dropdown-active
+      &:before
+        transform: rotate(-45deg) translateY(-3px)
+
+      &:after
+        transform: rotate(45deg) translateY(-3px)
+
+    &.disabled
+      background-color: #dfdfdf
+
+    .item
+      vertical-align: top
+      font-size: 15px
+      font-weight: 500
+      display: inline-block
+      overflow: hidden
+      white-space: nowrap
+      text-overflow: ellipsis
+      max-width: 100%
+
+    input
+      display: none
+
+  .input-active
+    margin: 0
+    padding: 25px 40px 24px 30px
+    border: 2px solid $blue
+
+  .selectize-dropdown
+    position: absolute
+    margin-top: 10px
+    z-index: 10
+    border: 1px solid $grey-middle
+    background: #ffffff
+    max-height: 200px
+    overflow-y: scroll
+    width: auto !important;
+    min-width: 100%;
+    max-width: 100%
+
+    .option
+      font-size: 15px
+      line-height: 21px
+      font-weight: 500
+      padding: 12px 30px
+      //white-space: nowrap
+      //overflow: hidden
+      //text-overflow: ellipsis
+      cursor: pointer
+      anim()
+
+      &.active, &:hover
+        color: $blue
+
+.bigBtn
+  display: inline-flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  position: relative
+  background: $blue
+  height: 49px
+  margin-top: 2px
+  width: 100%
+  color: $white
+  padding: 0 50px
+  font-weight: 600
+  letter-spacing: 1px
+  //border-bottom: 5px solid #49a6be
+  anim()
+
+  &:hover
+    padding-top: 2px
+    color: $white
+
+    &:before
+      height: 0
+
+    &:after
+      height: 3px
+  @media (max-width: $breakpoint-md)
+    padding: 0
+    height: 60px
+    font-size: 11px
+
+  &:before,
+  &:after
+    content: ''
+    display: block
+    position: absolute
+    left: 0
+    width: 100%
+    height: 10px
+    anim()
+
+  &:before
+    bottom: 100%
+    height: 2px
+    background: $blue
+
+  &:after
+    bottom: 0
+    height: 5px
+    background: #49a6be
+
+.checkbox
+  display: flex
+
+  &__text
+    position: relative
+    padding-left: 26px
+    font-size: 11px
+    line-height: 19px
+
+    a
+      padding-bottom: 2px
+
+    &:before,
+    &:after
+      content: ''
+      display: block
+      position: absolute
+
+    &:before
+      width: 16px
+      height: 16px
+      border: 1px solid $blue
+      left: 0
+      top: 0
+
+    &:after
+      width: 6px
+      height: 6px
+      background: $blue
+      opacity: 0
+      left: 5px
+      top: 5px
+      anim()
+
+  &__input
+    display: none
+
+  &__input:checked ~ &__text:after
+      opacity: 1
+
+.outlineTitle
+  position: absolute
+  bottom: 100%
+  margin-bottom: -1px
+  background: $grey-bright
+  border: 1px solid $grey-middle
+  border-bottom: 0
+  left: 50%
+  transform: translateX(-50%)
+  padding: 36px 38px 0
+  line-height: 20px
+  white-space nowrap
+  max-width: 100%
+  @media (max-width: $breakpoint-sm)
+    padding: 14px 25px 0
+
+.c
+  padding: 0 10px
+  margin-left: auto
+  margin-right: auto
+  max-width: $container-lg
+  width: 100%
+  @media (max-width: $breakpoint-sm)
+    padding: 0 20px
+
+.greyBg
+  background: $grey-bright
+
+.search
+  &__item
+    margin-top: 25px
+
+.hidden
+  display: none
+
+.screen-reader-response
+  display: none
+
+.wpcf7-form-control-wrap
+  position: relative
+  display: block
+
+.wpcf7-not-valid-tip
+  position: absolute
+  font-size: 11px
+  color: red
+  top: 100%
+  margin-top: 4px
+
+.wpcf7-response-output
+  font-size: 12px
+  margin-top: 8px
+  text-align: center
+  color: red
+
+  &.wpcf7-mail-sent-ok
+    color: $green
+
+#sprites
+  position: absolute
+  width: 0
+  height: 0
+  top: 0
+  left: 0
+
+@import "modules/header/header.styl"
+@import "modules/header/search.styl"
+@import "modules/header/menu.styl"
+@import "modules/footer/footer.styl"
+@import "modules/frontSlider/frontSlider.styl"
+@import "modules/problems/problems.styl"
+@import "modules/relatedEvents/relatedEvents.styl"
+@import "modules/achievements/achievements.styl"
+@import "modules/form/form.styl"
+@import "modules/clients/clients.styl"
+@import "modules/cardsList/cardsList.styl"
+@import "modules/submenu/submenu.styl"
+@import "modules/hero/hero.styl"
+@import "modules/aboutText/aboutText.styl"
+@import "modules/slider/slider.styl"
+@import "modules/history/history.styl"
+@import "modules/card/card.styl"
+@import "modules/licenses/licenses.styl"
+@import "modules/team/team.styl"
+@import "modules/docs/docs.styl"
+@import "modules/newsMenu/newsMenu.styl"
+@import "modules/newsList/newsList.styl"
+@import "modules/newsCategories/newsCategories.styl"
+@import "modules/newsSingle/newsSingle.styl"
+@import "modules/clientsList/clientsList.styl"
+@import "modules/clientsMap/clientsMap.styl"
+@import "modules/eventsCalendar/eventsCalendar.styl"
+@import "modules/eventHead/eventHead.styl"
+@import "modules/eventButtons/eventButtons.styl"
+@import "modules/eventKeys/eventKeys.styl"
+@import "modules/eventSpeakers/eventSpeakers.styl"
+@import "modules/eventProgram/eventProgram.styl"
+@import "modules/eventFormat/eventFormat.styl"
+@import "modules/eventStream/eventStream.styl"
+@import "modules/eventPartners/eventPartners.styl"
+@import "modules/eventMap/eventMap.styl"
+@import "modules/eventForm/eventForm.styl"
+@import "modules/contacts/contacts.styl"
+@import "modules/pageInfo/pageInfo.styl"
+@import "modules/serviceOrder/serviceOrder.styl"
+@import "modules/bulletsList/bulletsList.styl"
+@import "modules/advantages/advantages.styl"
+@import "modules/interest/interest.styl"
+@import "modules/fines/fines.styl"
+@import "modules/workSteps/workSteps.styl"
+@import "modules/result/result.styl"
+@import "modules/clientCard/clientCard.styl"
+@import "modules/clientsSlider/clientsSlider.styl"
+@import "modules/faq/faq.styl"
+@import "modules/breadcrumbs/breadcrumbs.styl"
+@import "modules/popup/popup.styl"
+@import "modules/popup/popupTeam.styl"
+
+@import "modules/photoswipe/photoswipe.styl"
+@import "modules/photoswipe/default-skin.styl"

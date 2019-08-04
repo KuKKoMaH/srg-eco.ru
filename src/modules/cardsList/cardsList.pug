@@ -1,0 +1,59 @@
+include ../card/card
+
+mixin cardsList(title, link, withDate, withSlider, withBorder, grey )
+  - let className = '';
+  - if(withSlider) className += 'cardsList--slider';
+  - if(grey) className += ' cardsList--grey';
+  .cardsList(class=className)
+    .c
+      h2.cardsList__title=title
+
+      .cardsList__items
+        a.cardsList__item(href='#'): +card(withBorder).card--withFooter
+          .card__head
+            .card__image(style='background-image: url(https://source.unsplash.com/random/380x213?random&1)')
+            if(withDate)
+              .card__date
+                .card__day 30
+                .card__month мар
+          .card__content
+            .card__title Заголовок новости
+            .card__text Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus.
+            .card__footer
+              | ЧИТАТЬ ПОЛНОСТЬЮ
+              svg: use(xlink:href="#arrow_right")
+
+        a.cardsList__item(href='#'): +card(withBorder).card--withFooter
+          .card__head
+            .card__image(style='background-image: url(https://source.unsplash.com/random/380x213?random&2)')
+            if(withDate)
+              .card__date
+                .card__day 30
+                .card__month мар
+          .card__content
+            .card__title Заголовок новости
+            .card__text Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus.
+            .card__footer
+              | ЧИТАТЬ ПОЛНОСТЬЮ
+              svg: use(xlink:href="#arrow_right")
+
+        a.cardsList__item(href='#'): +card(withBorder).card--withFooter
+          .card__head
+            .card__image(style='background-image: url(https://source.unsplash.com/random/380x213?random&3)')
+            if(withDate)
+              .card__date
+                .card__day 30
+                .card__month мар
+          .card__content
+            .card__title Заголовок новости
+            .card__text Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus.
+            .card__footer
+              | ЧИТАТЬ ПОЛНОСТЬЮ
+              svg: use(xlink:href="#arrow_right")
+      if(withSlider)
+        .cardsList__arrows
+          button.cardsList__arrow.cardsList__arrow--left: svg: use(xlink:href="#arrow_right")
+          button.cardsList__arrow.cardsList__arrow--right: svg: use(xlink:href="#arrow_right")
+
+      if(link)
+        .cardsList__link: a.cardsList__all(href='#')=link

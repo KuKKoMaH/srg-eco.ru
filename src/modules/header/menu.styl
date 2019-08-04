@@ -1,0 +1,233 @@
+.menu
+  &--active
+    & ^[0]__content
+      display: block
+
+  &--visible
+    & ^[0]__content
+      opacity: 1
+      transform: translateY(0)
+
+  &__trigger
+    margin-left: 30px
+    width: 32px
+    min-width: 32px
+    height: 20px
+    position: relative
+    fill: $blue
+
+    &:hover
+      svg
+        fill: $black
+
+    svg
+      display: block
+      width: 100%
+      height: 100%
+      position: absolute
+      top: 0
+      left: 0
+      anim()
+
+    &--active
+      & ^[0]__open
+        opacity: 0
+
+      & ^[0]__close
+        opacity: 1
+
+  &__open
+    opacity: 1
+
+  &__close
+    opacity: 0
+
+  &__content
+    display: none
+    position: fixed
+    top: 110px
+    bottom: 0
+    left: 0
+    width: 100%
+    background: #fbfbfb
+    padding: 58px 0
+    overflow: auto
+    -webkit-overflow-scrolling: touch
+    opacity: 0
+    transform: translateY(-20px)
+    anim()
+    z-index: 2
+    @media (max-width: $breakpoint-sm)
+      padding: 37px 0
+      top: 100px
+
+  &__row
+    display: flex
+    @media (max-width: $breakpoint-sm)
+      flex-direction: column
+
+  &__col
+    display: flex
+    margin-right: auto
+    @media (max-width: $breakpoint-sm )
+      margin-right: 0
+
+  &__left
+    width: 300px
+    display: flex
+    flex-direction: column
+    @media (max-width: $breakpoint-sm)
+      width: auto
+      flex: 1
+      padding-right: 10px
+
+  &__right
+    max-width 500px
+    margin-right: 20px
+
+    @media (max-width: $breakpoint-sm)
+      margin-right: 0
+      flex: 1
+      padding-left: 10px
+
+  &__left-top,
+  &__left-bottom
+    display: none
+    @media (max-width: $breakpoint-sm )
+      display: block
+
+  &__left-top
+    margin-top: auto
+    padding-top: 12px
+
+  &__left-middle
+    margin-top: auto
+    margin-bottom: 27px
+    @media (max-width: $breakpoint-sm)
+      margin-bottom: 39px
+  &__aside-top
+    @media (max-width: $breakpoint-sm)
+      display: none
+
+  &__aside-bottom
+    margin-top: 57px
+    @media (max-width: $breakpoint-sm)
+      text-align: center
+      text-transform: uppercase
+      margin-top: 34px
+
+  &__level1
+    margin-bottom: 25px
+    @media (max-width: $breakpoint-sm )
+      margin-bottom: 13px
+
+    a
+      font-size: 18px
+      font-weight: 500
+      background-image: none
+      line-height: 1
+      @media (max-width: $breakpoint-sm)
+        font-size: 13px
+
+  &__level2
+    margin-top: 31px
+    margin-bottom: 31px
+    @media (max-width: $breakpoint-sm )
+      margin-top: 12px
+      margin-bottom: 12px
+
+    a
+      font-size: 15px
+      color: $blue
+      font-weight: 500
+      line-height: 1
+      padding-bottom: 2px
+
+      &:hover
+        color: $black
+
+      @media (max-width: $breakpoint-sm)
+        font-size: 9px
+
+  &__level3
+    margin-bottom: 15px
+    @media (max-width: $breakpoint-sm )
+      margin-bottom: 8px
+
+    a
+      font-size: 13px
+      line-height: 21px
+      padding-bottom: 3px
+      @media (max-width: $breakpoint-sm)
+        font-size: 9px
+        line-height: 17px
+
+  &__button
+    display: inline-flex
+    width: 36px
+    height: 36px
+    align-items: center
+    justify-content: center
+    padding: 0
+    margin-right: 10px
+    @media (max-width: $breakpoint-sm)
+      width: 30px
+      height: 30px
+    svg
+      width: 16px
+      height: 16px
+      anim()
+
+    &--social
+      svg
+        fill: $white
+
+      &:hover
+        svg
+          fill: $blue
+
+    &--contact
+      svg
+        fill: $blue
+
+      &:hover
+        svg
+          fill: $white
+
+  &__socials-header
+    font-size: 11px
+    margin-top: 55px
+    margin-bottom: 18px
+    @media (max-width: $breakpoint-sm)
+      margin-top: 0
+      font-size: 9px
+      margin-bottom: 8px
+
+  &__addresses
+    display: flex
+    margin-top: 31px
+    @media (max-width: $breakpoint-sm)
+      display: none
+
+  &__address
+    flex: 1
+    margin-right: 30px
+
+  &__title
+    font-size: 25px
+    margin-bottom: 22px
+
+  &__label
+    color: $grey-dark
+    font-size: 11px
+    margin-bottom: 7px
+
+  &__text
+    font-size: 13px
+    line-height: 1.55
+    margin-bottom: 20px
+
+  &__contact
+    margin-left: 12px
+    &:first-child
+      margin-left: 0

@@ -1,0 +1,21 @@
+.serviceOrder
+  .c: .serviceOrder__inner
+    .serviceOrder__text
+      p Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+      p Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt.
+    .serviceOrder__aside: .serviceOrder__form
+      .serviceOrder__input: .input
+        label.input__label Ваше имя
+        input.input__input
+      .serviceOrder__input: .input
+        label.input__label Ваш телефон
+        input.input__input
+
+      .serviceOrder__input.serviceOrder__input--checkbox
+        label.checkbox
+          input.checkbox__input(type='checkbox')
+          .checkbox__text Я согласен(а) на #[a(href='#') обработку персональных данных]
+
+      .eventForm__input
+        button.bigBtn ЗАКАЗАТЬ УСЛУГУ
+

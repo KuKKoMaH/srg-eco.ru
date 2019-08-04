@@ -1,0 +1,6 @@
+mixin card(withBorder)
+  - let className = 'card';
+  - if(withBorder) className += ' card--bordered';
+  div(class=className)&attributes(attributes)
+    .card__inner
+      block

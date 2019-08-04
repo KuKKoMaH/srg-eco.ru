@@ -1,0 +1,41 @@
+include ../slider/slider
+mixin achievements(grey)
+  .achievements(class=grey && 'achievements--grey')
+    .c
+      h2.achievements__title ДОСТИЖЕНИЯ
+
+      +slider()(data-slider='{"0":{"items":1},"768":{"items":2},"992":{"items":3},"1200":{"items":4}}')
+        div: .achievements__slide
+          .achievements__image(style='background-image: url(https://source.unsplash.com/random/230x280?random&1)')
+          .achievements__content
+            .achievements__text
+            .achievements__big 12 ЛЕТ
+            .achievements__text успешной работы
+
+        div: .achievements__slide
+          .achievements__image(style='background-image: url(https://source.unsplash.com/random/230x280?random&2)')
+          .achievements__content
+            .achievements__text Комплексные исследования условий труда более чем
+            .achievements__big 500 000
+            .achievements__text рабочих мест
+
+        div: .achievements__slide
+          .achievements__image(style='background-image: url(https://source.unsplash.com/random/230x280?random&3)')
+          .achievements__content
+            .achievements__text Опыт разработки индивидуальных программ управления безопасностью более чем
+            .achievements__big 300 видов
+            .achievements__text рабочих специальностей
+
+        div: .achievements__slide
+          .achievements__image(style='background-image: url(https://source.unsplash.com/random/230x280?random&4)')
+          .achievements__content
+            .achievements__text
+            .achievements__big ТОП-5
+            .achievements__text крупнейших компаний РФ в сфере охраны труда
+
+        div: .achievements__slide
+          .achievements__image(style='background-image: url(https://source.unsplash.com/random/230x280?random&5)')
+          .achievements__content
+            .achievements__text Опыт разработки индивидуальных программ управления безопасностью более чем
+            .achievements__big 300 видов
+            .achievements__text рабочих специальностей

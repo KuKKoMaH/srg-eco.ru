@@ -1,0 +1,59 @@
+.newsCategories
+  padding: 40px 0 10px
+  @media (max-width: $breakpoint-sm)
+    padding: 35px 0 0
+
+  ul
+    display: flex
+    align-items: center
+    @media (max-width: $breakpoint-sm)
+      flex-wrap: wrap
+      margin: 0 -10px
+
+  li
+    position: relative
+    padding-left: 30px
+    margin-right: 40px
+    &:last-child
+      margin-right: 0
+    @media (max-width: $breakpoint-sm)
+      width: 50%
+      margin: 0
+      padding: 0 10px 20px 40px
+
+    &:before,
+    &:after
+      content: ''
+      display: block
+      position: absolute
+    &:before
+      width: 16px
+      height: 16px
+      border: 1px solid $blue
+      left: 0
+      top: 0
+      @media (max-width: $breakpoint-sm)
+        left: 10px
+    &:after
+      width: 6px
+      height: 6px
+      background: $blue
+      opacity: 0
+      left: 5px
+      top: 5px
+      anim()
+      @media (max-width: $breakpoint-sm)
+        left: 15px
+
+    &.current_page_item
+      &:after
+        opacity: 1
+
+  a
+    font-size: 11px
+    padding-bottom: 3px
+    font-weight: 500
+    @media (max-width: $breakpoint-sm)
+      font-size: 9px
+      padding-bottom: 2px
+      line-height: 17px

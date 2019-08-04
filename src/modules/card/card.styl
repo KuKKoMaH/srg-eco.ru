@@ -1,0 +1,173 @@
+.card
+  width: 100%
+  height: 100%
+  flex: 1
+  position: relative
+  background: $white
+  border-bottom: 5px solid $grey-dark
+  color: $black !important
+  display: flex
+  flex-direction column
+  @media (max-width: $breakpoint-sm)
+    border-bottom: 5px solid $blue
+
+  &:hover
+    border-bottom: 5px solid $blue
+
+    & ^[0]__image
+      filter: grayscale(0)
+
+    & ^[0]__date
+      background: $blue
+      color: $white
+
+    & ^[0]__label
+      color: $black
+      background: $grey-bright
+
+
+  &--withFooter
+    & ^[0]__content
+      padding-bottom: 80px
+      @media (max-width: $breakpoint-sm)
+        padding-bottom: 60px
+
+  &--bordered
+    border: 7px solid $grey-middle
+    anim()
+
+    &:hover
+      border: 7px solid $blue
+
+    @media (max-width: $breakpoint-sm)
+      border: 7px solid $blue
+
+    & ^[0]__image
+      filter: grayscale(0)
+    & ^[0]__inner
+      border: 0
+
+  &--sm
+    & ^[0]__head
+      height: 128px
+
+    & ^[0]__title
+      font-size: 13px
+      line-height: 18px
+      margin-bottom: 12px
+
+    & ^[0]__text
+      font-size: 11px
+      line-height: 19px
+
+    & ^[0]__content
+      padding: 24px
+
+  &__inner
+    flex: 1
+    border: 1px solid $grey-middle
+    border-bottom: 0
+    height: 100%
+    display: flex
+    flex-direction column
+
+  &__head
+    height: 213px
+    position: relative
+    @media (max-width: $breakpoint-sm)
+      height: 157px
+
+    & ^[0]__image
+      position: absolute
+      left: 0
+      top: 0
+      width: 100%
+      height: 100%
+
+  &__image
+    background-size: cover
+    background-position: 50% 50%
+    filter: grayscale(100%)
+    anim()
+    @media (max-width: $breakpoint-sm)
+      filter: grayscale(0)
+
+  &__content
+    padding: 30px
+
+  &__title
+    display: inline
+    font-size: 15px
+    line-height: 22px
+    color: $blue
+    border-bottom: 1px solid $blue
+    //display: inline-block
+    padding-bottom: 1px
+    @media (max-width: $breakpoint-sm)
+      font-size: 13px
+      line-height: 18px
+
+  &__text
+    margin-top: 28px
+    font-size: 13px
+    line-height: 21px
+    @media (max-width: $breakpoint-sm)
+      font-size: 11px
+      line-height: 19px
+
+  &__footer
+    font-weight: 500
+    position: absolute
+    bottom: 30px
+    background-image: none
+    padding-bottom: 0
+    @media (max-width: $breakpoint-sm)
+      font-size: 11px
+
+    svg
+      width: 13px
+      height: 9px
+      fill: $blue
+      margin-left: 4px
+
+  &__date
+    position: absolute
+    top: 29px
+    left: 29px
+    background: $grey-bright
+    text-align: center
+    width: 59px
+    padding: 7px 0 13px
+    anim()
+    @media (max-width: $breakpoint-sm)
+      top: 15px
+      left: 15px
+      background: $blue
+      color: $white
+
+  &__day
+    font-size: 35px
+    font-weight: 300
+    @media (max-width: $breakpoint-sm)
+      font-size: 25px
+
+  &__month
+    font-size: 10px
+    font-weight: 500
+    @media (max-width: $breakpoint-sm)
+      font-size: 8px
+
+  &__label
+    position: absolute
+    bottom: 0
+    left: 0
+    color: $white
+    background: $blue
+    font-size: 11px
+    padding: 9px 10px
+    anim()
+    @media (max-width: $breakpoint-sm)
+      font-size: 9px
+      color: $black
+      background: $grey-bright
+      padding: 5px 5px

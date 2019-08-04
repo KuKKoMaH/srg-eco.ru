@@ -1,0 +1,64 @@
+.eventKeys
+  //background: $grey-bright
+  padding: 80px 0 60px
+  @media (max-width: $breakpoint-sm)
+    padding: 40px 0 20px
+
+  &__title
+    margin-bottom: 45px
+    @media (max-width: $breakpoint-sm)
+      text-align: center
+      margin-bottom: 30px
+
+  &__items
+    display: flex
+    flex-wrap: wrap
+    margin: 0 -10px
+    align-items: stretch
+    @media (max-width: $breakpoint-sm)
+      flex-wrap: nowrap
+      flex-direction: column
+      margin: 0
+
+  &__item
+    padding: 0 10px 20px
+    width: 50%
+    @media (max-width: $breakpoint-sm)
+      width: 100%
+      padding: 0 0 15px
+
+  &__content
+    height: 100%
+    background: $white
+    border: 7px solid $grey-middle
+    display: flex
+    @media (max-width: $breakpoint-sm)
+      flex-direction: column
+
+    &:hover
+      & ^[0]__image
+        filter: grayscale(0)
+
+  &__image
+    flex: 1
+    background-size: cover
+    background-position: 50% 50%
+    min-height: 173px
+    max-width: 273px
+    filter: grayscale(100%)
+    anim()
+    @media (max-width: $breakpoint-sm)
+      filter: grayscale(0)
+      height: 165px
+      min-height: auto
+      max-width: none
+
+  &__text
+    flex: 1
+    font-size: 13px
+    line-height: 21px
+    align-self: center
+    padding: 30px
+    @media (max-width: $breakpoint-sm)
+      font-size: 11px
+      line-height: 19px

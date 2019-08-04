@@ -1,0 +1,26 @@
+include ../clientCard/clientCard
+
+.clientsList
+  .c
+    .clientsList__header
+      .clientsList__types
+        select.select
+          option Все направления
+          option(value='1') Сопровождение строительных проектов
+          option(value='2') Финансовый и юридический консалтинг
+          option(value='3') Консалтинг в области недвижимости
+      .clientsList__years
+        .clientsList__year(data-year='2013'): .link 2013
+        .clientsList__year(data-year='2014'): .link 2014
+        .clientsList__year(data-year='2015'): .link 2015
+        .clientsList__year(data-year='2016'): .link 2016
+        .clientsList__year(data-year='2017'): .link 2017
+        .clientsList__year(data-year='2018'): .link 2018
+        .clientsList__year.clientsList__year--active(data-year='2019'): .link 2019
+
+    .clientsList__items
+      +clientCard()
+      +clientCard()
+      +clientCard()
+      
+    .clientsList__more: button.link ЗАГРУЗИТЬ ЕЩЕ

@@ -1,0 +1,154 @@
+.eventsCalendar
+  &__content
+    display: flex
+    @media (max-width: $breakpoint-sm)
+      flex-direction: column-reverse
+
+  &__calendar
+    flex: 0 0 66.666666%
+    padding-right: 15px
+    font-family: 'Bebas Neue', sans-serif;
+    font-weight: bold
+    @media (max-width: $breakpoint-sm)
+      padding-right: 0
+
+  &__event
+    flex: 0 0 33.333333%
+    padding-left: 10px
+    @media (max-width: $breakpoint-sm)
+      flex: 1
+      padding-left: 0
+      margin-bottom: 25px
+
+  &__card
+    border: 7px solid $blue
+    height: 100%
+    position: relative
+
+    .card__image
+      filter: grayscale(0)
+
+    &:before
+      background: $blue
+      @media (max-width: $breakpoint-sm)
+        margin-top: -1px
+
+    &:after
+      background: $white
+      margin-left: 10px
+      @media (max-width: $breakpoint-sm)
+        margin-left: 0
+        margin-top: -9px
+
+    &:before, &:after
+      content: ''
+      display: block
+      position: absolute
+      transform-origin: 50% 50%
+      transform: rotate(45deg)
+      width: 30px
+      height: 30px
+      top: 50%
+      left: -20px
+      @media (max-width: $breakpoint-sm)
+        top: 100%
+        left: 50%
+        margin-left: -16px
+        width: 15px
+        height: 15px
+
+  &__row
+    display: flex
+
+  &__header
+    display: flex
+    margin-bottom: 20px
+    align-items: center
+
+  &__button
+    width: 180px
+    height: 50px
+    border: 1px solid $grey-middle
+    anim()
+    @media (max-width: $breakpoint-sm)
+      width: 70px
+      height: 40px
+
+    &:hover
+      border-color: $blue
+
+    svg
+      width: 20px
+      height: 14px
+      fill: $blue
+
+    &--prev
+      svg
+        transform: rotate(180deg)
+
+  &__title
+    flex: 1
+    text-align: center
+    font-size: 25px
+    padding-top: 4px
+    @media (max-width: $breakpoint-sm)
+      font-size: 18px
+
+  &__cell
+    position: relative
+    font-size: 25px
+    flex: 1
+    display: flex
+    align-items: center
+    justify-content: center
+    height: 72px
+    border: 1px solid $grey-middle
+    margin: -1px 0 0 -1px
+    padding-top: 4px
+    anim()
+    @media (max-width: $breakpoint-sm)
+      height: 30px
+      font-size: 18px
+
+    &:before,
+    &:after
+      content: ''
+      display: block
+      position: absolute
+      opacity: 0
+      z-index: 1
+      anim()
+
+    &:before
+      bottom: -1px
+      left: 0
+      right: -1px
+      height: 1px
+      background: $blue
+
+    &:after
+      top: 0
+      bottom: -1px
+      right: -1px
+      width: 1px
+      background: $blue
+
+    &--week
+      background: #f3f3f3
+
+    &--past
+      color: $grey-middle
+
+    &--active
+      color: $blue
+      cursor: pointer
+
+      &:hover
+        border-color: $blue
+
+        &:before, &:after
+          opacity: 1
+
+    &--current
+      background: $blue
+      color: $white

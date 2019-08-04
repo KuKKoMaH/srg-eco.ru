@@ -1,0 +1,268 @@
+.header
+  &__placeholder
+    height: 110px
+    @media (max-width: $breakpoint-sm)
+      height: 100px
+
+  &__container
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    height: 110px
+    padding: 0 30px
+    display: flex
+    align-items: center
+    z-index: 3
+    background: #ffffff
+    box-shadow: 0 5px 20px rgba(#000, .1)
+
+    @media (max-width: $breakpoint-sm)
+      height: 60px
+      padding: 0 20px
+
+  //&:before
+  //  content: ''
+  //  display: block
+  //  background: #ffffff
+  //  position: absolute
+  //  left: 0
+  //  top: 0
+  //  right: 0
+  //  bottom: 0
+  //  box-shadow: 0 5px 20px rgba(#000, .1)
+  //  z-index: 1
+  //
+  //> *
+  //  z-index: 2
+
+  &__logo
+    //margin-right: 16px
+    min-width: 0
+    background-image: none;
+    margin-right: auto
+    padding-bottom: 0
+    flex-shrink 0
+
+    img
+      max-width: 100%
+      @media (max-width: $breakpoint-sm)
+        max-height 45px
+  &__text
+    white-space: nowrap
+    font-size: 11px
+    line-height: 2
+    margin-right: auto
+    @media (max-width: $breakpoint-sm)
+      font-size: 7px
+
+  &__items
+    flex: 1
+    display: flex
+    justify-content: center
+    align-self: stretch
+    @media (max-width: 1350px)
+      display: none
+
+    .equal > ul > li
+      flex: 1
+
+    > ul
+      height: 100%
+      display: flex
+      align-items: stretch
+
+      > li
+        margin: 0 12px
+        display: flex
+        align-items: center
+        position: relative
+
+
+        &.menu-item-has-children
+          &.menu-item-active
+            &:before
+              content: ''
+              opacity: 0
+              pointer-events: none
+              position: fixed
+              top: 110px
+              bottom: 0
+              left: 0
+              right: 0
+              background: rgba(0, 0, 0, .5)
+              anim()
+
+            &:after
+              content: ''
+              position: absolute
+              width: 0;
+              height: 0;
+              border-style: solid;
+              border-width: 0 11px 0px 11px;
+              border-color: transparent transparent #eaeaea transparent
+              bottom: 0
+              left: 50%
+              margin-left: -11px - 8px
+              //opacity: 0
+              anim()
+
+            > ul
+              display: flex
+              opacity: 0
+
+            > a
+              color: $blue
+
+              &:after
+                background: url(images/sprite-arrow-up.svg)
+
+          &.menu-item-active-done
+            &:before
+              opacity: 1
+
+            &:after
+              //opacity: 1
+              border-width: 0 11px 10px 11px;
+
+
+            > ul
+              //transform: translateY(0)
+              opacity: 1
+
+          & > a
+            //&:before
+            //  content: ''
+            //  display: block
+            //  position: absolute
+            //  bottom: 0
+            //  height: 50%
+            //  left: -200px
+            //  right: -200px
+            //  //transform translateX(-50%)
+
+            &:after
+              content: ''
+              display: inline-block
+              vertical-align: middle
+              background: url(images/sprite-arrow-down.svg)
+              margin-left: 8px
+
+        > a
+          display: block
+          font-weight: 600
+          z-index: 1
+          white-space: nowrap
+          anim()
+
+          &:not(:hover)
+            background-image: none
+
+          &:hover
+            color: $blue
+
+        > ul
+          display: none
+          //opacity: 0
+          //pointer-events: none
+          position: fixed
+          top: 110px
+          left: 0
+          width: 100%
+          background: #ffffff
+          border-bottom: 1px solid #f3f3f3;
+          overflow: hidden
+          align-items: flex-start
+          justify-content center
+          padding: 60px 0
+          //transform: translateY(-20px)
+          anim()
+
+          &:hover
+            opacity: 1
+            pointer-events: all
+
+          &:before
+            content: ''
+            position: absolute
+            top: -20px
+            width: 100%
+            height: 20px
+            box-shadow: 0 5px 20px rgba(#000, .1)
+
+          > li
+            padding: 0 15px
+
+            > a
+              font-size: 15px
+              font-weight: 600
+              color: $blue
+              anim()
+
+              &:hover
+                color: $black
+
+            > ul
+              margin-top: 30px
+
+              > li
+                margin-bottom: 20px
+
+                > a
+                  font-size: 13px
+                  padding-bottom: 1px
+                  anim()
+
+                  &:hover
+                    color: $blue
+
+
+                > ul
+                  margin-top: 10px
+                  anim()
+
+                  > li
+                    margin-bottom: 5px
+
+                    > a
+                      font-size: 11px
+                      line-height: 16px
+                      padding-bottom: 1px
+
+                      &:hover
+                        color: $blue
+
+  &__phones
+    display: flex
+    flex-direction: column
+    @media (max-width: $breakpoint-sm)
+      position: fixed
+      top: 60px
+      left: 0
+      width: 100%
+      background: $blue
+      flex-direction: row
+      align-items: center
+      justify-content: center
+      height: 40px
+      box-shadow: 0 5px 20px rgba(#000, .1)
+
+  &__phone
+    font-size: 15px
+    background-image: none
+    font-weight: 500
+    white-space nowrap
+
+    &:last-child
+      padding-bottom: 0
+
+    @media (max-width: $breakpoint-sm)
+      color: #ffffff
+      margin: 0 8px
+      padding-bottom: 0
+
+  &__button
+    margin-left: 20px
+    @media (max-width: $breakpoint-md)
+      display: none
+

@@ -1,0 +1,29 @@
+include ../slider/slider
+
+.result
+  .c
+    .result__inner
+      .result__content
+        h2.result__title ЧТО ВЫ #[.link В ИТОГЕ ПОЛУЧАЕТЕ]
+        .result__text
+          p В процессе оказания услуг Заказчику оказывается консультация на всех этапах работы. В итогу заказчик получает полный пакет документов.
+      .result__aside
+        +slider()(data-slider='{"0":{"items":1}}')
+          .result__item: +card()
+            img.result__image(src="modules/licenses/1.png")
+            .result__name НАЗВАНИЕ ДОКУМЕНТА 1
+          .result__item: +card()
+            img.result__image(src="modules/licenses/1.png")
+            .result__name НАЗВАНИЕ ДОКУМЕНТА 2
+          .result__item: +card()
+            img.result__image(src="modules/licenses/1.png")
+            .result__name НАЗВАНИЕ ДОКУМЕНТА 3
+          .result__item: +card()
+            img.result__image(src="modules/licenses/1.png")
+            .result__name НАЗВАНИЕ ДОКУМЕНТА 4
+          .result__item: +card()
+            img.result__image(src="modules/licenses/1.png")
+            .result__name НАЗВАНИЕ ДОКУМЕНТА 5
+          .result__item: +card()
+            img.result__image(src="modules/licenses/1.png")
+            .result__name НАЗВАНИЕ ДОКУМЕНТА 6

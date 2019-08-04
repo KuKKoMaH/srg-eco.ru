@@ -1,0 +1,32 @@
+.eventPartners
+  background: $grey-bright
+  border-top: 1px solid $grey-middle
+  padding: 80px 0
+  position: relative
+  margin-top: 55px
+  @media (max-width: $breakpoint-sm)
+    padding: 40px 0
+    margin-top: 33px
+
+  &__title
+    left: auto
+    transform: none
+    @media (max-width: $breakpoint-sm)
+      left: 50%
+      transform: translateX(-50%)
+
+  &__item
+    height: 163px
+
+  &__image
+    position: absolute
+    left: 50%
+    top: 60px
+    transform: translate(-50%, -50%)
+    max-width: 80%;
+
+  &__text
+    position: absolute
+    top: 129px
+    font-weight: 500
+    padding: 0 20px

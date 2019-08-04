@@ -1,0 +1,64 @@
+.popupTeam
+  display: flex
+  max-width 770px
+  width: 100%
+  border: 7px solid $grey-middle
+  padding: 40px
+  margin: 0 auto;
+  background: #fff;
+  position: relative;
+  @media (max-width: 770px)
+    flex-direction column
+    padding: 20px
+
+
+  &__aside
+    margin-right: 50px
+    @media (max-width: 770px)
+      text-align: center
+      margin-right: 0
+      margin-bottom: 40px
+
+  &__image
+    display: block
+    margin-bottom: 20px
+    @media (max-width: 770px)
+      margin: 0 auto
+
+  &__name
+    display: inline;
+    font-size: 15px;
+    line-height: 22px;
+    color: #50bfdb;
+    border-bottom: 1px solid #50bfdb;
+    padding-bottom: 1px;
+
+  &__position
+    font-size: 11px;
+    line-height: 19px;
+    margin-top: 20px;
+
+  &__content
+    font-size: 14px;
+    line-height: 28px;
+    @media (max-width: 770px)
+      font-size: 13px
+
+    p
+      margin-bottom: 28px
+
+    ul
+      padding-left: 20px;
+
+    li
+      position: relative
+      margin-bottom: 24px
+
+      &:before
+        content: '';
+        position: absolute;
+        width: 7px;
+        height: 7px;
+        background-color: #00a9e0;
+        top: 11px;
+        left: -18px;

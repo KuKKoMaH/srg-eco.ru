@@ -1,0 +1,58 @@
+.slider
+  position: relative
+  padding: 0 100px
+  @media (max-width: $breakpoint-sm)
+    padding: 0
+
+  .tns-outer, .tns-ovh
+    //,.tns-inner
+    width: 100%
+
+  .tns-item
+    flex-shrink 0
+
+  &__slides
+    display: flex
+
+  &__slide
+    position: relative
+
+  &__arrows
+    display: flex
+    align-items: center
+    justify-content: center
+
+  &__arrow
+    position: absolute
+    top: 0
+    bottom: 0
+    width: 80px
+    display: block
+    background: #ffffff
+    border: 1px solid $grey-middle
+    anim()
+    @media (max-width: $breakpoint-sm)
+      margin-top: 10px
+      margin: 10px 5px 0
+      position: static
+      height: 40px
+      width: 70px
+
+    &:hover
+      border: 1px solid $blue
+
+    &--left
+      left: 0
+
+      svg
+        transform: rotate(180deg)
+
+    &--right
+      right: 0
+
+    svg
+      margin: 0 auto
+      display: block
+      width: 20px
+      height: 14px
+      fill: $blue

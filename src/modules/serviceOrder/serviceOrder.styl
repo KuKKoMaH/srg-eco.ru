@@ -1,0 +1,53 @@
+.serviceOrder
+  padding: 80px 0 0
+  @media (max-width: $breakpoint-sm)
+    padding: 0
+    margin-top: -75px
+
+  &__inner
+    display: flex
+    @media (max-width: $breakpoint-sm)
+      flex-direction: column-reverse
+
+  &__text
+    max-width: 680px
+    margin-right: 20px
+    font-size: 13px
+    line-height: 21px
+    @media (max-width: $breakpoint-sm)
+      font-size: 11px
+      line-height: 19px
+
+    p
+      margin-bottom: 20px
+
+      &:last-child
+        margin-bottom: 0
+
+  &__aside
+    position: relative
+    margin-left: auto
+    width: 380px
+    @media (max-width: $breakpoint-sm)
+      width: 100%
+
+  &__form
+    position: absolute
+    background: $grey-bright
+    top: -330px
+    //bottom: 0
+    padding: 40px
+
+    @media (max-width: $breakpoint-sm)
+      position: static
+      padding: 35px
+      margin-bottom: 38px
+
+  &__input
+    margin-bottom: 20px
+    &:last-child
+      margin-bottom: 0
+
+    &--checkbox
+      display: flex
+      justify-content: center

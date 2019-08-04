@@ -1,0 +1,86 @@
+include ../slider/slider
+
+.contacts
+  .c
+    .contacts__item
+      .contacts__primary
+        .contacts__content
+          h2.contacts__title: .link МОСКВА
+          .contacts__row
+            .contacts__contact
+              .contacts__label Адрес:
+              .contacts__text г. Москва, Переведеновский переулок, дом 13 строение 18, Бизнес-центр «Переведеновский», 6 этаж (ст. м. Бауманская)
+          .contacts__row
+            .contacts__contact
+              .contacts__label Тел./факс:
+              .contacts__text +7 (495) 260-11-47
+            .contacts__contact
+              .contacts__label E-mail:
+              .contacts__text eco@srgroup.ru
+          .contacts__row
+            .contacts__contact
+              .contacts__label График работы:
+              .contacts__text Пн – Пт: с 9 до 18 Сб – Вс: выходные
+          .contacts__row
+            a.contacts__link.link(href='#') ЗАКАЗАТЬ ЗВОНОК
+
+        .contacts__aside
+          .contacts__map(data-center='[55.780962,37.689312]' data-zoom='16')
+      .contacts__gallery
+        .contacts__gallery-items
+          a.contacts__image(href='https://source.unsplash.com/random/1500x1200?random&1' data-index=0 data-width=1500 data-height=1200)
+            img(src='https://source.unsplash.com/random/240x140?random&1')
+          a.contacts__image(href='https://source.unsplash.com/random/1500x1200?random&2' data-index=1 data-width=1500 data-height=1200)
+            img(src='https://source.unsplash.com/random/240x140?random&2')
+          a.contacts__image(href='https://source.unsplash.com/random/1500x1200?random&3' data-index=2 data-width=1500 data-height=1200)
+            img(src='https://source.unsplash.com/random/240x140?random&3')
+          a.contacts__image(href='https://source.unsplash.com/random/1500x1200?random&4' data-index=3 data-width=1500 data-height=1200)
+            img(src='https://source.unsplash.com/random/240x140?random&4')
+          a.contacts__image(href='https://source.unsplash.com/random/1500x1200?random&5' data-index=4 data-width=1500 data-height=1200)
+            img(src='https://source.unsplash.com/random/240x140?random&5')
+        .contacts__arrows
+          button.contacts__arrow.contacts__arrow--left: svg: use(xlink:href="#arrow_right")
+          button.contacts__arrow.contacts__arrow--right: svg: use(xlink:href="#arrow_right")
+
+    h2.contacts__filials-title ФИЛИАЛЫ
+    .contacts__filials
+      .contacts__filial
+        h4.contacts__filial-title Саратов
+        .contacts__row
+          .contacts__contact
+            .contacts__label Текущее время в Саратове
+            .contacts__text.contacts__text--time(data-gmt=4)
+        .contacts__row
+          .contacts__contact
+            .contacts__label Адрес
+            .contacts__text 410056, г. Саратов, ул. Астраханская, д. 88
+        .contacts__row
+          .contacts__contact
+            .contacts__label Тел./факс:
+            .contacts__text +7 (8452) 67-45-41
+          .contacts__contact
+            .contacts__label E-mail:
+            .contacts__text eco@srgroup.ru
+        .contacts__filial-map
+          .contacts__map(data-center='[51.529192, 46.002510]' data-zoom='16')
+
+      .contacts__filial
+        h4.contacts__filial-title НОВОСИБИРСК
+        .contacts__row
+          .contacts__contact
+            .contacts__label Текущее время в Новосибирск
+            .contacts__text.contacts__text--time(data-gmt=7)
+        .contacts__row
+          .contacts__contact
+            .contacts__label Адрес
+            .contacts__text 630007, г. Новосибирск, ул. Коммунистическая, 35, корпус 3, офис 12, 1 этаж
+        .contacts__row
+          .contacts__contact
+            .contacts__label Тел./факс:
+            .contacts__text +7 (8452) 67-45-41
+          .contacts__contact
+            .contacts__label E-mail:
+            .contacts__text eco@srgroup.ru
+        .contacts__filial-map
+          .contacts__map(data-center='[55.023986, 82.919666]' data-zoom='16')
+

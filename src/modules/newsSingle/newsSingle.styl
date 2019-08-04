@@ -1,0 +1,134 @@
+.newsSingle
+  overflow: auto
+  padding: 80px 0
+  @media (max-width: $breakpoint-sm)
+    padding: 40px 0
+
+  &__back
+    position: absolute
+    margin-left: -100px
+    top: -60px
+    //display: flex
+    //align-items: center
+    background-image: none
+    font-weight: 500
+
+    svg
+      height: 9px
+      width: 6px
+      fill: $blue
+      margin-right: 8px
+
+  &__inner
+    position: relative
+    padding-right: 100px
+    @media (max-width: $breakpoint-sm)
+      padding: 0
+
+  &__breadcrumbs
+    margin-bottom: 40px
+
+  &__title
+    font-size: 50px
+    line-height: 60px
+    max-width: 880px
+    margin-bottom: 25px
+    @media (max-width: $breakpoint-sm)
+      font-size: 25px
+      text-align: center
+      line-height: 35px
+
+  &__date
+    color: $grey-dark
+    font-size: 11px
+    margin-bottom: 75px
+    @media (max-width: $breakpoint-sm)
+      font-size: 9px
+      text-align: center
+      margin-bottom: 20px
+
+  &__content
+    font-size: 15px
+    line-height: 1.8
+    @media (max-width: $breakpoint-sm)
+      font-size: 13px
+    *:last-child
+      margin-bottom: 0
+
+    p
+      margin-bottom: 30px
+
+    //figure
+    //  position: relative
+    //  border: 7px solid $grey-dark
+    //  margin-bottom: 30px
+    //
+    //  img
+    //    display: block
+    //    max-width: 100%
+    //    width: 100%
+    //
+    //  figcaption
+    //    position: absolute
+    //    background: $blue
+    //    color: $white
+    //    bottom: 20px
+    //    left: 0
+    //    font-size: 11px
+    //    padding: 14px
+    //    @media (max-width: $breakpoint-sm)
+    //      font-size: 9px
+    //      padding: 5px
+
+    a
+      padding-bottom: 4px
+
+    blockquote
+      border: 7px solid $grey-dark
+      padding: 40px
+      font-style: italic
+      margin-bottom: 30px
+      @media (max-width: $breakpoint-sm)
+        padding: 20px
+
+      *:last-child
+        margin-bottom: 0
+
+  &__share
+    position: absolute
+    right: 0
+    top: 80px
+    @media (max-width: $breakpoint-sm)
+      position: static
+      align-items: center
+      justify-content: center
+      display: flex
+      top: 0
+      margin-bottom: 35px
+
+  &__btn
+    width: 44px
+    height: 44px
+    border: 1px solid $grey-middle
+    margin-bottom: 10px
+    display: flex
+    align-items: center
+    justify-content: center
+    cursor: pointer
+    background-image: none;
+    anim()
+    @media (max-width: $breakpoint-sm)
+      width: 30px
+      height: 30px
+      margin: 0 5px
+
+    &:hover
+      border-color: $blue
+
+    svg
+      fill: $blue
+      max-width: 22px
+      max-height: 22px
+      @media (max-width: $breakpoint-sm)
+        max-width: 12px
+        max-height: 12px

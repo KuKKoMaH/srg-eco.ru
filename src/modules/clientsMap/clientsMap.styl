@@ -1,0 +1,42 @@
+.clientsMap
+  position: relative
+  overflow: hidden
+
+  &__title
+    position: absolute
+    top: 0
+    left: 50%
+    height: 70px
+    transform: translateX(-50%)
+    z-index: 2
+    border: 1px solid $grey-middle
+    //border-top: 0
+    border-bottom: 0
+    padding: 22px 18px 0
+    background: linear-gradient(to top, rgba(#f4f4f4, 0) 0%, rgba(#f4f4f4, 1) 100% )
+    white-space: nowrap
+    @media (max-width: $breakpoint-sm)
+      padding: 6px 12px 0
+      height: 35px
+
+    &:before,
+    &:after
+      content: ''
+      display: block
+      position: absolute
+      top: -1px
+      height: 71px
+      background: #ffffff
+      border-bottom: 1px solid $grey-middle
+      width: 1000px
+      @media (max-width: $breakpoint-sm)
+        height: 35px
+
+    &:before
+      right: 100%
+    &:after
+      left: 100%
+
+  &__map
+    height: 570px
+    width: 100%

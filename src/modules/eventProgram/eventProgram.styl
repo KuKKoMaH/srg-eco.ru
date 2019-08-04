@@ -1,0 +1,166 @@
+.eventProgram
+  padding: 80px 0
+  //background: $grey-bright
+  @media (max-width: $breakpoint-sm)
+    padding: 40px 0
+
+  &__title
+    text-align: center
+    margin-bottom: 15px
+
+  &__days
+    text-align: center
+    margin-bottom: 50px
+    @media (max-width: $breakpoint-sm)
+      margin-bottom: 17px
+
+  &__tabs
+    position: relative
+
+  &__tab
+    position: absolute
+    left: 0
+    width: 100%
+    top: 0
+    opacity: 0
+    anim()
+
+    &--active
+      position: relative
+      opacity: 1
+      z-index: 1
+
+  &__day
+    display: inline-block
+    position: relative
+    margin-right: 8px
+    padding: 5px 6px 6px
+    cursor: pointer
+    anim()
+    &:last-child
+      margin-right: 0
+
+    &:after
+      content: ''
+      display: block
+      position: absolute
+      top: 100%
+      left: 50%
+      margin-left: -5px
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 0px 5px 0 5px;
+      border-color: #50beda transparent transparent transparent;
+      anim()
+
+
+    &--active
+      background: $blue
+      color: $white
+
+      .link
+        color: $white
+
+      &:after
+        border-width: 5px 5px 0 5px;
+
+
+    .link
+      padding-bottom: 3px
+
+
+  &__item
+    margin-bottom: 20px
+
+  &__content
+    display: flex
+    @media (max-width: $breakpoint-sm)
+      flex-direction: column
+
+  &__left
+    align-self: flex-start
+    min-width: 130px
+    @media (max-width: $breakpoint-sm)
+      margin-bottom: 15px
+
+  &__time
+    display: inline
+    font-size: 15px
+    color: $blue
+    border-bottom: 1px solid $blue
+    @media (max-width: $breakpoint-sm)
+      font-size: 11px
+
+  &__inner
+    width: 880px
+    margin-left: auto
+    @media (max-width: $breakpoint-sm)
+      width: auto
+      margin-left: 0
+
+    > *:last-child
+      margin-bottom: 0
+
+  &__head
+    font-size: 15px
+    line-height: 21px
+    margin-bottom: 15px
+    @media (max-width: $breakpoint-sm)
+      font-size: 11px
+      line-height: 19px
+
+  &__text
+    font-size: 13px
+    line-height: 21px
+    @media (max-width: $breakpoint-sm)
+      font-size: 11px
+      line-height: 19px
+
+    p
+      margin-bottom: 15px
+
+      &:last-child
+        margin-bottom: 0
+
+  &__speakers
+    display: flex
+    max-width: 780px
+    @media (max-width: $breakpoint-sm)
+      flex-direction: column
+      max-width: none
+      width: 100%
+
+  &__speaker
+    border: 7px solid $grey-middle
+    display: flex
+    width: 50%
+    max-width: 50%
+    margin-right: 20px
+    align-items: center
+    min-height: 95px
+    margin-bottom: 15px
+    @media (max-width: $breakpoint-sm)
+      width: 100%
+      max-width: none
+      flex-direction: column
+
+  &__image
+    min-width: 95px
+    align-self: stretch
+    @media (max-width: $breakpoint-sm)
+      height: 115px
+
+  &__info
+    padding: 10px 15px 10px 30px
+    @media (max-width: $breakpoint-sm)
+      padding: 20px
+
+  &__name
+    font-size: 13px
+    text-decoration: underline
+    margin-bottom: 15px
+    color: $blue
+
+  &__posiotion
+    font-size: 11px

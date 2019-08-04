@@ -1,0 +1,8 @@
+mixin slider()
+  .slider&attributes(attributes)
+    .slider__slides
+      block
+
+    .slider__arrows
+      button.slider__arrow.slider__arrow--left: svg: use(xlink:href="#arrow_right")
+      button.slider__arrow.slider__arrow--right: svg: use(xlink:href="#arrow_right")

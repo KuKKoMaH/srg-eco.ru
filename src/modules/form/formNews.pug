@@ -1,0 +1,31 @@
+.form
+  h2.form__title #[a(href='#') ПОДПИШИТЕСЬ НА НОВОСТИ] ПО НУЖНОМУ ДЛЯ ВАС НАПРАВЛЕНИЮ
+
+  .c
+    .form__form
+      .form__row
+        .form__col
+          .form__row
+            .form__input.input
+              label.input__label Выберете направлени
+              select.select
+                option Все направления
+                option(value='1') Сопровождение строительных проектов
+                option(value='2') Финансовый и юридический консалтинг
+                option(value='3') Консалтинг в области недвижимости
+          .form__row
+            .form__input.input
+              label.input__label Ваше имя
+              input.input__input
+            .form__input.input
+              label.input__label Ваша почта
+              input.input__input
+        .form__aside
+          .form__row
+            .form__withoutLabel.form__personal
+              label.checkbox
+                input.checkbox__input(type='checkbox')
+                .checkbox__text Я согласен(а) на #[a(href='#') обработку персональных данных]
+          .form__row
+            .form__withoutLabel
+              button.bigBtn ПОЛУЧАТЬ НОВОСТИ

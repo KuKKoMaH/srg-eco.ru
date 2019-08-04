@@ -1,0 +1,64 @@
+include ../slider/slider
+include ../card/card
+#history.history
+  .c
+    h2.history__title ИСТОРИЯ КОМПАНИИ
+
+    .history__nav
+      .history__years
+        .history__year(data-year='2017'): .link 2017
+        .history__year(data-year='2018'): .link 2018
+        .history__year(data-year='2019'): .link 2019
+    .history__sliders
+      each year in ['2017', '2018', '2019']
+        .history__slider(data-year=year)
+          +slider()(data-slider='{"0":{"items":1},"768":{"items":2},"992":{"items":3},"1200":{"items":4}}')
+            div.history__item: +card().card--sm
+              .card__head
+                .card__image(style='background-image: url(https://source.unsplash.com/random/380x213?random&1)')
+              .card__content
+                .card__title Заголовок новости #{year}
+                .card__text Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+
+            div.history__item: +card().card--sm
+              .card__head
+                .card__image(style='background-image: url(https://source.unsplash.com/random/380x213?random&1)')
+              .card__content
+                .card__title Заголовок новости
+                .card__text Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus.
+
+            div.history__item: +card().card--sm
+              .card__head
+                .card__image(style='background-image: url(https://source.unsplash.com/random/380x213?random&1)')
+              .card__content
+                .card__title Заголовок новости
+                .card__text Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+
+            div.history__item: +card().card--sm
+              .card__head
+                .card__image(style='background-image: url(https://source.unsplash.com/random/380x213?random&1)')
+              .card__content
+                .card__title Заголовок новости
+                .card__text Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus.
+
+            div.history__item: +card().card--sm
+              .card__head
+                .card__image(style='background-image: url(https://source.unsplash.com/random/380x213?random&1)')
+              .card__content
+                .card__title Заголовок новости
+                .card__text Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus.
+
+            div.history__item: +card().card--sm
+              .card__head
+                .card__image(style='background-image: url(https://source.unsplash.com/random/380x213?random&1)')
+              .card__content
+                .card__title Заголовок новости
+                .card__text Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus.
+
+            div.history__item: +card().card--sm
+              .card__head
+                .card__image(style='background-image: url(https://source.unsplash.com/random/380x213?random&1)')
+              .card__content
+                .card__title Заголовок новости
+                .card__text Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus.
+

@@ -1,0 +1,98 @@
+.fines
+  padding: 80px 0
+  background: $grey-bright
+  @media (max-width: $breakpoint-sm)
+    padding: 40px 0
+  &__title
+    text-align: center
+    margin-bottom: 15px
+
+  &__text
+    text-align: center
+    max-width: 580px
+    margin: 0 auto
+    font-size: 13px
+    line-height: 21px
+    @media (max-width: $breakpoint-sm)
+      font-size: 11px
+      line-height: 19px
+
+  &__slider
+    max-width: 580px
+    margin: 0 auto
+    position: relative
+    margin-top: 40px
+
+  &__item
+    border: 7px solid $grey-middle
+    padding: 40px
+    background: $white
+    text-align: center
+    @media (max-width: $breakpoint-sm)
+      padding: 30px
+
+  &__link
+    font-size: 15px
+    line-height: 21px
+    color: $blue
+    background-image: none
+    border-bottom: 1px solid $blue
+    padding-bottom: 1px
+    @media (max-width: $breakpoint-sm)
+      font-size: 11px
+      line-height: 19px
+
+  &__number
+    margin-top: 25px
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 25px
+    @media (max-width: $breakpoint-sm)
+      margin-top: 20px
+      font-size: 20px
+
+  &__arrows
+    display: flex
+    align-items: center
+    justify-content: center
+
+  &__arrow
+    position: absolute
+    bottom: 0
+    width: 180px
+    height: 50px
+    top: 50%
+    margin-top: -25px
+    display: block
+    background: #ffffff
+    border: 1px solid $grey-middle
+    anim()
+    @media (max-width: $breakpoint-sm)
+      margin-top: 10px
+      margin: 10px 5px 0
+      position: static
+      height: 40px
+      width: 70px
+
+    &:hover
+      border: 1px solid $blue
+
+    &--left
+      right: 100%
+      margin-right: 20px
+      @media (max-width: $breakpoint-sm)
+        margin-right: 5px
+      svg
+        transform: rotate(180deg)
+
+    &--right
+      left: 100%
+      margin-left: 20px
+      @media (max-width: $breakpoint-sm)
+        margin-left: 5px
+
+    svg
+      margin: 0 auto
+      display: block
+      width: 20px
+      height: 14px
+      fill: $blue
