@@ -57,6 +57,40 @@ a, .link
   &:hover
     color $blue
 
+ol
+  padding-left: 2em
+  margin-bottom: 2em
+
+  li
+    position: relative
+    margin-bottom: 1.5em
+    list-style decimal
+
+ul
+  padding-left: 1em
+  margin-bottom: 2em
+
+  li
+    position: relative
+    margin-bottom: 1.5em
+
+    &:before
+      content: '';
+      position: absolute;
+      width: .5em
+      height: .5em
+      background-color: #00a9e0;
+      top: .6em;
+      left: -1.2em;
+
+table
+  td
+    border: 1px solid #f7f7f7;
+    padding: .3em;
+
+p
+  margin-bottom: 1em
+
 .btn
   display: inline-block
   font-size: 11px
@@ -288,7 +322,7 @@ a, .link
     display: none
 
   &__input:checked ~ &__text:after
-      opacity: 1
+    opacity: 1
 
 .outlineTitle
   position: absolute
