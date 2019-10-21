@@ -1,0 +1,37 @@
+.estimate
+  padding: 80px 0
+  @media (max-width: $breakpoint-sm)
+    padding: 40px 0
+
+  &__container
+    background: #51bfdb
+    padding: 50px 0
+    display: flex;
+    align-items center
+    justify-content center
+    @media (max-width: $breakpoint-sm)
+      flex-direction column
+      padding: 30px 0
+
+  &__icon
+    fill: #fff
+    width: 40px
+    height: 45px
+
+  &__text
+    font-size: 35px
+    color: #ffffff
+    font-family: 'Bebas Neue', sans-serif;
+    font-weight: bold
+    padding-top: 10px
+    margin: 0 60px -0px 25px
+    @media (max-width: $breakpoint-sm)
+      margin: 10px 0
+
+  &__button
+    flex: 0
+    @media (max-width: $breakpoint-md)
+      padding: 0 65px
+    @media (max-width: $breakpoint-sm)
+      flex: auto
+      width: auto;

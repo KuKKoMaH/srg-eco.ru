@@ -4,7 +4,8 @@
 
 @import "destyle.css/destyle.css"
 @import "magnific-popup/dist/magnific-popup.css";
-@import "tiny-slider/dist/tiny-slider.css";
+@import "swiper/dist/css/swiper.css"
+//@import "tiny-slider/dist/tiny-slider.css";
 
 @import "stylus/_fonts.styl";
 @import "stylus/_vars.styl";
@@ -21,8 +22,9 @@ body
 h1, h2, h3, h4, h5, h6
   font-family: 'Bebas Neue', sans-serif;
   font-weight: bold
+  line-height: 1.15
 
-  a, .link
+  a, .link, span
     background-image: none;
     padding-bottom: 0
     border-bottom: 1px solid $blue
@@ -82,6 +84,18 @@ ul
       background-color: #00a9e0;
       top: .6em;
       left: -1.2em;
+
+blockquote
+  border-left: 7px solid $grey-dark
+  padding: 0 20px
+  font-style: italic
+  margin-bottom: 1em
+  @media (max-width: $breakpoint-sm)
+    border-left: 3px solid $grey-dark
+    padding: 0 10px
+
+  *:last-child
+    margin-bottom: 0
 
 table
   td
@@ -284,6 +298,16 @@ p
     height: 5px
     background: #49a6be
 
+  &--white
+    background: #ffffff
+    color: #50bfdb
+
+    &:after
+      background: #d3eff6
+
+    &:hover
+      color: #50bfdb
+
 .checkbox
   display: flex
 
@@ -352,9 +376,42 @@ p
 .greyBg
   background: $grey-bright
 
+.block
+  padding: 80px 0
+  @media (max-width: $breakpoint-lg)
+    padding: 40px 0
+
 .search
   &__item
     margin-top: 25px
+
+.toTop
+  position: fixed;
+  bottom: 20px
+  left: 50%
+  margin-left: 530px
+  background: #ffffff
+  @media (max-width: $breakpoint-lg)
+    left: auto
+    margin-left: 0
+    right: 10px
+
+  &:hover
+    svg
+      fill: #fff
+
+  svg
+    transform rotate(-90deg)
+    display: block
+    margin: 0 auto
+    width: 20px
+    height: 14px
+    fill: #50bfdb
+    anim()
+
+.frontTitle
+  text-align: center;
+  margin-bottom: 20px
 
 .hidden
   display: none
@@ -414,7 +471,8 @@ p
 @import "modules/newsCategories/newsCategories.styl"
 @import "modules/newsSingle/newsSingle.styl"
 @import "modules/clientsList/clientsList.styl"
-@import "modules/clientsMap/clientsMap.styl"
+@import "modules/clientsList/clientsCard.styl"
+//@import "modules/clientsMap/clientsMap.styl"
 @import "modules/eventsCalendar/eventsCalendar.styl"
 @import "modules/eventHead/eventHead.styl"
 @import "modules/eventButtons/eventButtons.styl"
@@ -435,12 +493,17 @@ p
 @import "modules/fines/fines.styl"
 @import "modules/workSteps/workSteps.styl"
 @import "modules/result/result.styl"
+@import "modules/result/resultPopup.styl"
 @import "modules/clientCard/clientCard.styl"
 @import "modules/clientsSlider/clientsSlider.styl"
 @import "modules/faq/faq.styl"
 @import "modules/breadcrumbs/breadcrumbs.styl"
 @import "modules/popup/popup.styl"
 @import "modules/popup/popupTeam.styl"
+@import "modules/notFound/notFound.styl"
+@import "modules/needs/needs.styl"
+@import "modules/includes/includes.styl"
+@import "modules/estimate/estimate.styl"
 
 @import "modules/photoswipe/photoswipe.styl"
 @import "modules/photoswipe/default-skin.styl"

@@ -1,0 +1,38 @@
+.includes
+  padding: 75px 0 50px
+  @media (max-width: $breakpoint-sm)
+    padding: 35px 10px
+
+  .c
+    display: flex;
+    align-items flex-start
+    @media (max-width: $breakpoint-sm)
+      flex-direction column
+
+  &__title
+    width: 500px
+    padding-right: 100px
+    text-align: right;
+    flex-shrink 0
+    @media (max-width: $breakpoint-md)
+      width: 350px
+    @media (max-width: $breakpoint-sm)
+      text-align: center;
+      width: 100%
+      padding-right: 0
+      margin-bottom: 35px
+
+  &__items
+    line-height: 1.6
+
+//li
+//&:after
+//  content: ''
+//  display: block;
+//  position: absolute;
+//  top: 0.6em;
+//  left: -1.2em;
+//  border: 1px solid #e8e8e8
+//  width: 1em
+//  height: 1em
+//

@@ -3,66 +3,51 @@
   @media (max-width: $breakpoint-sm)
     padding: 40px 0
 
-  &__header
-    display: flex
-    align-items: center
-    margin-bottom: 50px
-    @media (max-width: $breakpoint-sm)
-      flex-direction: column
-      margin-bottom: 20px
+  &__items
+    display: flex;
+    flex-wrap wrap
+    margin: 0 -10px
 
-  &__types
-    max-width 380px
+  &__item
+    width: 25%
+    padding: 10px
+    position: relative;
+    cursor: pointer;
+    background: none;
+    @media (max-width: $breakpoint-md)
+      width: 50%
+    @media (max-width: $breakpoint-sm)
+      width: 100%
+
+    &:hover
+      .clientsList
+        &__image
+          filter: grayscale(0)
+
+        &__text
+          color: #ffffff
+          background: #50bfdb
+
+  &__image
     width: 100%
-    @media (max-width: $breakpoint-sm)
-      margin-bottom: 20px
-
-  &__years
-    margin-left: auto
-    display: flex
-    @media (max-width: $breakpoint-sm)
-      position: static
-      margin-top: 0
-      flex-wrap: wrap
-      align-items: center
-      justify-content: center
-
-  &__year
-    position: relative
-    margin-right: 8px
-    padding: 5px 6px 6px
-    background-image: none
+    height: 280px
+    filter: grayscale(100%)
+    background-position: 50% 50%
+    background-size: cover
     anim()
+    transform: translateZ(0)
     @media (max-width: $breakpoint-sm)
-      margin: 0 8px 13px
+      filter: grayscale(0)
 
-    &:after
-      content: ''
-      display: block
-      position: absolute
-      top: 100%
-      left: 50%
-      margin-left: -5px
-      width: 0;
-      height: 0;
-      border-style: solid;
-      border-width: 0px 5px 0 5px;
-      border-color: #50beda transparent transparent transparent;
-      anim()
-
-    &--active
-      background: $blue
-      color: $white
-
-      .link
-        color: $white
-
-      &:after
-        border-width: 5px 5px 0 5px;
-
-    .link
-      padding-bottom: 3px
-
+  &__text
+    position: absolute;
+    bottom: 30px
+    left: 30px
+    background: #ffffff
+    font-family: 'Bebas Neue Book', sans-serif
+    font-size: 24px
+    padding 8px 10px 2px 10px
+    anim()
 
   &__more
     padding-top: 30px

@@ -8,22 +8,48 @@ include ../slider/slider
         .result__text
           p В процессе оказания услуг Заказчику оказывается консультация на всех этапах работы. В итогу заказчик получает полный пакет документов.
       .result__aside
-        +slider()(data-slider='{"0":{"items":1}}')
-          .result__item: +card()
+        +slider()(data-slider='{"0":{"slidesPerView":1}}')
+          a.result__item.slider__slide.popup__opener(href='#resultPopup'): +card()
             img.result__image(src="modules/licenses/1.png")
             .result__name НАЗВАНИЕ ДОКУМЕНТА 1
-          .result__item: +card()
+          .result__item.slider__slide: +card()
             img.result__image(src="modules/licenses/1.png")
             .result__name НАЗВАНИЕ ДОКУМЕНТА 2
-          .result__item: +card()
+          .result__item.slider__slide: +card()
             img.result__image(src="modules/licenses/1.png")
             .result__name НАЗВАНИЕ ДОКУМЕНТА 3
-          .result__item: +card()
+          .result__item.slider__slide: +card()
             img.result__image(src="modules/licenses/1.png")
             .result__name НАЗВАНИЕ ДОКУМЕНТА 4
-          .result__item: +card()
+          .result__item.slider__slide: +card()
             img.result__image(src="modules/licenses/1.png")
             .result__name НАЗВАНИЕ ДОКУМЕНТА 5
-          .result__item: +card()
+          .result__item.slider__slide: +card()
             img.result__image(src="modules/licenses/1.png")
             .result__name НАЗВАНИЕ ДОКУМЕНТА 6
+
+.hidden
+  #resultPopup.resultPopup
+    .resultPopup__license
+      +card()
+        img.result__image(src="modules/licenses/1.png")
+        .result__name НАЗВАНИЕ ДОКУМЕНТА 1
+    .resultPopup__form
+      h2.form__title СКАЧАЙТЕ ДОКУМЕНТ, ЧТОБЫ ОН ВСЕГДА БЫЛ ПОД РУКОЙ
+      .form__row
+        .form__input.input
+          label.input__label Ваше имя*
+          input.input__input
+      .form__row
+        .form__input.input
+          label.input__label Ваш email*
+          input.input__input
+
+      .form__row
+        label.checkbox
+          input.checkbox__input(type="checkbox")
+          .checkbox__text Я согласен(а) на #[a(href="/politika-konfidencialnosti/") обработку персональных данных]
+
+      .form__row
+        button.bigBtn СКАЧАТЬ
+

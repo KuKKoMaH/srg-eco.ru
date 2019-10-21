@@ -1,0 +1,83 @@
+.notFound
+  height: 100vh
+  min-height 580px
+  display: flex;
+  flex-direction column
+  @media (max-width: $breakpoint-sm)
+    min-height 300px
+  &__inner
+    flex 1
+    display: flex;
+    flex-direction column
+    justify-content center
+
+  &__content
+    display: flex;
+    align-items center
+    margin-bottom: 115px
+    @media (max-width: $breakpoint-sm)
+      flex-direction column
+      margin-bottom: 30px
+
+  &__logo
+    display: block;
+    margin-bottom: 42px
+    @media (max-width: $breakpoint-sm)
+      margin: 0 auto
+      margin-bottom: 15px
+
+  &__message
+    font-size: 13px
+    line-height: 1.6
+    max-width 240px
+    @media (max-width: $breakpoint-sm)
+      font-size: 9px
+      margin-bottom: 20px
+      text-align: center;
+      max-width 480px
+
+  &__center
+    text-align: center;
+    flex: 1
+    @media (max-width: $breakpoint-sm)
+      margin-bottom: 20px
+
+  &__title
+    font-family: 'Montserrat', sans-serif;
+    font-size: 160px
+    color: #50bfdb
+    font-weight: 300
+    @media (max-width: $breakpoint-sm)
+      font-size: 100px
+
+  &__subtitle
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400
+    font-size: 13px
+    @media (max-width: $breakpoint-sm)
+      font-size: 11px
+
+  &__right
+    flex-shrink 0
+
+  &__menu
+    font-size: 13px
+    font-weight: 500;
+    @media (max-width: $breakpoint-sm)
+      text-align: center;
+      font-size: 11px
+
+    ul
+      padding: 0
+
+    li
+      &:before
+        display: none;
+
+  &__search
+    width: 100%
+
+  &__image
+    width: 100%
+    height: auto;
+    border-bottom: 10px solid #50bfdb

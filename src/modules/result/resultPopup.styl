@@ -1,0 +1,33 @@
+.resultPopup
+  max-width 625px
+  margin: 0 auto;
+  background: #fff;
+  position: relative;
+  border: 7px solid #e8e8e8;
+  padding: 50px
+  display: flex;
+  align-items flex-start
+  @media (max-width: $breakpoint-sm)
+    flex-direction column-reverse
+    align-items center
+    padding: 30px
+
+  &__license
+    height: 312px
+    width: 180px
+    flex-shrink 0
+    margin-right: 45px
+    @media (max-width: $breakpoint-sm)
+      margin-right: 0
+      margin-top: 30px
+
+  &__form
+    @media (max-width: $breakpoint-sm)
+      width: 100%
+
+    & .form
+      &__title
+        text-align: left;
+
+      &__input
+        margin-right: 0

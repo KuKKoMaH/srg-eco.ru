@@ -5,10 +5,12 @@
     padding: 40px 0
 
   &--slider
+    overflow: hidden;
     @media (max-width: $breakpoint-sm)
       padding: 40px 0 40px
       & ^[0]__items
-        display: block
+        display: flex
+        flex-direction row
       & ^[0]__item
         margin-bottom: 0
 
@@ -45,6 +47,7 @@
       margin: 0
 
   &__item
+    flex-shrink 0
     display: block
     position: relative
     width: 33.33333%

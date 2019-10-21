@@ -12,7 +12,8 @@ import './modules/relatedEvents/relatedEvents';
 import './modules/slider/slider';
 import './modules/history/history';
 import './modules/team/team';
-import './modules/clientsMap/clientsMap';
+import './modules/clientsList/clientsList';
+// import './modules/clientsMap/clientsMap';
 import './modules/eventsCalendar/eventsCalendar';
 import './modules/cardsList/cardsList';
 import './modules/eventProgram/eventProgram';
@@ -48,7 +49,10 @@ window.showThanks = (text) => {
 };
 
 const $searchContainer = $('.w');
-if($searchContainer.length) {
+if (window.SEARCH_TERM && $searchContainer.length) {
   $searchContainer.mark(window.SEARCH_TERM);
-
 }
+
+$('.toTop').on('click', () => {
+  window.smoothscroll.animateScroll(0)
+});

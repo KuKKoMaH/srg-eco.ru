@@ -63,6 +63,7 @@
 
   &__gallery
     padding: 0 30px 30px
+    overflow: hidden;
 
   &__gallery-items
     display: flex
@@ -70,8 +71,11 @@
     margin: 0 -10px -20px
     @media (max-width: $breakpoint-sm)
       margin: 0
+      flex-wrap: nowrap
 
   &__image
+    display: block;
+    flex-shrink 0
     width: 25%
     padding: 0 10px
     background-image: none

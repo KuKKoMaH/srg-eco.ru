@@ -1,0 +1,89 @@
+.needs
+  position: relative;
+  background-color: #000
+  background-position: 50% 50%
+  background-size: cover
+  padding: 75px 0 60px
+  @media (max-width: $breakpoint-sm)
+    padding: 35px 0 20px
+
+  &:before,
+  &:after
+    content: ''
+    display: block
+    position: absolute
+    left: 0
+    top: 0
+    width: 100%
+    height: 100%
+
+  &:before
+    background: url('data:image/gif;base64,R0lGODlhDAAMAPABAP///wAAACH5BAUAAAEALAAAAAAMAAwAAAILRI6py+0Po5y0sgIAOw==')
+    opacity: .25
+    @media (max-width: $breakpoint-sm)
+      opacity: .5
+
+  &:after
+    background: linear-gradient(to right, rgba($black, 1) 0%, rgba($black, 0) 100%)
+    opacity: .5
+    @media (max-width: $breakpoint-sm)
+      background: #282828 linear-gradient(to top, rgba($black, 1) 0%, rgba($black, 0) 100%)
+
+  &__title
+    position: relative;
+    z-index: 1
+    text-align: center;
+    color: #ffffff
+    margin-bottom: 55px
+    @media (max-width: $breakpoint-sm)
+      margin-bottom: 30px
+
+  &__items
+    display: flex
+    flex-wrap: wrap
+    margin: 0 -10px
+    align-items: stretch
+    justify-content: center
+    position: relative;
+    z-index: 1
+    @media (max-width: $breakpoint-sm)
+      margin: 0
+      //flex-direction: column
+      align-items: center
+
+  &__item
+    width: 25%
+    min-height: 180px
+    display: flex
+    flex-direction: column
+    @media (max-width: $breakpoint-sm)
+      width: 50%
+      min-height: auto
+      padding: 0
+      margin-bottom: 15px
+
+    .card__inner
+      background: $white
+
+  &__image
+    height: 110px
+    display: flex
+    align-items: center
+    justify-content: center
+    @media (max-width: $breakpoint-sm)
+      height: 100px
+
+  &__text
+    color: #ffffff
+    text-align: center
+    font-size: 15px
+    line-height: 1.55
+    flex: 1
+    display: flex
+    align-items center
+    justify-content center
+    padding: 0 10px 10px
+    @media (max-width: $breakpoint-sm)
+      font-size: 11px
+      br
+        display: none

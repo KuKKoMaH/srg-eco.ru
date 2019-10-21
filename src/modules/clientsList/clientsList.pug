@@ -2,25 +2,62 @@ include ../clientCard/clientCard
 
 .clientsList
   .c
-    .clientsList__header
-      .clientsList__types
-        select.select
-          option Все направления
-          option(value='1') Сопровождение строительных проектов
-          option(value='2') Финансовый и юридический консалтинг
-          option(value='3') Консалтинг в области недвижимости
-      .clientsList__years
-        .clientsList__year(data-year='2013'): .link 2013
-        .clientsList__year(data-year='2014'): .link 2014
-        .clientsList__year(data-year='2015'): .link 2015
-        .clientsList__year(data-year='2016'): .link 2016
-        .clientsList__year(data-year='2017'): .link 2017
-        .clientsList__year(data-year='2018'): .link 2018
-        .clientsList__year.clientsList__year--active(data-year='2019'): .link 2019
-
     .clientsList__items
-      +clientCard()
-      +clientCard()
-      +clientCard()
-      
+      a.clientsList__item(onclick='openClientCard("#clientCard")')
+        .clientsList__image(style='background-image: url(https://source.unsplash.com/random/280x280?random&1)')
+        .clientsList__text ПАО «ИЛ»
+      a.clientsList__item(onclick='openClientCard("#clientCard")')
+        .clientsList__image(style='background-image: url(https://source.unsplash.com/random/280x280?random&2)')
+        .clientsList__text АО «МУЛТОН»
+      a.clientsList__item(onclick='openClientCard("#clientCard")')
+        .clientsList__image(style='background-image: url(https://source.unsplash.com/random/280x280?random&3)')
+        .clientsList__text ООО «БЭСТ ПРАЙС»
+      a.clientsList__item(onclick='openClientCard("#clientCard")')
+        .clientsList__image(style='background-image: url(https://source.unsplash.com/random/280x280?random&4)')
+        .clientsList__text АО «СОГАЗ»
+      a.clientsList__item(onclick='openClientCard("#clientCard")')
+        .clientsList__image(style='background-image: url(https://source.unsplash.com/random/280x280?random&5)')
+        .clientsList__text ООО «БЭСТ ПРАЙС»
+      a.clientsList__item(onclick='openClientCard("#clientCard")')
+        .clientsList__image(style='background-image: url(https://source.unsplash.com/random/280x280?random&6)')
+        .clientsList__text АО «СОГАЗ»
+
     .clientsList__more: button.link ЗАГРУЗИТЬ ЕЩЕ
+
+.hidden
+  #clientCard.clientsCard
+    .clientsCard__image(data-image='https://source.unsplash.com/random/665x375?random&1')
+      .clientsCard__head
+        .clientsCard__title АО «СОГАЗ»
+        .clientsCard__subtitle Местоположение Местоположение
+    .clientsCard__body
+      .clientsCard__h
+        svg.clientsCard__arrow: use(xlink:href="#chevron_left")
+        | ОБЪЕКТ:
+      .clientsCard__p: .clientsCard__p-inner
+        p Ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec.
+        p Ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec.
+
+      .clientsCard__h
+        svg.clientsCard__arrow: use(xlink:href="#chevron_left")
+        | ЦЕЛЬ:
+      .clientsCard__p: .clientsCard__p-inner
+        p Cum sociis natoque penatibu
+
+      .clientsCard__h
+        svg.clientsCard__arrow: use(xlink:href="#chevron_left")
+        | СРОКИ:
+      .clientsCard__p: .clientsCard__p-inner
+        p Sit amet, consectetuer
+
+      .clientsCard__h
+        svg.clientsCard__arrow: use(xlink:href="#chevron_left")
+        | ВЫПОЛНЕННЫЕ РАБОТЫ:
+      .clientsCard__p: .clientsCard__p-inner
+        p Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec.Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
+
+      .clientsCard__h
+        svg.clientsCard__arrow: use(xlink:href="#chevron_left")
+        | РЕЗУЛЬТАТЫ:
+      .clientsCard__p: .clientsCard__p-inner
+        p Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.

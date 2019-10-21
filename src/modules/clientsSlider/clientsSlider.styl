@@ -1,16 +1,22 @@
 .clientsSlider
   padding: 80px 0
-  background: $grey-bright
   @media (max-width: $breakpoint-sm)
     padding: 40px 0
   &__inner
     position: relative
+    overflow: hidden;
 
   &__title
     margin-bottom: 40px
     @media (max-width: $breakpoint-sm)
       text-align: center
       margin-bottom: 35px
+
+  &__items
+    display: flex;
+
+  &__item
+    flex-shrink 0
 
   &__arrows
     position: absolute

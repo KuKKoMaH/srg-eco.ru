@@ -1,0 +1,97 @@
+.clientsCard
+  border: 7px solid #e8e8e8
+  max-width 680px
+  width: 100%
+  margin: 0 auto;
+  background: #fff;
+  position: relative;
+
+  &__image
+    position: relative;
+    height: 375px
+    background-size cover
+    background-position: 50% 50%
+    @media (max-width: $breakpoint-sm)
+      height: 170px
+
+  &__head
+    position: absolute;
+    bottom: 30px
+    left: 30px
+    @media (max-width: $breakpoint-sm)
+      bottom: 20px
+      left: 20px
+
+  &__title
+    display: inline-block
+    font-family: 'Bebas Neue Book', sans-serif
+    font-size: 40px
+    line-height: 1.2
+    background: #51bfdb
+    color: #ffffff
+    padding: 9px 10px 0px 10px
+    @media (max-width: $breakpoint-sm)
+      padding-top: 6px
+      font-size: 24px
+
+  &__subtitle
+    font-size: 15px
+    color: #ffffff
+    margin-top: 12px
+    @media (max-width: $breakpoint-sm)
+      font-size: 11px
+
+  &__body
+    padding: 45px 48px
+    @media (max-width: $breakpoint-sm)
+      padding: 18px 20px
+
+    > *
+      &:first-child
+        margin-top: 0
+
+      &:last-child
+        margin-bottom: 0
+
+  &__arrow
+    display: none;
+    @media (max-width: $breakpoint-sm)
+      display: block;
+      position: absolute;
+      transform rotate(180deg)
+      height: 9px
+      width: 4px
+      fill #50bfdb
+      left: 2px
+      top: 2px
+      anim()
+
+  &__h
+    color: #50bfdb
+    font-weight: bold;
+    font-size: 15px
+    margin: 35px 0 13px
+    @media (max-width: $breakpoint-sm)
+      font-size: 11px
+      margin: 10px 0 6px
+      cursor: pointer;
+      position: relative;
+      padding-left: 13px
+
+      &--active
+        & .clientsCard__arrow
+          transform rotate(270deg)
+
+  &__p
+    line-height: 1.6
+    @media (min-width: $breakpoint-sm + 1)
+      max-height none !important
+    @media (max-width: $breakpoint-sm)
+      max-height 0
+      overflow: hidden;
+      anim()
+
+  p
+    line-height 1.55
+    @media (max-width: $breakpoint-sm)
+      font-size: 9px

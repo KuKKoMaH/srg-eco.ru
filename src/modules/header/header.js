@@ -97,47 +97,27 @@ function hideSearch() {
 /* ================================================ */
 /* Меню */
 /* ================================================ */
-const $menu        = $('.menu');
-const $menuTrigger = $('.menu__trigger');
-const $menuContent = $('.menu__content');
-let menuVisible    = false;
+const $menuContainer = $('.menu__container');
+const $menu          = $('.menu');
+const $menuToggle    = $('.menu__toggle');
 
-$menuTrigger.on('click', () => toggleMenu());
+const isMenuVisible = () => $menuToggle.prop('checked');
 
 $body.on('click', (e) => {
   const $target = $(e.target);
-  if (!$target.closest($menuContent).length) {
+  if (!$target.closest($menuContainer).length) {
     hideMenu();
   }
 });
 
-function toggleMenu() {
-  if (menuVisible) {
-    hideMenu();
-  } else {
-    showMenu();
-  }
-}
-
 function showMenu() {
-  if (menuVisible) return;
-  $menu.addClass('menu--active');
-  $menuTrigger.addClass('menu__trigger--active');
-
-  setTimeout(() => {
-    $menu.addClass('menu--visible');
-    menuVisible = true;
-  }, 0);
+  if (isMenuVisible()) return;
+  $menuToggle.prop('checked', true);
 }
 
 function hideMenu() {
-  if (!menuVisible) return;
-  $menu.removeClass('menu--visible');
-  $menu.one('transitionend', () => {
-    $menu.removeClass('menu--active');
-  });
-  $menuTrigger.removeClass('menu__trigger--active');
-  menuVisible = false;
+  if (!isMenuVisible()) return;
+  $menuToggle.prop('checked', false);
 }
 
 $menu.find('a[href*="#"]').on('click', () => hideMenu());

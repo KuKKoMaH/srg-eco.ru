@@ -4,16 +4,16 @@ include ../card/card
 .eventPartners
   .c
     h2.outlineTitle.eventPartners__title ПАРТНЕРЫ СЕМИНАРА
-    +slider()(data-slider='{"0":{"items":2, "gutter":10},"768":{"items":2, "gutter":20},"992":{"items":3},"1200":{"items":4}}')
-      .eventPartners__item: +card()
+    +slider()(data-slider='{"0":{"slidesPerView":2, "spaceBetween":10},"768":{"slidesPerView":2, "spaceBetween":20},"992":{"slidesPerView":3},"1200":{"slidesPerView":4}}')
+      .eventPartners__item.slider__slide: +card()
         img.eventPartners__image.card__image(src="modules/clients/1.png")
         .eventPartners__text ГАЗПРОМ
-      .eventPartners__item: +card()
+      .eventPartners__item.slider__slide: +card()
         img.eventPartners__image.card__image(src="modules/clients/2.png")
         .eventPartners__text МТС
-      .eventPartners__item: +card()
+      .eventPartners__item.slider__slide: +card()
         img.eventPartners__image.card__image(src="modules/clients/3.png")
         .eventPartners__text ADIDAS
-      .eventPartners__item: +card()
+      .eventPartners__item.slider__slide: +card()
         img.eventPartners__image.card__image(src="modules/clients/4.png")
         .eventPartners__text LEROY MERLIN

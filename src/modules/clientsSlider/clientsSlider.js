@@ -1,17 +1,19 @@
-import { tns } from "tiny-slider/src/tiny-slider";
+import Swiper from '../../js/swiper';
 
 const $container = $('.clientsSlider');
 
 if ($container.length) {
-  tns({
-    container:  $container.find('.clientsSlider__items')[0],
-    prevButton: $container.find('.clientsSlider__arrow--left')[0],
-    nextButton: $container.find('.clientsSlider__arrow--right')[0],
-    items:      1,
-    swipeAngle: false,
-    speed:      400,
-    nav:        false,
-    gutter:     20,
-    // "autoHeight": true,
+  new Swiper($container.find('.c')[0], {
+    wrapperClass:      'clientsSlider__items',
+    slideClass:        'clientsSlider__item',
+    navigation:        {
+      prevEl: $container.find('.clientsSlider__arrow--left')[0],
+      nextEl: $container.find('.clientsSlider__arrow--right')[0],
+    },
+    touchEventsTarget: 'wrapper',
+    slidesPerView:     1,
+    spaceBetween:      20,
+    loop:              true,
+    speed:             400,
   });
 }

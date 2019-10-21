@@ -1,6 +1,7 @@
 .relatedEvents
   position: relative
   padding: 80px 0
+  overflow hidden
   @media (max-width: $breakpoint-sm)
     padding: 40px 0
 
@@ -28,6 +29,12 @@
 
   &__slider
     position: relative
+
+  &__slides
+    display: flex;
+
+  &__item
+    flex-shrink 0
 
   &__slide
     height: 430px

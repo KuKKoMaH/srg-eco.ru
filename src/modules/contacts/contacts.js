@@ -1,4 +1,4 @@
-import { tns }      from "tiny-slider/src/tiny-slider";
+import Swiper       from '../../js/swiper';
 import Breakpoints  from 'breakpoints-js';
 import scriptLoader from '../../js/scriptLoader';
 import initGallery  from '../../js/initGallery';
@@ -35,20 +35,23 @@ $('.contacts__gallery').each((i, el) => {
 
   const initSliders = () => {
     destroySlider();
-    slider = tns({
-      container : $el.find('.contacts__gallery-items')[0],
-      prevButton: $el.find('.contacts__arrow--left')[0],
-      nextButton: $el.find('.contacts__arrow--right')[0],
-      items     : 1,
-      swipeAngle: false,
-      speed     : 400,
-      nav       : false,
-      gutter    : 20,
+    slider = new Swiper(el, {
+      wrapperClass:      'contacts__gallery-items',
+      slideClass:        'contacts__image',
+      navigation:        {
+        prevEl: $el.find('.contacts__arrow--left')[0],
+        nextEl: $el.find('.contacts__arrow--right')[0],
+      },
+      touchEventsTarget: 'wrapper',
+      slidesPerView:     1,
+      spaceBetween:      20,
+      loop:              true,
+      speed:             400,
     });
   };
 
   const destroySlider = () => {
-    if (slider) slider.destroy();
+    if (slider) slider.destroy(true, true);
     slider = null;
   };
 
@@ -70,11 +73,11 @@ if ($maps.length) {
         zoom   = +zoom;
 
         const map = new google.maps.Map(el, {
-          zoom                    : zoom,
-          center                  : new google.maps.LatLng(center[0], center[1]),
+          zoom:                     zoom,
+          center:                   new google.maps.LatLng(center[0], center[1]),
           // styles:                   mapStyles,
-          mapTypeControl          : false,
-          streetViewControl       : false,
+          mapTypeControl:           false,
+          streetViewControl:        false,
           fullscreenControlOptions: {
             position: google.maps.ControlPosition.RIGHT_BOTTOM
           }
@@ -82,7 +85,7 @@ if ($maps.length) {
 
         const marker = new google.maps.Marker({
           position: new google.maps.LatLng(center[0], center[1]),
-          map     : map,
+          map:      map,
         });
       } catch (e) {
         console.log(e);

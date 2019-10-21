@@ -1,19 +1,40 @@
 mixin clientCard()
   .clientCard
-    .clientCard__image
-      img(src='modules/clients/1.png')
-      .clientCard__name Газпром
+    .clientCard__image(style='background-image: url(https://source.unsplash.com/random/280x280?random&1)')
+      .clientsCard__head
+        .clientsCard__title АО «СОГАЗ»
+        .clientsCard__subtitle Местоположение Местоположение
+
     .clientCard__content
-      .clientCard__date 01 июня 2016
-      .clientCard__title ЧТО БЫЛО СДЕЛАНО ПРО ПРОЕКТУ
-      .clientCard__text
-        p Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt.
-      .clientCard__footer
-        .clientCard__row
-          a.clientCard__link.clientCard__link--testimonial(href='#') ОТЗЫВ
-          a.clientCard__link.clientCard__link--video(href='#') ВИДЕО
-        .clientCard__row
-          a.clientCard__social(href='#'): svg: use(xlink:href="#vk")
-          a.clientCard__social(href='#'): svg: use(xlink:href="#fb")
-          a.clientCard__social(href='#'): svg: use(xlink:href="#ok")
-          a.clientCard__social(href='#'): svg: use(xlink:href="#mail")
+      .clientsCard__body
+        .clientsCard__h
+          svg.clientsCard__arrow: use(xlink:href="#chevron_left")
+          | ОБЪЕКТ:
+        .clientsCard__p: .clientsCard__p-inner
+          p Ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec.
+          p Ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec.
+
+        .clientsCard__h
+          svg.clientsCard__arrow: use(xlink:href="#chevron_left")
+          | ЦЕЛЬ:
+        .clientsCard__p: .clientsCard__p-inner
+          p Cum sociis natoque penatibu
+
+        .clientsCard__h
+          svg.clientsCard__arrow: use(xlink:href="#chevron_left")
+          | СРОКИ:
+        .clientsCard__p: .clientsCard__p-inner
+          p Sit amet, consectetuer
+
+        .clientsCard__h
+          svg.clientsCard__arrow: use(xlink:href="#chevron_left")
+          | ВЫПОЛНЕННЫЕ РАБОТЫ:
+        .clientsCard__p: .clientsCard__p-inner
+          p Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec.Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
+
+        .clientsCard__h
+          svg.clientsCard__arrow: use(xlink:href="#chevron_left")
+          | РЕЗУЛЬТАТЫ:
+        .clientsCard__p: .clientsCard__p-inner
+          p Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+

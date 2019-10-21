@@ -5,25 +5,25 @@ mixin licenses(title, link)
   .licenses
     h2.outlineTitle=title
     .c
-      +slider()(data-slider='{"0":{"items":2, "gutter":10},"768":{"items":3, "gutter":20},"992":{"items":4},"1200":{"items":5}}')
-        a.licenses__item(href='/modules/licenses/1.png' data-index=0 data-width=1550 data-height=220): +card()
+      +slider()(data-slider='{"0":{"slidesPerView":2, "spaceBetween":10},"768":{"slidesPerView":3, "spaceBetween":20},"992":{"slidesPerView":4},"1200":{"slidesPerView":5}}')
+        a.licenses__item.slider__slide(href='/modules/licenses/1.png' data-index=0 data-width=1550 data-height=220): +card()
           img.licenses__image.card__image(src="modules/licenses/1.png")
           .licenses__text НАЗВАНИЕ ДОКУМЕНТА 1
-        a.licenses__item(href='/modules/licenses/1.png' data-index=1 data-width=155 data-height=220): +card()
+        a.licenses__item.slider__slide(href='/modules/licenses/1.png' data-index=1 data-width=155 data-height=220): +card()
           img.licenses__image.card__image(src="modules/licenses/1.png")
           .licenses__text НАЗВАНИЕ ДОКУМЕНТА 2
-        a.licenses__item(href='/modules/licenses/1.png' data-index=2 data-width=155 data-height=220): +card()
+        a.licenses__item.slider__slide(href='/modules/licenses/1.png' data-index=2 data-width=155 data-height=220): +card()
           img.licenses__image.card__image(src="modules/licenses/1.png")
           .licenses__text НАЗВАНИЕ ДОКУМЕНТА 3
-        a.licenses__item(href='/modules/licenses/1.png' data-index=3 data-width=155 data-height=220): +card()
+        a.licenses__item.slider__slide(href='/modules/licenses/1.png' data-index=3 data-width=155 data-height=220): +card()
           img.licenses__image.card__image(src="modules/licenses/1.png")
           .licenses__text НАЗВАНИЕ ДОКУМЕНТА 4
-        a.licenses__item(href='/modules/licenses/1.png' data-index=4 data-width=155 data-height=220): +card()
-          img.licenses__image.card__image(src="modules/licenses/1.png")
-          .licenses__text НАЗВАНИЕ ДОКУМЕНТА 5
-        a.licenses__item(href='/modules/licenses/1.png' data-index=5 data-width=155 data-height=220): +card()
-          img.licenses__image.card__image(src="modules/licenses/1.png")
-          .licenses__text НАЗВАНИЕ ДОКУМЕНТА 6
+        //a.licenses__item.slider__slide(href='/modules/licenses/1.png' data-index=4 data-width=155 data-height=220): +card()
+        //  img.licenses__image.card__image(src="modules/licenses/1.png")
+        //  .licenses__text НАЗВАНИЕ ДОКУМЕНТА 5
+        //a.licenses__item.slider__slide(href='/modules/licenses/1.png' data-index=5 data-width=155 data-height=220): +card()
+        //  img.licenses__image.card__image(src="modules/licenses/1.png")
+        //  .licenses__text НАЗВАНИЕ ДОКУМЕНТА 6
 
       if(link)
         .licenses__link: a(href='#')=link
