@@ -85,6 +85,10 @@
         align-items: center
         position: relative
 
+        &.current-menu-ancestor, &.current-menu-item
+          > a
+            color: $blue
+
         &.menu-item-has-children
           &.menu-item-active
             &:before
@@ -160,6 +164,7 @@
           z-index: 1
           white-space: nowrap
           anim()
+
 
           &:not(:hover)
             background-image: none
