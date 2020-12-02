@@ -1,0 +1,71 @@
+.registerForm
+  margin: 7em 0
+  padding: 80px 0
+  width: 100vw
+  margin-left: 50%
+  transform translateX(-50%)
+  background: #eeeeee
+  display: flex;
+  align-items center
+  @media (max-width: $breakpoint-lg)
+    width: auto;
+    transform none
+    margin-left: -10px
+    margin-right: -10px
+  @media (max-width: $breakpoint-sm)
+    margin: 3em -20px
+    padding: 35px 0
+
+  &__row
+    display: flex;
+    align-items flex-start
+    @media (max-width: $breakpoint-sm)
+      flex-direction column
+
+  &__content
+    flex: 1
+    padding-top: 35px
+    padding-right: 100px
+    @media (max-width: $breakpoint-sm)
+      padding: 0
+
+  &__aside
+    width: 480px
+    @media (max-width: $breakpoint-sm)
+      width: 100%
+      min-height 300px
+      margin-top: 30px
+
+  &__label
+    margin-bottom: 10px
+    font-size: 1.15em
+    @media (max-width: $breakpoint-sm)
+      font-size: 1em
+      margin-bottom: 15px
+
+  &__title
+    font-size: 50px
+    @media (max-width: $breakpoint-sm)
+      font-size: 33px
+
+  &__text
+    margin-top: 20px
+    //font-size: .85em
+    @media (max-width: $breakpoint-sm)
+      margin-top: 10px
+
+  &__date
+    //font-size: .85em;
+    margin-top: 50px
+    @media (max-width: $breakpoint-sm)
+      margin-top: 10px
+
+  &__icon
+    margin-right: 12px
+    display: inline-block;
+    vertical-align: middle;
+
+    svg
+      fill: #00b2e0;
+      width: 24px
+      height: 24px

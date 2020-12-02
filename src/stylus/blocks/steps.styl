@@ -1,0 +1,53 @@
+.steps
+  margin: 2em 0
+  display: flex;
+  flex-wrap wrap
+  justify-content space-between
+  @media (max-width: $breakpoint-sm)
+    margin: 2em 0
+    flex-direction column
+
+  &__item
+    //width: 33.3333%
+    max-width 300px
+    width: 100%
+    padding: 10px 0
+    @media (max-width: $breakpoint-sm)
+      width: 100%
+      max-width 100%
+      padding: 0 0 20px 0
+
+  &__header
+    display: flex;
+    align-items center
+    max-width 300px
+
+  &__number
+    width: 80px
+    height: 80px
+    background: #00b2e0
+    color: #ffffff
+    font-size: 35px
+    font-family: 'Bebas Neue', sans-serif;
+    display: flex;
+    align-items center
+    justify-content center
+    margin-right: 20px
+    flex-shrink 0
+    //@media (max-width: $breakpoint-sm)
+    //  width: 50px
+    //  height: 50px
+    //  font-size: 25px
+    //  margin-right: 10px
+
+  &__title
+    font-size: 1.1em
+    font-weight: 600
+
+  &__sub
+    font-size: .85em
+    opacity: .6
+    margin-top: 15px
+    max-width 280px
+    @media (max-width: $breakpoint-sm)
+      margin-top: 10px

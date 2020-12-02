@@ -1,0 +1,45 @@
+.speaker
+  margin: 7em 0
+  position: relative;
+  padding-right: 350px
+  @media (max-width: $breakpoint-sm)
+    padding-right: 0
+    margin: 3em 0px
+
+  &__name
+    font-size: 1.25em
+
+    b
+      font-weight: 600
+      color: #00b2e0
+
+  &__description
+    margin-top: 2em
+
+    &:before
+      content: ''
+      display: block;
+      width: 180px
+      height: 1px
+      background: #e8e8e8
+      margin-bottom: 2em
+      //margin-left: -1em
+
+  &__image
+    position: absolute;
+    right: 75px
+    top: 0
+    @media (max-width: $breakpoint-sm)
+      position: relative;
+      margin: 0 auto
+      right: 0
+      text-align: center;
+
+    //&:after
+    //  content: ''
+    //  position: absolute;
+    //  left: 0
+    //  top: 0
+    //  right: 0
+    //  bottom: -5px
+    //  background: linear-gradient(to top, rgba(#fff, 1), rgba(#fff, 0) 50%);

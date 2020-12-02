@@ -19,8 +19,9 @@ html
 
 body
   overflow-x: hidden
+  overflow-anchor: none;
 
-h1, h2, h3, h4, h5, h6
+h1, h2, h3, h4, h5, h6, .title
   font-family: 'Bebas Neue', sans-serif;
   font-weight: bold
   line-height: 1.15
@@ -138,7 +139,27 @@ p
 
     &:hover
       color: $blue
+      //background: #fff;
       background: transparent
+
+  &--block
+    width: 100%
+    display: block;
+
+  &--big
+    padding: 14px 14px 14px
+    font-size: 14px
+    letter-spacing .05em
+    @media (max-width: $breakpoint-sm)
+      font-size: 12px
+
+  &--yellow
+    background: #f0bc5e
+    border-color #f0bc5e
+    color: #000000
+
+    &:hover
+      border-color $blue
 
 .input
   &__label
@@ -456,6 +477,27 @@ p
   top: 0
   left: 0
 
+.content
+  font-size: 16px
+  line-height: 1.65
+  padding-top: 120px
+  padding-bottom: 120px
+  @media (max-width: $breakpoint-sm)
+    padding-top: 120px
+    padding-bottom: 120px
+    font-size: 13px
+  //line-height: 1.75
+
+  h1, h2, h3, h4, h5, h6
+    margin-bottom: .75em
+    @media (max-width: $breakpoint-sm)
+      margin-bottom: 1em
+
+  p
+    @media (max-width: $breakpoint-sm)
+      margin-bottom: 3em
+
+
 @import "modules/header/header.styl"
 @import "modules/header/search.styl"
 @import "modules/header/menu.styl"
@@ -483,7 +525,8 @@ p
 @import "modules/clientsList/clientsList.styl"
 @import "modules/clientsList/clientsCard.styl"
 //@import "modules/clientsMap/clientsMap.styl"
-@import "modules/eventsCalendar/eventsCalendar.styl"
+//@import "modules/eventsCalendar/eventsCalendar.styl"
+@import "modules/eventsList/eventsList.styl"
 @import "modules/eventHead/eventHead.styl"
 @import "modules/eventButtons/eventButtons.styl"
 @import "modules/eventKeys/eventKeys.styl"
@@ -518,6 +561,14 @@ p
 
 @import "modules/photoswipe/photoswipe.styl"
 @import "modules/photoswipe/default-skin.styl"
+
+@import "stylus/blocks/bullets.styl"
+@import "stylus/blocks/banner.styl"
+@import "stylus/blocks/cards.styl"
+@import "stylus/blocks/speaker.styl"
+@import "stylus/blocks/steps.styl"
+@import "stylus/blocks/registerForm.styl"
+@import "stylus/blocks/program.styl"
 
 .greyBg
   background: $grey-bright

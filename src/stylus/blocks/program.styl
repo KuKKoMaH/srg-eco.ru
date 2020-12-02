@@ -1,0 +1,134 @@
+.program
+  margin: 1.5em 0px 2.5em
+  position: relative;
+
+  &__headers
+    display: flex;
+    margin: -.5em
+    margin-bottom: 40px
+    flex-wrap wrap
+    @media (max-width: $breakpoint-sm)
+      margin-bottom: 20px
+
+  &__header
+    font-size: .85em
+    letter-spacing .1em
+    font-weight: 600
+    background: #f3f3f3
+    padding: 3px 12px
+    margin: .5em
+    cursor: pointer;
+    white-space nowrap
+    @media (max-width: $breakpoint-sm)
+      padding: 4px 12px
+      font-size: .8em
+
+    &--active
+      background: #00b2e0
+      color: #ffffff
+
+  &__bodies
+    position: relative;
+
+  &__body
+    position: absolute;
+    opacity: 0
+    z-index: -1
+    left: 0
+    top: 0
+    width: 100%
+    anim()
+
+    &--active
+      position: relative;
+      z-index: 1
+      opacity: 1
+
+  &__item
+    border-top: 1px solid #e8e8e8
+    padding: 40px 0
+    @media (max-width: $breakpoint-sm)
+      padding: 20px 0
+
+    &:last-child
+      border-bottom: 1px solid #e8e8e8
+
+    &--active
+      & ^[0]__arrow
+        transform rotate(90deg)
+
+  &__head
+    display: flex;
+    align-items center
+    cursor: pointer;
+    @media (max-width: $breakpoint-sm)
+      flex-direction column
+      align-items flex-start
+
+  &__time
+    opacity: .6
+    width: 140px
+    padding-right: 20px
+    flex-shrink 0
+    font-size: .9em
+    @media (max-width: $breakpoint-sm)
+      width: auto;
+      font-size: .8em
+
+  &__content
+    flex: 1
+
+  &__title
+    font-size: 1.1em
+    @media (max-width: $breakpoint-sm)
+      font-size: 1em
+
+  &__arrow
+    margin-left: auto;
+    transform rotate(-90deg)
+    width: 14px
+    height: 14px
+    fill: #00b2e0
+    anim(.25s)
+    @media (max-width: $breakpoint-sm)
+      position: absolute;
+      width: 12px
+      height: 12px
+      right: 0
+      top: 23px
+
+  &__text
+    padding-left: 140px
+    height 0
+    overflow: hidden;
+    font-size: .9em
+    opacity: .6
+    anim(.25s)
+    @media (max-width: $breakpoint-sm)
+      padding-left: 0
+
+  &__inner
+    padding-top: 45px
+    @media (max-width: $breakpoint-sm)
+      padding-top: 20px
+
+  &__link
+    position: absolute;
+    right: 0
+    top: 28px
+    font-size: .85em
+    font-weight: 600
+    letter-spacing .07em
+    background: none;
+    padding: 0
+    @media (max-width: $breakpoint-sm)
+      position: static;
+      margin-bottom: 1em
+      display: inline-block;
+
+    svg
+      display: inline-block;
+      margin-right: 8px
+      width: 14px
+      height: 14px
+      fill: #00b2e0

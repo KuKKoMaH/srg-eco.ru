@@ -1,0 +1,39 @@
+mixin eventsList(title, disabled)
+  .eventsList(class=disabled && 'eventsList--disabled')
+    h2=title
+    .eventsList__slider(data-rows='2' data-onreachend='ON_REACT_END')
+      button.eventsList__nav.eventsList__nav--prev: svg: use(xlink:href="#chevron_left")
+      button.eventsList__nav.eventsList__nav--next: svg: use(xlink:href="#chevron_left")
+      .eventsList__container
+        .eventsList__items
+          each i in [1,2,3,4,5,6,7,8,9,10]
+            .eventsList__item
+              a.eventsList__card(href='#')
+                .eventsList__head
+                  .eventsList__image(style='background-image: url(https://source.unsplash.com/random/380x213?random&1)')
+                  .eventsList__date 20 октября
+                  .eventsList__tag очный курс
+                .eventsList__body
+                  .eventsList__props
+                    .eventsList__prop
+                      svg: use(xlink:href="#clock")
+                      | 9:00 - 12:00
+                    .eventsList__prop
+                      svg: use(xlink:href="#thumbUp")
+                      | бесплатно
+                  .eventsList__title
+                    =i
+                    | Безопасные методы и приемы выполнения работ на высоте
+                  .eventsList__text Обучение по пожарной безопасности — ключевое условие допуска к работе в различных компаниях. Его организуют для того, чтобы снизить риски возгорания
+                .eventsList__footer
+                  | ПОДРОБНЕЕ
+                  svg: use(xlink:href="#chevron_left")
+    .eventsList__more
+      button
+        | ЗАГРУЗИТЬ ЕЩЕ
+        svg: use(xlink:href="#chevron_left")
+
+  script.
+    function ON_REACT_END( swiper ) {
+      console.log({ swiper });
+    }
