@@ -1,0 +1,22 @@
+.media
+  .c
+    .media__items
+      each i in [1,2,3,4,5,6,7,8,9,10]
+        .media__item
+          a.media__card(href='#')
+            .media__header
+              .media__logo: img(src='modules/media/img/media_logo.png')
+              .media__date 13.03.2021
+            .media__title Что происходит с рынком автозапчастей в 2021 году? Разбираем, что будет с ценами деталей и их наличием
+            .media__author
+              .media__avatar: img(src='https://source.unsplash.com/random/41x41?random&' + i)
+              .media__info
+                .media__name Игорь Чеботнягин
+                .media__position Директор SRG-ECO
+            .media__text
+              p Рассказ «Кактус» посвящен автобиографическому эпизоду из жизни Афанасия Фета, относящемуся к 1856 году. Лирический герой, от лица которого в рассказе ведется повествование, в молодости служил в гвардии и «проживал в отпуску в Москве».
+            .media__footer
+              | ПОДРОБНЕЕ
+              svg: use(xlink:href="#chevron_left")
+
+    .newsList__more: button.link ЗАГРУЗИТЬ ЕЩЕ

@@ -497,6 +497,14 @@ p
     @media (max-width: $breakpoint-sm)
       margin-bottom: 3em
 
+  & > *:last-child
+    margin-bottom: 0
+
+  & .registerForm:last-child
+    margin-bottom: -120px
+
+.wp-block-image img
+  height: auto;
 
 @import "modules/header/header.styl"
 @import "modules/header/search.styl"
@@ -558,6 +566,9 @@ p
 @import "modules/includes/includes.styl"
 @import "modules/estimate/estimate.styl"
 @import "modules/pagination/pagination.styl"
+@import "modules/cookies/cookies.styl"
+@import "modules/media/media.styl"
+@import "modules/press/press.styl"
 
 @import "modules/photoswipe/photoswipe.styl"
 @import "modules/photoswipe/default-skin.styl"

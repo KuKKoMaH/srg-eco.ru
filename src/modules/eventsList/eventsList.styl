@@ -18,7 +18,7 @@
         filter: grayscale(0)
 
       & ^[0]__date
-        background: #00B2E0
+        background: $blue
 
       & ^[0]__tag
         background: #F0BC5E
@@ -32,7 +32,7 @@
     margin-bottom: 30px
     width: 45px
     height: 45px
-    border: 3px solid #00B2E0
+    border: 3px solid $blue
     display: flex;
     align-items center
     justify-content center
@@ -41,13 +41,13 @@
       display: none;
 
     &:hover
-      background: #00B2E0
+      background: $blue
 
       svg
         fill: #ffffff
 
     svg
-      fill: #00B2E0
+      fill: $blue
       width: 15px
       height: 15px
       anim()
@@ -94,7 +94,7 @@
       flex-direction row
 
     &:hover
-      border-color: #00B2E0
+      border-color: $blue
       color: #000000
 
   &__head
@@ -114,7 +114,7 @@
     position: absolute;
     right: 0
     top: 20px
-    background: #00B2E0
+    background: $blue
     padding: 4px 5px
     color: #ffffff
     font-size: 20px
@@ -145,7 +145,7 @@
       top: 40px
 
   &__body
-    padding: 20px 15px
+    padding: 15px 15px 20px
     flex: 1
     @media (max-width: $breakpoint-sm)
       padding: 10px 10px 30px
@@ -153,13 +153,14 @@
   &__props
     display: flex;
     align-items center
-    margin-bottom: 10px
+    margin-bottom: 5px
+    flex-wrap wrap
 
   &__prop
     font-size: 14px
     font-weight: 600
     text-transform: uppercase;
-    margin-right: 15px
+    margin: 5px 60px 5px 0
     display: flex;
     align-items center
     @media (max-width: $breakpoint-sm)
@@ -171,7 +172,7 @@
     svg
       width: 20px
       height: 20px
-      fill: #00B2E0
+      fill: $blue
       margin-right: 10px
       flex-shrink 0
       @media (max-width: $breakpoint-sm)
@@ -182,7 +183,7 @@
   &__title
     font-size: 16px
     font-weight: 600
-    color: #00b2e0
+    color: $blue
     margin-bottom: 10px
     @media (max-width: $breakpoint-sm)
       font-size: 9px
@@ -208,7 +209,7 @@
     svg
       width: 12px
       height: 12px
-      fill: #00B2E0
+      fill: $blue
       transform rotate(180deg)
       margin-left: 5px
       @media (max-width: $breakpoint-sm)
@@ -233,9 +234,9 @@
       svg
         width: 12px
         height: 12px
-        fill: #00B2E0
+        fill: $blue
         transform rotate(180deg)
         margin-left: 5px
 
       &:hover
-        color: #00b2e0
+        color: $blue

@@ -14,6 +14,7 @@ import './modules/history/history';
 import './modules/team/team';
 import './modules/clientsList/clientsList';
 import './modules/eventsList/eventsList';
+import './modules/cookies/cookies';
 // import './modules/clientsMap/clientsMap';
 import './modules/eventsCalendar/eventsCalendar';
 import './modules/cardsList/cardsList';
