@@ -1,0 +1,27 @@
+.popularServices.block
+  .c
+    .blockHeader
+      .blockHeader__title.blockHeader__title--sm услуги
+      .blockHeader__title популярные услуги
+    .popularServices__content
+      .popularServices__slider
+        .popularServices__items
+          each i in [1,2,3,4]
+            .popularServices__item
+              a.popularServices__header(href='#') Охрана труда #{i}
+              .popularServices__links
+                .popularServices__link: a(href='#') Поведенческий аудит культуры безопасности
+                .popularServices__link: a(href='#') Аудит охраны труда
+                .popularServices__link: a(href='#') Аутсорсинг охраны труда
+                .popularServices__link: a(href='#') Оценка профессиональных рисков
+                .popularServices__link: a(href='#') Производственный контроль (ПК)
+                .popularServices__link: a(href='#') Аутсорсинг охраны труда
+                .popularServices__link: a(href='#') Оценка профессиональных рисков
+                .popularServices__link: a(href='#') Производственный контроль (ПК)
+              button.popularServices__expand: svg: use(xlink:href="#chevron_left")
+
+      .popularServices__nav.nav
+        button.nav__button.nav__button--prev: svg: use(xlink:href="#chevron_left")
+        button.nav__button.nav__button--next: svg: use(xlink:href="#chevron_left")
+
+      button.popularServices__expandAll: svg: use(xlink:href="#chevron_left")

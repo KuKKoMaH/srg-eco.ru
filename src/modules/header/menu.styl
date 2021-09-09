@@ -22,6 +22,8 @@
     height: 20px
     position: relative
     fill: $blue
+    @media (max-width: $breakpoint-sm)
+      margin-left: 15px
 
     &:hover
       svg
@@ -45,9 +47,12 @@
   &__content
     //display: none
     pointer-events none
-    position: fixed
-    top: 110px
-    bottom: 0
+    position: absolute;
+    top: 100%
+    height: calc(100vh - 105px)
+    //position: fixed
+    //top: 110px
+    //bottom: 0
     left: 0
     width: 100%
     background: #fbfbfb
@@ -60,7 +65,7 @@
     z-index: 2
     @media (max-width: $breakpoint-sm)
       padding: 37px 0
-      top: 100px
+      top: 60px
 
   &__row
     display: flex
@@ -190,6 +195,7 @@
 
     &--social
       svg
+        margin: 0
         fill: $white
 
       &:hover

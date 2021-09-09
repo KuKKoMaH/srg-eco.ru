@@ -1,26 +1,20 @@
 include ../slider/slider
 include ../card/card
 
-.clients
-  h2.outlineTitle КЛИЕНТЫ
-  
+.clients.block
   .c
-    +slider()(data-slider='{"0":{"slidesPerView":2, "spaceBetween":10},"768":{"slidesPerView":2, "gutter":20},"992":{"slidesPerView":3},"1200":{"slidesPerView":4}}')
-      .clients__item.slider__slide: +card()
-        img.clients__image.card__image(src="modules/clients/1.png")
-        .clients__text ГАЗПРОМ
-      .clients__item.slider__slide: +card()
-        img.clients__image.card__image(src="modules/clients/2.png")
-        .clients__text МТС
-      .clients__item.slider__slide: +card()
-        img.clients__image.card__image(src="modules/clients/3.png")
-        .clients__text ADIDAS
-      .clients__item.slider__slide: +card()
-        img.clients__image.card__image(src="modules/clients/4.png")
-        .clients__text LEROY MERLIN
-      .clients__item.slider__slide: +card()
-        img.clients__image.card__image(src="modules/clients/5.png")
-        .clients__text РОСНЕФТЬ
-      .clients__item.slider__slide: +card()
-        img.clients__image.card__image(src="modules/clients/6.png")
-        .clients__text РУСАЛ
+    .blockHeader
+      .blockHeader__title КЛИЕНТЫ
+      a.blockHeader__aside.blockHeader__aside--showSm(href='#') Смотреть все #[span ❯]
+
+    .clients__content
+      .clients__slider
+        .clients__items
+          each i in [1,2,3,4,5,6]
+            .clients__item
+              img(src=`modules/clients/${i}.png`)
+
+      .nav
+        button.nav__button.nav__button--prev: svg: use(xlink:href="#chevron_left")
+        button.nav__button.nav__button--next: svg: use(xlink:href="#chevron_left")
+    .nav__pagination

@@ -1,0 +1,28 @@
+.services
+  .c
+    .services__head
+      h2.services__title Охрана труда
+      .services__menu
+        button.services__button
+          svg.services__hamburger: use(xlink:href="#hamburger2")
+          svg.services__close: use(xlink:href="#close2")
+        .services__link: button.services__header(data-category=0) Вопросы законодательства
+        .services__link: button.services__header(data-category=1) Эффективность управления
+        .services__link: button.services__header.services__header--active(data-category='all') Все услуги
+    .services__items
+      each i in [1,2,3,4]
+        .services__item(data-category=(i%2))
+          .services__card
+            .services__image(style='background-image: url(https://source.unsplash.com/random/240x300?random)')
+            .services__content
+              .services__label
+                img(src='modules/services/img/icon.png')
+                |Эффективность управления
+              .services__name Оценка профессиональной надежности персонала
+              .services__description
+                p Оценка профессиональной надежности персонала предприятий – тестирование сотрудников по методике, которая исследует особенности человеческих качеств и поведения.
+                p AKSDHAJKLSDLKAHSDKLJASKLDHALSKJKLJASDKLHASJKDHAJKSHLKASHDLKAS
+              .services__footer
+                .services__price от 500 руб.
+                .services__btn
+                  a.btn.btn--(href='#') Подробнее

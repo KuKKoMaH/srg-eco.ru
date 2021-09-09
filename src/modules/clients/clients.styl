@@ -1,25 +1,31 @@
-.clients
-  background: $grey-bright
-  border-top: 1px solid $grey-middle
-  padding: 80px 0
-  position: relative
-  margin-top: 55px
-  @media (max-width: $breakpoint-sm)
-    padding: 40px 0
-    margin-top: 33px
+.clients {
 
-  &__item
-    height: 163px
+  &__content {
+    position: relative;
+  }
 
-  &__image
-    position: absolute
-    left: 50%
-    top: 60px
-    max-width 90%
-    transform: translate(-50%, -50%)
+  &__slider {
+    overflow: hidden;
+  }
 
-  &__text
-    position: absolute
-    top: 129px
-    font-weight: 500
-    padding: 0 20px
+  &__items {
+    display: flex;
+  }
+
+  &__item {
+    flex-shrink 0
+    width: 20%
+    display: flex;
+    align-items center
+    justify-content center
+    height: 120px
+
+    img {
+      max-width 100%;
+      max-height 100%;
+      width: auto;
+      height: auto;
+    }
+  }
+
+}

@@ -1,0 +1,24 @@
+.testimonials.block
+  .c
+    .blockHeader
+      .blockHeader__title ОТЗЫВЫ
+      a.blockHeader__aside.blockHeader__aside--showSm(href='#') Смотреть все #[span ❯]
+
+    .testimonials__content
+      .testimonials__slider
+        .testimonials__items
+          each i in [1,2,3,4,5,6,7]
+            .testimonials__item
+              a.testimonials__card(href='#')
+                .testimonials__head
+                  .testimonials__logo
+                    img(src='/modules/testimonials/img/testimonials-logo.png')
+                  .testimonials__info
+                    .testimonials__header Ростелеком
+                    .testimonials__sub Сфера деятельности компании
+                .testimonials__text Когда человек сознательно или интуитивно выбирает себе в жизни какую-то цель, жизненную задачу, он невольно дает себе оценку.
+                .testimonials__link Читать отзыв ❯
+      .testimonials__nav.nav
+        button.nav__button.nav__button--prev: svg: use(xlink:href="#chevron_left")
+        button.nav__button.nav__button--next: svg: use(xlink:href="#chevron_left")
+    .nav__pagination

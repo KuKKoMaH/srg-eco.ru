@@ -1,0 +1,208 @@
+.services
+  padding: 80px 0
+  @media (max-width: $breakpoint-sm)
+    padding: 40px 0
+
+  &__head
+    display: flex;
+    flex-wrap wrap
+    align-items center
+    margin-bottom: 70px
+    @media (max-width: $breakpoint-sm)
+      margin-bottom: 30px
+      flex-direction column
+      align-items flex-start
+      position: relative;
+
+  & &__title
+    padding-right: 40px
+    margin: 0
+    margin-right: auto;
+
+  &__menu
+    display: flex;
+    align-items center
+    flex-wrap wrap
+    margin: 20px 0
+    @media (max-width: $breakpoint-sm)
+      flex-direction column
+      align-items flex-start
+      margin-bottom: 0
+      width: 100%
+
+      &--active
+        & ^[0]__link
+          display: block;
+
+        & ^[0]__hamburger
+          transform translateY(-5px)
+          opacity: 0
+
+        & ^[0]__close
+          transform none
+          opacity: 1
+
+  &__link
+    //display: flex;
+    font-size: 16px
+    align-items center
+    padding: 0 30px
+    border-left: 1px solid #B4B4B4
+    @media (max-width: $breakpoint-sm)
+      font-size: 12px
+      border: 0
+      padding: 12px 0px
+      border-top: 1px solid #EEEEEE
+      width: 100%
+      display: none;
+
+    &:first-child
+      border-left: 0;
+      padding-left: 0
+      @media (max-width: $breakpoint-sm)
+        margin-top: 0
+        border-top: 0
+
+    &:last-child
+      padding-right: 0
+
+
+  &__header
+    background: none;
+    cursor: pointer;
+
+    &:hover {
+      color: $blue;
+    }
+
+    &--active
+      font-weight: 600
+      color: $blue;
+
+  &__bodies
+    position: relative;
+
+  &__body
+    position: absolute;
+    top: 0
+    left: 0
+    width: 100%
+    opacity: 0
+    transform translateY(20px)
+    visibility: hidden;
+    anim(.25s);
+
+    &--active
+      position: relative;
+      opacity: 1
+      visibility: visible;
+      transform none
+
+  &__items
+    display: flex;
+    flex-wrap wrap
+    margin: -10px
+
+  &__item
+    width: 50%
+    padding: 10px
+    @media (max-width: $breakpoint-md)
+      width: 100%
+
+  &__card
+    border: 1px solid #EEEEEE;
+    display: flex;
+    height: 100%
+    anim();
+
+    &:hover
+      border-color: $blue;
+
+      & ^[0]__name
+        color: $blue;
+
+  &__image
+    width: 240px
+    flex-shrink 0
+    background: 50% 50% no-repeat;
+    background-size cover;
+    @media (max-width: $breakpoint-sm)
+      display: none;
+
+
+  &__content
+    padding: 20px
+    display: flex;
+    flex-direction column
+    align-items stretch
+    flex: 1;
+    min-width: 0;
+
+  &__label
+    font-size: 12px
+    color: #7A7A7A
+    margin-bottom: 20px
+
+    img
+      vertical-align: middle;
+      max-width 20px
+      max-height 20px
+      width: auto;
+      height: auto;
+      margin-right: 8px
+      @media (max-width: $breakpoint-sm)
+        max-width 14px
+        max-height 14px
+
+  &__name
+    font-size: 18px
+    font-weight: 600
+    margin-bottom: 10px
+    anim();
+    @media (max-width: $breakpoint-sm)
+      font-size: 13px
+
+  &__description
+    font-size: 12px
+    word-wrap: break-word;
+    @media (max-width: $breakpoint-sm)
+      font-size: 10px
+
+  &__footer
+    padding-top: 40px
+    margin-top: auto;
+    display: flex;
+    align-items center
+    @media (max-width: $breakpoint-sm)
+      padding-top: 10px
+
+
+  &__price
+    font-size: 16px
+    font-weight: 500
+    @media (max-width: $breakpoint-sm)
+      font-size: 12px
+
+  &__btn {
+    margin-left: auto;
+  }
+
+  &__button
+    position: absolute;
+    right: 0
+    top: 0
+    display: none;
+    @media (max-width: $breakpoint-sm)
+      display: block;
+
+    svg
+      position: absolute;
+      top: 0
+      right: 0
+      width: 20px
+      height: 20px
+      anim()
+
+  &__close
+    transform translateY(5px)
+    opacity: 0

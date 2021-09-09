@@ -12,5 +12,10 @@ if ($('.frontSlider__slides').length) {
     slidesPerView:     1,
     loop:              true,
     speed:             400,
+        // autoHeight: true,
+    // breakpoints:       {
+    //   768: {
+    //   },
+    // },
   });
 }

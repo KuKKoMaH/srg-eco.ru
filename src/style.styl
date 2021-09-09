@@ -41,15 +41,20 @@ h2
   @media (max-width: $breakpoint-sm)
     font-size: 25px
 
-h3
+h3, h4, h5
   font-size: 30px
   @media (max-width: $breakpoint-sm)
     font-size: 20px
 
-h4
-  font-size: 25px
-  @media (max-width: $breakpoint-sm)
-    font-size: 20px
+//h4
+//  font-size: 25px
+//  @media (max-width: $breakpoint-sm)
+//    font-size: 20px
+//
+//h4
+//  font-size: 16px
+//  @media (max-width: $breakpoint-sm)
+//    font-size: 14px
 
 a, .link
   display: inline
@@ -116,7 +121,8 @@ p
   margin-bottom: 1em
 
 .btn
-  display: inline-block
+  display: inline-flex
+  align-items center
   font-size: 11px
   line-height: 1.25
   font-weight: 500
@@ -132,6 +138,16 @@ p
   &:hover
     background: $blue
     color: #ffffff
+
+    svg
+      fill $white
+
+  svg
+    width: 14px
+    height: 14px
+    margin-left: 8px
+    fill: $blue
+    anim()
 
   &--filled
     background: $blue
@@ -160,6 +176,10 @@ p
 
     &:hover
       border-color $blue
+
+  &--icon
+    svg
+      margin: 0
 
 .input
   &__label
@@ -339,6 +359,19 @@ p
     &:hover
       color: #50bfdb
 
+  &--yellow
+    background: #f0bc5e
+    color: #000
+
+    &:before
+      background: #f0bc5e;
+
+    &:after
+      background: darken(#f0bc5e, 15%)
+
+    &:hover
+      color: #000
+
 .checkbox
   display: flex
 
@@ -419,6 +452,7 @@ p
   left: 50%
   margin-left: 530px
   background: #ffffff
+  z-index: 1
   @media (max-width: $breakpoint-lg)
     left: auto
     margin-left: 0
@@ -506,6 +540,99 @@ p
 .wp-block-image img
   height: auto;
 
+.nav {
+  &__button {
+    pointer-events all
+    position: absolute;
+    top: 50%
+    transform translateY(-50%)
+    width: 40px
+    height: 40px
+    display: flex;
+    align-items center
+    justify-content center
+    anim()
+
+    &--prev {
+      right: 100%
+      @media (max-width: $breakpoint-sm) {
+        margin-right: -20px
+      }
+    }
+
+    &--next {
+      left: 100%
+      transform rotate(180deg) translateY(50%)
+      @media (max-width: $breakpoint-sm) {
+        margin-left: -20px
+      }
+    }
+
+    &.swiper-button-disabled {
+      opacity: 0
+    }
+
+    svg {
+      width: 18px
+      height: 18px
+      fill: $blue
+    }
+  }
+
+  &__pagination {
+    display: flex;
+    flex-wrap wrap
+    align-items center
+    justify-content center
+    margin-top: (45 - 10)px
+    margin-bottom: -10px
+    @media (max-width: $breakpoint-sm) {
+      margin-top: (45 - 7)px
+      margin-bottom: -7px
+    }
+
+    .swiper-pagination-bullet {
+      position: relative;
+      width: 18px
+      height: 18px
+      border: 1px solid $blue;
+      display: flex;
+      align-items center
+      justify-content center
+      border-radius: 0
+      background: transparent;
+      opacity: 1
+      margin: 4px 8px
+      anim()
+      //@media (max-width: $breakpoint-sm) {
+      //  width: 24px
+      //  height: 24px
+      //  margin: 7px
+      //}
+
+      &:before {
+        content ''
+        width: 8px
+        height: 8px
+        background: $blue;
+        anim()
+        //@media (max-width: $breakpoint-sm) {
+        //  width: 12px
+        //  height: 12px
+        //}
+      }
+
+      &.swiper-pagination-bullet-active {
+        background: $blue;
+
+        &:before {
+          background: $white;
+        }
+      }
+    }
+  }
+}
+
 @import "modules/header/header.styl"
 @import "modules/header/search.styl"
 @import "modules/header/menu.styl"
@@ -533,7 +660,7 @@ p
 @import "modules/clientsList/clientsList.styl"
 @import "modules/clientsList/clientsCard.styl"
 //@import "modules/clientsMap/clientsMap.styl"
-//@import "modules/eventsCalendar/eventsCalendar.styl"
+@import "modules/eventsCalendar/eventsCalendar.styl"
 @import "modules/eventsList/eventsList.styl"
 @import "modules/eventHead/eventHead.styl"
 @import "modules/eventButtons/eventButtons.styl"
@@ -569,6 +696,15 @@ p
 @import "modules/cookies/cookies.styl"
 @import "modules/media/media.styl"
 @import "modules/press/press.styl"
+@import "modules/services/services.styl"
+@import "modules/facts/facts.styl"
+@import "modules/cases/cases.styl"
+@import "modules/popularServices/popularServices.styl"
+@import "modules/eventCard/eventCard.styl"
+@import "modules/pressCenter/pressCenter.styl"
+@import "modules/importantInfo/importantInfo.styl"
+@import "modules/testimonials/testimonials.styl"
+@import "modules/documents/documents.styl"
 
 @import "modules/photoswipe/photoswipe.styl"
 @import "modules/photoswipe/default-skin.styl"
@@ -580,6 +716,7 @@ p
 @import "stylus/blocks/steps.styl"
 @import "stylus/blocks/registerForm.styl"
 @import "stylus/blocks/program.styl"
+@import "stylus/blocks/blockHeader.styl"
 
 .greyBg
   background: $grey-bright

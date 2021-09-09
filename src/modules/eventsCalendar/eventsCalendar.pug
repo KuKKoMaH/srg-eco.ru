@@ -1,72 +1,49 @@
 include ../card/card
 
-.eventsCalendar
-  .c: .eventsCalendar__content
-    .eventsCalendar__calendar
-      .eventsCalendar__header
-        button.eventsCalendar__button.eventsCalendar__button--prev: svg: use(xlink:href="#arrow_right")
-        .eventsCalendar__title май 2019
-        button.eventsCalendar__button.eventsCalendar__button--next: svg: use(xlink:href="#arrow_right")
-      .eventsCalendar__row
-        .eventsCalendar__cell.eventsCalendar__cell--week ПН
-        .eventsCalendar__cell.eventsCalendar__cell--week ВТ
-        .eventsCalendar__cell.eventsCalendar__cell--week СР
-        .eventsCalendar__cell.eventsCalendar__cell--week ЧТ
-        .eventsCalendar__cell.eventsCalendar__cell--week ПТ
-        .eventsCalendar__cell.eventsCalendar__cell--week СБ
-        .eventsCalendar__cell.eventsCalendar__cell--week ВС
-      .eventsCalendar__row
-        .eventsCalendar__cell
-        .eventsCalendar__cell
-        .eventsCalendar__cell.eventsCalendar__cell--past 01
-        .eventsCalendar__cell.eventsCalendar__cell--past 02
-        .eventsCalendar__cell.eventsCalendar__cell--past 03
-        .eventsCalendar__cell.eventsCalendar__cell--past 04
-        .eventsCalendar__cell.eventsCalendar__cell--past 05
-      .eventsCalendar__row
-        .eventsCalendar__cell.eventsCalendar__cell--past 06
-        .eventsCalendar__cell.eventsCalendar__cell--past 07
-        .eventsCalendar__cell.eventsCalendar__cell--past 08
-        .eventsCalendar__cell 09
-        .eventsCalendar__cell.eventsCalendar__cell--current 10
-        .eventsCalendar__cell 11
-        .eventsCalendar__cell 12
-      .eventsCalendar__row
-        .eventsCalendar__cell 13
-        .eventsCalendar__cell.eventsCalendar__cell--active 14
-        .eventsCalendar__cell 15
-        .eventsCalendar__cell.eventsCalendar__cell--active 16
-        .eventsCalendar__cell.eventsCalendar__cell--active 17
-        .eventsCalendar__cell 18
-        .eventsCalendar__cell 19
-      .eventsCalendar__row
-        .eventsCalendar__cell 20
-        .eventsCalendar__cell 21
-        .eventsCalendar__cell 22
-        .eventsCalendar__cell 23
-        .eventsCalendar__cell.eventsCalendar__cell--active 24
-        .eventsCalendar__cell 25
-        .eventsCalendar__cell 26
-      .eventsCalendar__row
-        .eventsCalendar__cell 27
-        .eventsCalendar__cell 28
-        .eventsCalendar__cell 29
-        .eventsCalendar__cell 30
-        .eventsCalendar__cell 31
-        .eventsCalendar__cell
-        .eventsCalendar__cell
+.eventsCalendar.block: .c
+  .blockHeader
+    .blockHeader__title Мероприятия
+    a.blockHeader__aside.blockHeader__aside--sm(href='#') все #[span ❯]
+    a.blockHeader__aside(href='#') Смотреть все #[span ❯]
 
+
+  .eventsCalendar__content
     .eventsCalendar__event
-      a(href='#'): .card--withFooter.eventsCalendar__card
-        .card__head
-          .card__image(style='background-image: url(https://source.unsplash.com/random/380x213?random&1)')
-          if(withDate)
-            .card__date
-              .card__day 30
-              .card__month мар
-        .card__content
-          .card__title Заголовок новости
-          .card__text Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus.
-          .card__footer
-            | ЧИТАТЬ ПОЛНОСТЬЮ
-            svg: use(xlink:href="#arrow_right")
+      .eventsCalendar__head
+        .eventsCalendar__label БЛИЖАЙШЕЕ
+        .eventsCalendar__nav
+          button.eventsCalendar__button.eventsCalendar__button--prev: svg: use(xlink:href="#chevron_left")
+          .eventsCalendar__month май 2019
+          button.eventsCalendar__button.eventsCalendar__button--next: svg: use(xlink:href="#chevron_left")
+
+      .eventsCalendar__card
+        //.eventsCalendar__empty
+        //  .eventsCalendar__emptyIcon: svg: use(xlink:href="#clock3")
+        //  .eventsCalendar__emptyTitle Мы еще разрабатываем план мероприятий на этот месяц!
+        //  .eventsCalendar__emptyText Совсем скоро здесь появится информация: следите за обновлениями.
+        include ../eventCard/eventCard
+
+    .eventsCalendar__calendar
+      .eventsCalendar__week
+        .eventsCalendar__cell ПН
+        .eventsCalendar__cell ВТ
+        .eventsCalendar__cell СР
+        .eventsCalendar__cell ЧТ
+        .eventsCalendar__cell ПТ
+        .eventsCalendar__cell СБ
+        .eventsCalendar__cell ВС
+      .eventsCalendar__days
+        .eventsCalendar__cell
+        .eventsCalendar__cell
+        each _, i in (new Array(30).fill(''))
+          .eventsCalendar__cell
+            if(i === 7 || i === 8 || i === 9 || i === 10 || i === 11)
+              a.eventsCalendar__day(href='#')=i + 1
+              .eventsCalendar__popup
+                .eventsCalendar__title Пожарно-технический минимум Пожарно- технический минимум
+                .eventsCalendar__footer
+                  span Вебинар
+                  span 10.00
+
+            else
+              .eventsCalendar__day=i + 1

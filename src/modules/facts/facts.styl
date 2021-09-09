@@ -1,0 +1,23 @@
+.facts
+  &__items
+    display: flex;
+    align-items flex-start
+    margin: 0 -35px
+    flex-wrap wrap
+    @media (max-width: $breakpoint-sm)
+      margin: 0
+
+  &__item
+    width: 33.3333%
+    padding: 25px 35px
+    font-size: 16px
+    @media (max-width: $breakpoint-sm)
+      width: 100%
+      padding: 0
+      margin-bottom: 30px
+
+    span
+      font-size: 36px
+      font-weight: 700
+      color: $blue
+      margin-right: 10px

@@ -1,3 +1,33 @@
+// ===============================================================
+const $document = $(document);
+const $top = $('.header__sub');
+const $bottom = $('.header__wrapper');
+
+const bottomFixedClass = 'header__wrapper--fixed';
+
+let headerFixed = false;
+let menuOffset = $top.outerHeight();
+
+$(window).on('scroll', checkMenuFixed);
+$(window).on('resize', () => {
+  menuOffset = $top.outerHeight();
+  checkMenuFixed();
+});
+
+function checkMenuFixed() {
+  const scrollTop = $document.scrollTop();
+
+  if (scrollTop > menuOffset && !headerFixed) {
+    $bottom.addClass(bottomFixedClass);
+    headerFixed = true;
+  } else if (scrollTop < menuOffset && headerFixed) {
+    $bottom.removeClass(bottomFixedClass);
+    headerFixed = false;
+  }
+}
+
+checkMenuFixed();
+
 /* ================================================ */
 /* Меню */
 /* ================================================ */
@@ -10,9 +40,9 @@ $('.header__items > ul > li.menu-item-has-children > a').mouseenter(function () 
     $li.addClass('menu-item-active-done');
   }, 0);
 
-  let leaved         = false;
-  let lastY          = 0;
-  const onMouseMove  = (e) => {
+  let leaved = false;
+  let lastY = 0;
+  const onMouseMove = ( e ) => {
     const { pageY } = e;
     if (leaved && pageY < lastY) {
       close();
@@ -25,7 +55,7 @@ $('.header__items > ul > li.menu-item-has-children > a').mouseenter(function () 
   const onMouseLeave = () => {
     leaved = true;
   };
-  const close        = () => {
+  const close = () => {
     $(document).off('mousemove', onMouseMove);
     $li.off('mouseenter', onMouseEnter);
     $li.off('mouseleave', onMouseLeave);
@@ -45,16 +75,16 @@ $('.header__items > ul > li.menu-item-has-children > a').mouseenter(function () 
 /* ================================================ */
 /* Поиск */
 /* ================================================ */
-const $search        = $('.search');
+const $search = $('.search');
 const $searchTrigger = $('.search__trigger');
-const $searchInput   = $('.search__input');
+const $searchInput = $('.search__input');
 const $searchContent = $('.search__content');
-const $body          = $('body');
-let searchVisible    = false;
+const $body = $('body');
+let searchVisible = false;
 
 $searchTrigger.on('click', () => toggleSearch());
 
-$body.on('click', (e) => {
+$body.on('click', ( e ) => {
   const $target = $(e.target);
   if (!$target.closest($searchContent).length) {
     hideSearch();
@@ -98,12 +128,12 @@ function hideSearch() {
 /* Меню */
 /* ================================================ */
 const $menuContainer = $('.menu__container');
-const $menu          = $('.menu');
-const $menuToggle    = $('.menu__toggle');
+const $menu = $('.menu');
+const $menuToggle = $('.menu__toggle');
 
 const isMenuVisible = () => $menuToggle.prop('checked');
 
-$body.on('click', (e) => {
+$body.on('click', ( e ) => {
   const $target = $(e.target);
   if (!$target.closest($menuContainer).length) {
     hideMenu();

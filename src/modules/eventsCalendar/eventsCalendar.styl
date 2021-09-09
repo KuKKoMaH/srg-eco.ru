@@ -1,154 +1,204 @@
 .eventsCalendar
   &__content
     display: flex
-    @media (max-width: $breakpoint-sm)
-      flex-direction: column-reverse
+    //margin: 0 -40px
+    @media (max-width: $breakpoint-sm) {
+      margin: 0
+    }
+
 
   &__calendar
-    flex: 0 0 66.666666%
-    padding-right: 15px
-    font-family: 'Bebas Neue', sans-serif;
-    font-weight: bold
+    width: 50%
+    padding-left: 25px
     @media (max-width: $breakpoint-sm)
-      padding-right: 0
+      display: none;
 
   &__event
-    flex: 0 0 33.333333%
-    padding-left: 10px
+    width: 50%
+    padding-right: 25px
+    display: flex;
+    flex-direction column
     @media (max-width: $breakpoint-sm)
-      flex: 1
-      padding-left: 0
-      margin-bottom: 25px
+      width: 100%
+      padding: 0
 
-  &__card
-    border: 7px solid $blue
-    height: 100%
-    position: relative
+  &__card {
+    flex: 1;
+  }
 
-    .card__image
-      filter: grayscale(0)
-
-    &:before
-      background: $blue
-      @media (max-width: $breakpoint-sm)
-        margin-top: -1px
-
-    &:after
-      background: $white
-      margin-left: 10px
-      @media (max-width: $breakpoint-sm)
-        margin-left: 0
-        margin-top: -9px
-
-    &:before, &:after
-      content: ''
-      display: block
-      position: absolute
-      transform-origin: 50% 50%
-      transform: rotate(45deg)
-      width: 30px
-      height: 30px
-      top: 50%
-      left: -20px
-      @media (max-width: $breakpoint-sm)
-        top: 100%
-        left: 50%
-        margin-left: -16px
-        width: 15px
-        height: 15px
-
-  &__row
-    display: flex
-
-  &__header
+  &__head
     display: flex
     margin-bottom: 20px
     align-items: center
 
-  &__button
-    width: 180px
-    height: 50px
-    border: 1px solid $grey-middle
-    anim()
-    @media (max-width: $breakpoint-sm)
-      width: 70px
-      height: 40px
+  &__label {
+    font-size: 16px
+    font-weight: 500
+  }
 
-    &:hover
-      border-color: $blue
+  &__nav {
+    margin-left: auto;
+    display: flex;
+    align-items center
+    @media (max-width: $breakpoint-sm) {
+      display: none;
+    }
+  }
+
+  &__button
+    //width: 180px
+    //height: 50px
+    width: 32px
+    height: 32px
+    display: flex;
+    align-items center
+    justify-content center
 
     svg
-      width: 20px
-      height: 14px
+      width: 18px
+      height: 18px
       fill: $blue
 
-    &--prev
+    &--next
       svg
         transform: rotate(180deg)
 
-  &__title
-    flex: 1
-    text-align: center
-    font-size: 25px
-    padding-top: 4px
-    @media (max-width: $breakpoint-sm)
-      font-size: 18px
+  &__month {
+    font-size: 16px
+    font-weight: 500
+    color: $blue;
+    margin: 0 5px
+  }
 
-  &__cell
-    position: relative
-    font-size: 25px
-    flex: 1
-    display: flex
-    align-items: center
-    justify-content: center
-    height: 72px
-    border: 1px solid $grey-middle
-    margin: -1px 0 0 -1px
-    padding-top: 4px
+  &__week
+    display: flex;
+    font-size: 16px
+    font-weight: 500
+    text-align: center;
+    margin-bottom: 10 px1
+
+  &__days
+    display: flex;
+    flex-wrap wrap
+    position: relative;
+
+  &__popup
+    position: absolute;
+    background: $white;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    padding: 20px
+    left: 0
+    margin-left: 6px
+    bottom: 100%
+    margin-bottom: 6px
+    width: calc(400% - 12px)
+    opacity: 0
+    visibility: hidden;
+    pointer-events none
+    transform translateY(6px)
     anim()
-    @media (max-width: $breakpoint-sm)
-      height: 30px
-      font-size: 18px
 
-    &:before,
-    &:after
-      content: ''
-      display: block
-      position: absolute
-      opacity: 0
-      z-index: 1
-      anim()
+  &__cell {
+    width: (100 / 7) %;
+    padding: 6px
+    position: relative;
 
-    &:before
-      bottom: -1px
-      left: 0
-      right: -1px
-      height: 1px
-      background: $blue
+    for num in (1..4) {
+      &:nth-child(7n + {4 + num}) {
+        & ^[0]__popup {
+          left: -(100 * num) %
+        }
+      }
+    }
 
-    &:after
-      top: 0
-      bottom: -1px
-      right: -1px
-      width: 1px
-      background: $blue
+    &:hover {
+      & ^[0]__popup {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: all
+        transform none
+      }
+    }
+  }
 
-    &--week
-      background: #f3f3f3
+  &__day
+    border: 1px solid #D9D9D9;
+    display: flex;
+    align-items center
+    justify-content center
+    height: 55px
+    background: none;
+    padding: 0
+    margin: 0
+    font-size: 18px
+    font-weight: 500
+    color: #C4C4C4;
 
-    &--past
-      color: $grey-middle
+    a&
+      color: $blue;
+      border-color: $blue;
 
-    &--active
-      color: $blue
-      cursor: pointer
+      &:hover {
+        color: $white;
+        background: $blue;
+      }
 
-      &:hover
-        border-color: $blue
+  &__title {
+    font-weight: 600;
+    font-size: 14px;
+    color: $blue;
+  }
 
-        &:before, &:after
-          opacity: 1
+  &__footer {
+    display: flex;
+    flex-wrap wrap
+    margin-top: 20px
+    font-size: 12px
+    color: #B4B4B4;
 
-    &--current
-      background: $blue
-      color: $white
+    span {
+      &:before {
+        content '|';
+        color: $blue;
+        margin: 0 5px
+      }
+
+      &:first-child {
+        &:before {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &__empty {
+    border: 1px solid #D9D9D9;
+    height: 100%
+    display: flex;
+    align-items center
+    justify-content center
+    flex-direction column
+    text-align: center;
+    padding: 20px
+  }
+
+  &__emptyIcon {
+    margin-bottom: 20px
+    svg {
+      width: 42px
+      height: 42px
+    }
+  }
+
+  &__emptyTitle {
+    font-size: 18px
+    font-weight: 600
+    color: $blue;
+    margin-bottom: 5px
+    max-width 400px;
+  }
+
+  &__emptyText {
+    font-size: 16px
+    max-width 400px;
+  }

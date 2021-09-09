@@ -1,0 +1,40 @@
+.pressCenter.block
+  .c
+    .blockHeader
+      .blockHeader__title пресс-центр
+      a.blockHeader__aside.blockHeader__aside--sm(href='#') #[span ❯]
+      a.blockHeader__aside(href='#') перейти в пресс-центр #[span ❯]
+
+    .pressCenter__container
+      .pressCenter__main
+        .pressCenter__news
+          a.pressCenter__card(href='#')
+            .pressCenter__title РАСШИРЕН ПЕРЕЧЕНЬ РАБОТНИКОВ, ПО КОТОРЫМ ОСУЩЕСТВЛЯЕТСЯ ПРОФ. ОБУЧЕНИЕ
+            .pressCenter__label Новости охраны труда
+            .pressCenter__text
+              p Поведенческий аудит культуры безопасности Аудит охраны труда Аутсорсинг охраны труда Оценка профессиональных рисков Производственный контроль (ПК)
+            .pressCenter__footer
+              .pressCenter__date 03.10.2021
+              .pressCenter__more Читать #[span ❯]
+
+
+        .pressCenter__articles
+          .pressCenter__article
+            a.pressCenter__card(href='#')
+              .pressCenter__title РАСШИРЕН ПЕРЕЧЕНЬ РАБОТНИКОВ, ПО КОТОРЫМ ОСУЩЕСТВЛЯЕТСЯ ПРОФ. ОБУЧЕНИЕ
+              .pressCenter__footer
+                .pressCenter__date 03.10.2021
+                .pressCenter__more Читать #[span ❯]
+          .pressCenter__article
+            a.pressCenter__card(href='#')
+              .pressCenter__title РАСШИРЕН ПЕРЕЧЕНЬ РАБОТНИКОВ, ПО КОТОРЫМ ОСУЩЕСТВЛЯЕТСЯ ПРОФ. ОБУЧЕНИЕ
+              .pressCenter__footer
+                .pressCenter__date 03.10.2021
+                .pressCenter__more Читать #[span ❯]
+
+      .pressCenter__aside
+        each i in ['Новости', 'Статьи', 'SRG-ECO в СМИ', 'Контакты для СМИ']
+          a.pressCenter__link(href='#' style='background-image:url(modules/pressCenter/img/pressCenter-bg.jpg)')
+            span=i
+            svg: use(xlink:href="#chevron_left")
+

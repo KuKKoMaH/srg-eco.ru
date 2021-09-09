@@ -1,53 +1,66 @@
+
 header.header
-  .header__placeholder
-  .header__container
-    a.header__logo(href='#'): img(src='modules/header/menu-logo.png')
-    //.header__text Lorem ipsum dolor sit amet,#[br]consectetuer adipiscing
-    .header__items
-      ul
-        li.menu-item-has-children
-          a(href='#') УСЛУГИ
+  .header__sub
+    .c
+      .header__label Охрана труда и производственная безопасность!
+      a.header__enter(href='#' target="_blank")
+        | ВОЙТИ В СДО
+        svg.menu__open: use(xlink:href="#enter")
+  .header__wrapper
+    .header__container
+      .c
+        a.header__logo(href='#'): img(src='modules/header/menu-logo.png')
+        //.header__text Lorem ipsum dolor sit amet,#[br]consectetuer adipiscing
+        .header__items
           ul
-            li
-              a(href='#') ОХРАНА ТРУДА
-              ul
-                li: a(href='#') Культура безопасности
-                li: a(href='#') Система управления профессиональными рисками
-                li: a(href='#') Аутсорсинг функций служб охраны труда
-                li: a(href='#') Специальная оценка условий труда
-                li: a(href='#') Производственный контроль
-            li
-              a(href='#') ЭКОЛОГИЯ
-              ul
-                li: a(href='#') Экологический консалтинг
-                li: a(href='#') Аудит
-                li: a(href='#') Проектирование
-                li: a(href='#') Производственный экологический контроль
-                li: a(href='#') Оценка рисков
-                li: a(href='#') Консультация
-            li
-              a(href='#') УЧЕБНЫЙ ЦЕНТР
+            li.menu-item-has-children
+              a(href='#') УСЛУГИ
+              .header__submenu
+                .c
+                  ul
+                    li
+                      a(href='#') ОХРАНА ТРУДА
+                      ul
+                        li: a(href='#') Культура безопасности
+                        li: a(href='#') Система управления профессиональными рисками
+                        li: a(href='#') Аутсорсинг функций служб охраны труда
+                        li: a(href='#') Специальная оценка условий труда
+                        li: a(href='#') Производственный контроль
+                    li
+                      a(href='#') ЭКОЛОГИЯ
+                      ul
+                        li: a(href='#') Экологический консалтинг
+                        li: a(href='#') Аудит
+                        li: a(href='#') Проектирование
+                        li: a(href='#') Производственный экологический контроль
+                        li: a(href='#') Оценка рисков
+                        li: a(href='#') Консультация
+                    li
+                      a(href='#') УЧЕБНЫЙ ЦЕНТР
 
-        li: a(href='#') КЛИЕНТЫ
-        li: a(href='#') МЕРОПРИЯТИЯ
-        li: a(href='#') КОМПАНИЯ
-        li: a(href='#') КОНТАКТЫ
-    .header__phones
-      a.header__phone(href='tel:') 8 (800) 456-77-88
-      a.header__phone(href='tel:') 8 (800) 456-77-88
-    button.btn.header__button УЧАСТВОВАТЬ В ТЕНДЕРЕ
-    a.btn.btn--filled.header__button.popup__opener(href='#callback') СВЯЗАТЬСЯ СО МНОЙ
-    button.search__trigger
-      svg.search__open: use(xlink:href="#magnifier")
-      svg.search__close: use(xlink:href="#close")
-    .menu__container
-      input.menu__toggle(id='menuToggle' type='checkbox')
-      label.menu__trigger(for='menuToggle')
-        svg.menu__open: use(xlink:href="#hamburger")
-        svg.menu__close: use(xlink:href="#close")
-      include menu
+            li: a(href='#') КЛИЕНТЫ
+            li: a(href='#') МЕРОПРИЯТИЯ
+            li: a(href='#') КОМПАНИЯ
+            li: a(href='#') КОНТАКТЫ
+        .header__phones
+          a.header__phone(href='tel:') 8 (800) 456-77-88
 
-  .search
-    form.search__content
-      input.search__input(placeholder='Введите ваш запрос')
-      button.search__button: svg: use(xlink:href="#magnifier")
+        //a.btn.btn--filled.header__button.popup__opener(href='#callback') СВЯЗАТЬСЯ СО МНОЙ
+        button.search__trigger
+          svg.search__open: use(xlink:href="#magnifier")
+          svg.search__close: use(xlink:href="#close")
+        .menu__container
+          input.menu__toggle(id='menuToggle' type='checkbox')
+          label.menu__trigger(for='menuToggle')
+            svg.menu__open: use(xlink:href="#hamburger")
+            svg.menu__close: use(xlink:href="#close")
+          include menu
+
+    .search
+        form.search__content
+          .c
+            input.search__input(placeholder='Введите ваш запрос')
+            button.search__button: svg: use(xlink:href="#magnifier")
+
+  .header__placeholder
+

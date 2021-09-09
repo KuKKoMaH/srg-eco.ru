@@ -1,11 +1,12 @@
 import 'jquery';
 import 'magnific-popup/dist/jquery.magnific-popup.js';
-import 'jquery.maskedinput/src/jquery.maskedinput';
+// import 'jquery.maskedinput/src/jquery.maskedinput';
 import SmoothScroll from 'smooth-scroll';
 import 'selectize';
 import 'mark.js/dist/jquery.mark.min';
 
 import './js/init';
+import initGallery from './js/initGallery';
 import './modules/header/header';
 import './modules/frontSlider/frontSlider';
 import './modules/relatedEvents/relatedEvents';
@@ -29,12 +30,18 @@ import './modules/faq/faq';
 import './modules/licenses/licenses';
 import './modules/result/result';
 import './modules/clientCard/clientCard';
+import './modules/services/services';
+import './modules/cases/cases';
+import './modules/popularServices/popularServices';
+import './modules/clients/clienst';
+import './modules/testimonials/testimonials';
+import './modules/documents/documents';
 
 $('select').selectize({
   maxItems: 1,
 });
 
-$('input[type="tel"]').mask("+7 (999) 999-99-99");
+// $('input[type="tel"]').mask("+7 (999) 999-99-99");
 
 $('.popup__opener').on('click', ( e ) => {
   e.preventDefault();
@@ -85,3 +92,11 @@ $('.program__item').each(( i, el ) => {
     $el.toggleClass('program__item--active');
   });
 });
+
+const initGalleries = () => {
+  $('.gallery').each(( i, el ) => {
+    initGallery({ $items: $(el).find('.gallery__item') });
+  });
+};
+initGalleries();
+window.INIT_GALLERIES = initGalleries;

@@ -1,0 +1,19 @@
+.documents.block
+  .c
+    .blockHeader
+      .blockHeader__title РАЗРЕШИТЕЛЬНАЯ ДОКУМЕНТАЦИЯ
+      a.blockHeader__aside.blockHeader__aside--sm(href='#') #[span ❯]
+      a.blockHeader__aside(href='#') Смотреть все #[span ❯]
+
+    .documents__container
+      .documents__slider.gallery
+        .documents__items
+          each i in [1,2,3,4,5,6,7]
+            .documents__item
+              a.documents__doc.gallery__item(style='background-image: url(modules/documents/img/img.jpg)' data-index=(i-1) data-width=451*2 data-height=647*2 href='modules/licenses/img/img_big.jpg' data-title="Уведомление Минтруда"+i data-subtitle="о внесении в реестр организаций, проводящих СОУТ")
+                .documents__button: svg: use(xlink:href="#expand")
+
+      .documents__nav.nav
+        button.nav__button.nav__button--prev: svg: use(xlink:href="#chevron_left")
+        button.nav__button.nav__button--next: svg: use(xlink:href="#chevron_left")
+    .nav__pagination

@@ -1,0 +1,75 @@
+.blockHeader {
+  display: flex;
+  align-items flex-end
+  margin-bottom: 50px
+  word-wrap: break-word;
+  @media (max-width: $breakpoint-sm) {
+    margin-bottom: 30px
+  }
+
+  &__title {
+    font-size: 35px
+    font-weight: 700
+    font-family: 'Bebas Neue', sans-serif;
+    line-height: 1
+    background: none;
+    padding: 0
+    margin: 0
+    @media (max-width: $breakpoint-sm) {
+      font-size: 25px
+    }
+
+    &--sm {
+      display: none;
+      @media (max-width: $breakpoint-sm) {
+        display: block;
+      }
+    }
+
+    &--sm ~ & {
+      @media (max-width: $breakpoint-sm) {
+        display: none;
+      }
+    }
+  }
+
+  &__aside {
+    background: none
+    text-transform: uppercase;
+    font-weight: 500
+    font-size: 16px
+    padding: 0
+    margin: 0
+    margin-left: auto;
+    margin-bottom: 7px
+
+    span {
+      color: $blue;
+      margin-left: 5px
+    }
+
+    @media (max-width: $breakpoint-sm) {
+      font-size: 14px
+      display: none;
+    }
+
+    &--showSm {
+      @media (max-width: $breakpoint-sm) {
+        display: block;
+      }
+    }
+
+    &--sm {
+      display: none;
+      @media (max-width: $breakpoint-sm) {
+        display: block;
+      }
+    }
+
+    &--sm ~ & {
+      @media (max-width: $breakpoint-sm) {
+        display: none;
+      }
+    }
+  }
+}
