@@ -1,0 +1,76 @@
+.streamComments
+  .streamComments__head
+    | Комментарии
+    .streamComments__total 148
+
+  form.streamComments__form
+    .streamComments__formName
+      input.streamComments__input(placeholder='Введите ваше имя')
+    .streamComments__formMessage
+      textarea.streamComments__textarea(placeholder='Оставьте комментарий')
+      button.streamComments__submit: svg: use(xlink:href="#chevron_left")
+
+
+  .streamComments__comments
+    each i in [1,2,3,4]
+      .streamComments__comment
+        .streamComments__info
+          .streamComments__avatar
+          .streamComments__author
+            .streamComments__name
+              | Albert Flores
+              .streamComments__menu
+                button.streamComments__actionsLg(onclick="SHOW_COMMENT_ACTIONS(event)"): svg: use(xlink:href="#chevron_left")
+                button.streamComments__actionsSm(onclick="SHOW_COMMENT_ACTIONS(event)"): svg: use(xlink:href="#stream_more")
+                .streamComments__actions
+                  button.streamComments__action Ответить
+
+            .streamComments__date 14:10
+        .streamComments__text
+          p A falsis, canis magnum vita.The issue of your graces will preach wonderfully when you handle that suffering is the power.
+
+        .streamComments__meta
+          button.streamComments__metaButton.streamComments__like
+            svg: use(xlink:href="#stream_like")
+            | 0
+          button.streamComments__metaButton.streamComments__dislike
+            svg: use(xlink:href="#stream_like")
+            | 16
+          .streamComments__responcesTotal
+            svg: use(xlink:href="#stream_comment")
+            | 2 ответа
+
+        .streamComments__responces
+          each i in [1,2]
+            .streamComments__comment
+              .streamComments__info
+                .streamComments__avatar
+                .streamComments__author
+                  .streamComments__name
+                    | Albert Flores
+                    .streamComments__menu
+                      button.streamComments__actionsLg(onclick="SHOW_COMMENT_ACTIONS(event)"): svg: use(xlink:href="#chevron_left")
+                      button.streamComments__actionsSm(onclick="SHOW_COMMENT_ACTIONS(event)"): svg: use(xlink:href="#stream_more")
+                      .streamComments__actions
+                        button.streamComments__action Ответить
+                  .streamComments__date 14:10
+              .streamComments__text
+                p A falsis, canis magnum vita.The issue of your graces will preach wonderfully when you handle that suffering is the power.
+
+              .streamComments__meta
+                button.streamComments__metaButton.streamComments__like
+                  svg: use(xlink:href="#stream_like")
+                  | 0
+                button.streamComments__metaButton.streamComments__dislike
+                  svg: use(xlink:href="#stream_like")
+                  | 16
+
+        .streamComments__response
+          form.streamComments__responseForm
+            .streamComments__formName
+              input.streamComments__input(placeholder='Введите ваше имя')
+            .streamComments__responseRow
+              textarea.streamComments__responseMessage
+              button.streamComments__responseButton Отправить
+
+              a.streamComments__cancel(href='#') Отменить

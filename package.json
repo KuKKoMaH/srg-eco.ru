@@ -46,7 +46,9 @@
     "webpack-stream": "^5.2.1"
   },
   "dependencies": {
+    "autosize": "^5.0.1",
     "breakpoints-js": "^1.0.6",
+    "clipboard": "^2.0.8",
     "countup.js": "^2.0.4",
     "destyle.css": "^1.0.5",
     "jquery": "^3.3.1",

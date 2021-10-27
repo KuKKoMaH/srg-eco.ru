@@ -1,0 +1,49 @@
+.streamHead
+  .c
+    .streamHead__container
+      .streamHead__main
+        .streamHead__video
+
+        .streamHead__special
+          button.btn.btn--yellow.streamHead__specialAction
+            .streamHead__specialActionLgText Специальное предложение
+            .streamHead__specialActionSmText Спецпредложение
+          .streamHead__specialInfo
+            .streamHead__specialTotal
+              svg: use(xlink:href="#stream_requests")
+              | 365
+            .streamHead__specialText Оставили заявку
+
+      .streamHead__aside
+        .streamHead__chat
+        button.streamHead__chatHide
+          | Скрыть чат
+          svg: use(xlink:href="#chevron_left")
+
+    .streamHead__container
+      .streamHead__main
+        .streamHead__meta
+          .streamHead__metaDate 23 августа 2021
+
+          .streamHead__metaItem
+            svg: use(xlink:href="#stream_views")
+            | 365
+
+          .streamHead__metaItem
+            button.streamHead__metaButton.streamHead__like
+              svg: use(xlink:href="#stream_like")
+              | 0
+            button.streamHead__metaButton.streamHead__dislike
+              svg: use(xlink:href="#stream_like")
+              | 16
+
+          .streamHead__metaItem
+            a.streamHead__metaButton.streamHead__share.popup__opener(href='#streamShare')
+              svg: use(xlink:href="#stream_share")
+              .streamHead__metaText Поделиться
+
+          button.streamHead__chatShow
+            |Чат
+            svg: use(xlink:href="#chevron_left")
+
+      .streamHead__aside

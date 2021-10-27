@@ -1,0 +1,43 @@
+.stream
+  .c
+    .stream__main
+      .stream__recommends
+        .stream__title Рекомендации
+        .stream__text
+          p Получите демо-доступ к курсам
+          each i in [1,2,3]
+            a.stream__card(href='#')
+              .stream__cardImage(style='background-image: url(https://source.unsplash.com/random/230x230?random&' + i + ')')
+                .stream__cardLink
+                  .stream__cardArrow
+                    svg: use(xlink:href="#chevron_left")
+                  | Перейти
+
+              .stream__cardText Оказание первой помощи в образовательных организациях
+
+      .stream__info
+        .stream__title Оказание первой помощи в образовательных организациях
+        .stream__text
+          p Краткое описание Краткое описание Краткое описание Краткое описание Краткое описание Краткое описание Краткое описание Краткое описание Краткое описание Краткое описание Краткое описание
+        .stream__authors
+          .stream__author
+            .stream__authorAvatar
+            .stream__authorInfo
+              .stream__authorName Albert Flores
+              .stream__authorPosition Albert Flores
+          .stream__author
+            .stream__authorAvatar
+            .stream__authorInfo
+              .stream__authorName Albert Flores
+              .stream__authorPosition Albert Flores
+          .stream__author
+            .stream__authorAvatar
+            .stream__authorInfo
+              .stream__authorName Albert Flores
+              .stream__authorPosition Albert Flores
+
+        .stream__action
+          a.btn.btn--filled Скачать материалы вебинара
+
+    .stream__comments
+      include ../streamComments/streamComments

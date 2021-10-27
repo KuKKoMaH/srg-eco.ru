@@ -36,6 +36,10 @@ import './modules/popularServices/popularServices';
 import './modules/clients/clienst';
 import './modules/testimonials/testimonials';
 import './modules/documents/documents';
+import './modules/streamHead/streamHead';
+import './modules/streamComments/streamComments';
+import './modules/streamShare/streamShare';
+import './modules/questions/questions';
 
 $('select').selectize({
   maxItems: 1,

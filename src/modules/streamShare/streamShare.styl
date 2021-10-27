@@ -1,0 +1,82 @@
+.streamShare
+  width: 510px
+  max-width 100%
+  padding: 2em 10px
+
+  &__title
+    padding: 0 .5em
+    margin-bottom: 1em
+
+  &__links
+    display: flex;
+    align-items center
+    justify-content center
+    flex-wrap wrap
+
+  &__link
+    margin: 10px
+    padding: 0
+    background: none;
+
+  &__icon
+    width: 50px
+    height: 50px
+    border-radius: 50%
+    margin: 0 auto 7px
+    display: flex;
+    align-items center
+    justify-content center
+
+    &--tg
+      background: #40B3E0;
+
+    &--wa
+      background: #00E676;
+
+    &--vk
+      background: #2787F5;
+
+    &--fb
+      background: #395185
+
+    &--ok
+      background: #ed812b
+
+    &--email
+      background: #D9D9D9
+
+    svg
+      fill: #ffffff
+      width: 28px
+      height: 28px
+
+  &__name
+    text-align: center;
+
+  &__copy
+    display: flex;
+    max-width 440px
+    margin: 40px auto 0
+    height: 50px
+
+  &__input
+    height: 100%
+    border-radius: 25px 0 0 25px;
+    border: 1px solid #D9D9D9
+    display: flex;
+    align-items center
+    padding: 0 20px
+    min-width: 0;
+
+  &__href
+    white-space nowrap
+    user-select all
+    overflow: hidden;
+    text-overflow ellipsis
+
+  &__button
+    height: 100%
+    border-radius: 0 25px 25px 0;
+    padding: 0 15px
+    background: #D9D9D9;
+    color: #fff;
