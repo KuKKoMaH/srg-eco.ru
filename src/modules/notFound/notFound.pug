@@ -2,7 +2,7 @@
   .notFound__inner
     .c.notFound__content
       .notFound__left
-        img.notFound__logo(src='modules/header/menu-logo.png')
+        img.notFound__logo(src=require('src/modules/header/menu-logo.png'))
         .notFound__message
           | Если Вы считаете, что произошла ошибка, сообщите, пожалуйста, по адресу #[a(href='#') feedback-eco@srgroup.ru]
       .notFound__center
@@ -22,4 +22,4 @@
           input.search__input(placeholder='Введите ваш запрос')
           button.search__button: svg: use(xlink:href="#magnifier")
 
-  img.notFound__image(src='modules/notFound/notFound-bg.jpg')
+  img.notFound__image(src=require('src/modules/notFound/notFound-bg.jpg'))

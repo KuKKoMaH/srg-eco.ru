@@ -1,3 +1,3 @@
 import ClipboardJS from 'clipboard';
 
-new ClipboardJS('.streamShare__button');
+if ($('.streamShare__button').length) new ClipboardJS('.streamShare__button');

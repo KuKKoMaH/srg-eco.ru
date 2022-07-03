@@ -1,0 +1,14 @@
+extends ../pug/_layout
+include ../modules/hero/hero
+include ../modules/licenses/licenses
+
+block body
+  include ../modules/submenu/submenu
+  +hero('О нас')
+  include ../modules/aboutText/aboutText
+  include ../modules/history/history
+  +licenses('ЛИЦЕНЗИЯ И АККРЕДИТАЦИЯ')
+  include ../modules/team/team
+  include ../modules/docs/docs
+  include ../modules/newsMenu/newsMenu
+  include ../modules/form/formAbout

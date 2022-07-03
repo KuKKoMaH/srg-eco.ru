@@ -1,0 +1,18 @@
+.review.block
+  .c
+    .blockHeader
+      .blockHeader__title ОТЗЫВЫ
+
+    .review__container
+      .review__slider.gallery
+        .review__items
+          each i in [1,2,3,4,5,6,7]
+            .review__item
+              a.review__doc.gallery__item(data-index=(i-1) data-width=451*2 data-height=647*2 href=require('src/modules/documents/img/img_big.jpg') data-title="Уведомление Минтруда"+i data-subtitle="о внесении в реестр организаций, проводящих СОУТ")
+                img(src=require('src/modules/documents/img/img.jpg'))
+                .review__button: svg: use(xlink:href="#expand")
+
+      .review__nav.nav
+        button.nav__button.nav__button--prev: svg: use(xlink:href="#chevron_left")
+        button.nav__button.nav__button--next: svg: use(xlink:href="#chevron_left")
+    .nav__pagination

@@ -1,12 +1,16 @@
 block html
 doctype html
-html
+html(lang="ru")
   head
     title SRG
     meta(http-equiv="X-UA-Compatible" content="IE=edge")
     meta(http-equiv="content-type" content="text/html; charset=utf-8")
     meta(name="viewport" content="width=device-width, initial-scale=1.0")
-    link(rel="stylesheet" media="all" href="style.css")
+    link(rel="stylesheet" href="critical/fonts.css")
+    link(rel="stylesheet" href="critical/common.css")
+    link(rel="stylesheet" href="critical/destyle.css")
+    link(rel="stylesheet" href="critical/header.css")
+    link(rel="stylesheet" href="critical/frontSlider.css")
     //link(rel="shortcut icon" href="/favicon.ico")
 
   body(onunload="")
@@ -26,7 +30,6 @@ html
     var MAP_API_KEY = "AIzaSyAKCWqbAVy8AsekfYEuddPMtdb5xMpC9pk";
     var MAP_CENTER = [53.189798, 45.039265];
     var MAP_ZOOM = 16;
-  script(src='js/app.js')
 
   svg#sprites(xmlns="http://www.w3.org/2000/svg").
     <symbol id="magnifier" viewBox="0 0 200 200">

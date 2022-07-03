@@ -1,43 +1,50 @@
 .header
-  ul
-    padding: 0
-    margin: 0
+  +crit('header.css')
+    &
+      display: block;
 
-    li
-      &:before
-        display none
+    ul
+      padding: 0
+      margin: 0
 
-  &__placeholder
-    height: 105px
-    @media (max-width: $breakpoint-sm)
-      height: 60px
+      li
+        &:before
+          display none
+
+  +crit('header.css')
+    &__placeholder
+      height: 105px
+      @media (max-width: $breakpoint-sm)
+        height: 60px
 
   &__wrapper
-    position: absolute;
-    left: 0
-    width: 100%
+    +crit('header.css')
+      &
+        position: absolute;
+        left: 0
+        width: 100%
 
     &--fixed
       position: fixed;
       top: 0
       z-index: 3
 
+  +crit('header.css')
+    &__container
+      position: relative;
+      height: 105px
+      z-index: 3
+      background: #ffffff
+      box-shadow: 0 5px 20px rgba(#000, .1)
 
-  &__container
-    position: relative;
-    height: 105px
-    z-index: 3
-    background: #ffffff
-    box-shadow: 0 5px 20px rgba(#000, .1)
+      @media (max-width: $breakpoint-sm)
+        height: 60px
+      //padding: 0 20px
 
-    @media (max-width: $breakpoint-sm)
-      height: 60px
-    //padding: 0 20px
-
-    > .c
-      height: 100%
-      display: flex
-      align-items: center
+      > .c
+        height: 100%
+        display: flex
+        align-items: center
 
   //&:before
   //  content: ''
@@ -54,20 +61,23 @@
   //> *
   //  z-index: 2
 
-  &__logo
-    //margin-right: 16px
-    min-width: 0
-    background-image: none;
-    margin-right: auto
-    padding-bottom: 0
-    flex-shrink 0
-    @media (max-width: $breakpoint-sm)
-      margin-right: 0
-
-    img
-      max-width: 100%
+  +crit('header.css')
+    &__logo
+      //margin-right: 16px
+      min-width: 0
+      background-image: none;
+      margin-right: auto
+      padding-bottom: 0
+      flex-shrink 0
       @media (max-width: $breakpoint-sm)
-        max-height 45px
+        margin-right: 0
+        flex-shrink 1
+
+      img
+        max-width: 100%
+        height: auto;
+        @media (max-width: $breakpoint-sm)
+          max-height 45px
 
   &__text
     white-space: nowrap
@@ -78,120 +88,136 @@
       font-size: 7px
 
   &__items
-    flex: 1
-    display: flex
-    justify-content: center
-    align-self: stretch
-    @media (max-width: 950px)
-      display: none
-
-    .equal > ul > li
-      flex: 1
+    +crit('header.css')
+      &
+        flex: 1
+        display: flex
+        justify-content: center
+        align-self: stretch
+        @media (max-width: 950px)
+          display: none
 
     > ul
-      height: 100%
-      display: flex
-      align-items: stretch
+      +crit('header.css')
+        &
+          height: 100%
+          display: flex
+          align-items: stretch
 
       > li
-        margin: 0 12px
-        display: flex
-        align-items: center
-        position: static
+        +crit('header.css')
+          &
+            margin: 0 12px
+            display: flex
+            align-items: center
+            position: static
 
-        &.wrap
-          .sub-menu
-            flex-wrap wrap
+            &.wrap
+              .sub-menu
+                flex-wrap wrap
 
-        &.current-menu-ancestor, &.current-menu-item
-          > a
-            color: $blue
-
-        &.menu-item-has-children
-          &.menu-item-active
-            &:before
-              content: ''
-              opacity: 0
-              pointer-events: none
-              position: fixed
-              top: 110px
-              bottom: 0
-              left: 0
-              right: 0
-              background: rgba(0, 0, 0, .5)
-              anim()
-
-            &:after
-              content: ''
-              position: absolute
-              width: 0;
-              height: 0;
-              border-style: solid;
-              border-width: 0 11px 0px 11px;
-              border-color: transparent transparent #eaeaea transparent
-              bottom: 0
-              left: 50%
-              margin-left: -11px - 8px
-              //opacity: 0
-              anim()
-
-            & ^[0]__submenu
-              display: block
-              opacity: 0
-
+        +crit('header.css')
+          &.current-menu-ancestor, &.current-menu-item
             > a
               color: $blue
 
+        &.menu-item-has-children
+          +crit('header.css')
+            &.menu-item-active
+              &:before
+                content: ''
+                opacity: 0
+                pointer-events: none
+                position: fixed
+                top: 110px
+                bottom: 0
+                left: 0
+                right: 0
+                background: rgba(0, 0, 0, .5)
+                anim()
+
               &:after
-                background: url(images/sprite-arrow-up.svg)
+                content: ''
+                position: absolute
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 0 11px 0px 11px;
+                border-color: transparent transparent #eaeaea transparent
+                bottom: 0
+                left: 50%
+                margin-left: -11px - 8px
+                //opacity: 0
+                anim()
 
-          &.menu-item-active-done
-            &:before
-              opacity: 1
+              & ^[0]__submenu
+                display: block
+                opacity: 0
 
+              > a
+                color: $blue
+
+          &.menu-item-active
             &:after
-              //opacity: 1
-              border-width: 0 11px 10px 11px;
+              background-image: url(../../images/sprite-arrow-up.svg)
+
+          +crit('header.css')
+            &.menu-item-active-done
+              &:before
+                opacity: 1
+
+              &:after
+                //opacity: 1
+                border-width: 0 11px 10px 11px;
 
 
-            & ^[0]__submenu
-              //transform: translateY(0)
-              opacity: 1
+              & ^[0]__submenu
+                //transform: translateY(0)
+                opacity: 1
 
-          & > a
-            //&:before
-            //  content: ''
-            //  display: block
-            //  position: absolute
-            //  bottom: 0
-            //  height: 50%
-            //  left: -200px
-            //  right: -200px
-            //  //transform translateX(-50%)
+          +crit('header.css')
+            & > a
+              //&:before
+              //  content: ''
+              //  display: block
+              //  position: absolute
+              //  bottom: 0
+              //  height: 50%
+              //  left: -200px
+              //  right: -200px
+              //  //transform translateX(-50%)
 
-            &:after
-              content: ''
-              display: inline-block
-              vertical-align: middle
-              background: url(images/sprite-arrow-down.svg)
-              margin-left: 8px
+              &:after
+                content: ''
+                display: inline-block
+                vertical-align: middle
+                width: 9px
+                height: 9px
+                margin-left: 8px
 
-        > a
-          display: block
-          font-weight: 600
-          z-index: 1
-          white-space: nowrap
-          anim()
+          & > a:after
+            background: url(../../images/sprite-arrow-down.svg) 50% 50% no-repeat
 
+        +crit('header.css')
+          > a
+            color: $black
+            text-decoration: none
+            display: block
+            font-weight: 600
+            z-index: 1
+            white-space: nowrap
+            anim()
 
-          &:not(:hover)
-            background-image: none
+            &:not(:hover)
+              background-image: none
 
-          &:hover
-            color: $blue
+            &:hover
+              color: $blue
 
         ^[0]__submenu
-          display: none
+          +crit('header.css')
+            &
+              display: none
           position: absolute;
           top: 100%
           left: 0
@@ -266,71 +292,75 @@
                         &:hover
                           color: $blue
 
-  &__phones
-    display: flex
-    flex-direction: column
-    //@media (max-width: $breakpoint-sm)
-    //  position: fixed
-    //  top: 60px
-    //  left: 0
-    //  width: 100%
-    //  background: $blue
-    //  flex-direction: row
-    //  align-items: center
-    //  justify-content: center
-    //  height: 40px
-    //  box-shadow: 0 5px 20px rgba(#000, .1)
-    @media (max-width: $breakpoint-sm)
-      flex: 1;
-      text-align: center;
+  +crit('header.css')
+    &__phones
+      display: flex
+      flex-direction: column
+      //@media (max-width: $breakpoint-sm)
+      //  position: fixed
+      //  top: 60px
+      //  left: 0
+      //  width: 100%
+      //  background: $blue
+      //  flex-direction: row
+      //  align-items: center
+      //  justify-content: center
+      //  height: 40px
+      //  box-shadow: 0 5px 20px rgba(#000, .1)
+      @media (max-width: $breakpoint-sm)
+        flex: 1;
+        text-align: center;
 
-  &__phone
-    font-size: 22px
-    background-image: none
-    font-weight: 600
-    white-space nowrap
-    color: $blue;
+  +crit('header.css')
+    &__phone
+      text-decoration: none
+      font-size: 22px
+      background-image: none
+      font-weight: 600
+      white-space nowrap
+      color: $blue;
 
-    &:last-child
-      padding-bottom: 0
+      &:last-child
+        padding-bottom: 0
 
-    @media (max-width: $breakpoint-sm)
-      //color: #ffffff
-      //margin: 0 8px
-      //padding-bottom: 0
-      font-size: 12px
+      @media (max-width: $breakpoint-sm)
+        //color: #ffffff
+        //margin: 0 8px
+        //padding-bottom: 0
+        font-size: 12px
 
   //&__button
   //  margin-left: 20px
   //  @media (max-width: $breakpoint-md)
   //    display: none
 
-
-  &__sub
-    position: relative;
-    z-index: 4;
-    background: $white;
-    border-bottom: 1px solid #D9D9D9;
-    @media (max-width: $breakpoint-sm)
-      border: 0
-      background: $blue;
-
-    .c
-      display: flex;
-      align-items: center
-      height: 60px
+  +crit('header.css')
+    &__sub
+      position: relative;
+      z-index: 4;
+      background: $white;
+      border-bottom: 1px solid #D9D9D9;
       @media (max-width: $breakpoint-sm)
-        height: 40px
+        border: 0
+        background: $blue;
+
+      .c
+        display: flex;
+        align-items: center
+        height: 60px
+        @media (max-width: $breakpoint-sm)
+          height: 40px
 
   //padding-top: 10px
   //padding-bottom: 10px
 
-  &__label
-    font-size: 16px
-    font-weight: 500
-    color: $blue;
-    @media (max-width: $breakpoint-sm)
-      display: none;
+  +crit('header.css')
+    &__label
+      font-size: 16px
+      font-weight: 500
+      color: $blue;
+      @media (max-width: $breakpoint-sm)
+        display: none;
 
   //font-size: 11px
   //max-width 200px
@@ -359,25 +389,28 @@
         width: 14px
         height: 14px
 
-  &__enter
-    display: flex
-    margin-left: auto;
-    align-items center
-    font-size: 16px
-    font-weight: 600
-    background: none;
-    padding: 0
-    @media (max-width: $breakpoint-sm)
-      color: $white;
-      font-size: 14px
-      &:hover
-        color: $white;
-
-    svg
-      width: 31px
-      height: 31px
-      margin-left: 12px
+  +crit('header.css')
+    &__enter
+      text-decoration: none
+      color: $black
+      display: flex
+      margin-left: auto;
+      align-items center
+      font-size: 16px
+      font-weight: 600
+      background: none;
+      padding: 0
       @media (max-width: $breakpoint-sm)
-        width: 21px
-        height: 21px
-        margin-left: 6px
+        color: $white;
+        font-size: 14px
+        &:hover
+          color: $white;
+
+      svg
+        width: 31px
+        height: 31px
+        margin-left: 12px
+        @media (max-width: $breakpoint-sm)
+          width: 21px
+          height: 21px
+          margin-left: 6px

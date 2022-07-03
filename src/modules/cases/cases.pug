@@ -7,7 +7,7 @@
     .cases__items
       each i in [1,2,3,4]
         .cases__item(class=(i === 1 ? 'cases__item--active' : ''))
-          .cases__header(style='background-image:url(modules/cases/img/cases-bg.jpg)')
+          .cases__header(style='background-image:url(' + require('src/modules/cases/img/cases-bg.jpg') + ')')
             span ПАО «ТГК-2»
             .cases__arrow: svg: use(xlink:href="#chevron_left")
           .cases__body

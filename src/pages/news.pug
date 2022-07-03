@@ -1,0 +1,9 @@
+extends ../pug/_layout
+include ../modules/hero/hero
+
+block body
+  +hero('Новости')
+  include ../modules/newsCategories/newsCategories
+  include ../modules/newsList/newsList
+  include ../modules/pagination/pagination
+  include ../modules/form/formNews

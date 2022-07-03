@@ -12,7 +12,7 @@ include ../card/card
         .clients__items
           each i in [1,2,3,4,5,6]
             .clients__item
-              img(src=`modules/clients/${i}.png`)
+              img(src=require('src/modules/clients/' + i + '.png'))
 
       .nav
         button.nav__button.nav__button--prev: svg: use(xlink:href="#chevron_left")

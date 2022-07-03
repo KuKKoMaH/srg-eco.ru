@@ -1,6 +1,6 @@
 .frontSlider
   .frontSlider__slides
-    .frontSlider__slide(style='background-image: url(modules/frontSlider/slide.jpg)')
+    .frontSlider__slide(style='background-image: url(' + require('src/modules/frontSlider/slide.jpg') + ')')
       //.frontSlider__footer-bg: .frontSlider__footer-img(style='background-image: url(modules/frontSlider/slide.jpg)')
       .c
         h1 Охрана труда 1
@@ -8,7 +8,7 @@
         a.btn(href='#')
           | ПОДРОБНЕЕ#{' '}
           svg: use(xlink:href="#arrow_right")
-    .frontSlider__slide(style='background-image: url(modules/frontSlider/slide.jpg)')
+    .frontSlider__slide(style='background-image: url(' + require('src/modules/frontSlider/slide.jpg') + ')')
       //.frontSlider__footer-bg: .frontSlider__footer-img(style='background-image: url(modules/frontSlider/slide.jpg)')
       .c
         h1 Охрана труда 2
@@ -16,7 +16,7 @@
         a.btn(href='#')
           | ПОДРОБНЕЕ#{' '}
           svg: use(xlink:href="#arrow_right")
-    .frontSlider__slide(style='background-image: url(modules/frontSlider/slide.jpg)')
+    .frontSlider__slide(style='background-image: url(' + require('src/modules/frontSlider/slide.jpg') + ')')
       //.frontSlider__footer-bg: .frontSlider__footer-img(style='background-image: url(modules/frontSlider/slide.jpg)')
       .c
         h1 Охрана труда 3
@@ -34,14 +34,14 @@
   //    h3.frontSlider__footer-title КОМУ МЫ БУДЕМ ПОЛЕЗНЫ
   //    .frontSlider__bullets
   //      a.frontSlider__bullet
-  //        img(src='modules/frontSlider/1.png')
+  //        img(src=require('src/modules/frontSlider/1.png'))
   //        span Специалист по охране труда
   //      a.frontSlider__bullet
-  //        img(src='modules/frontSlider/2.png')
+  //        img(src=require('src/modules/frontSlider/2.png'))
   //        span HR-директор
   //      a.frontSlider__bullet
-  //        img(src='modules/frontSlider/3.png')
+  //        img(src=require('src/modules/frontSlider/3.png'))
   //        span ТОП-менеджмент
   //      a.frontSlider__bullet
-  //        img(src='modules/frontSlider/4.png')
+  //        img(src=require('src/modules/frontSlider/4.png'))
   //        span Эколог

@@ -34,7 +34,7 @@
 
       .pressCenter__aside
         each i in ['Новости', 'Статьи', 'SRG-ECO в СМИ', 'Контакты для СМИ']
-          a.pressCenter__link(href='#' style='background-image:url(modules/pressCenter/img/pressCenter-bg.jpg)')
+          a.pressCenter__link(href='#' style='background-image:url(' + require('src/modules/pressCenter/img/pressCenter-bg.jpg') + ')')
             span=i
             svg: use(xlink:href="#chevron_left")
 

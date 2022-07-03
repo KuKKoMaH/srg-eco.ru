@@ -1,0 +1,14 @@
+extends ../pug/_layout
+include ../modules/hero/hero
+include ../modules/cardsList/cardsList
+include ../modules/licenses/licenses
+include ../modules/achievements/achievements
+
+block body
+  +hero('Охрана труда')
+  include ../modules/pageInfo/pageInfo
+  +achievements()
+  +licenses('РАЗРЕШИТЕЛЬНАЯ ДОКУМЕНТАЦИЯ', 'ПРОВЕРИТЬ В РЕЕСТРЕ')
+  +cardsList('МЕРОПРИЯТИЕ ПО ТЕМЕ', null, false, true, true)
+  +cardsList('НОВОСТИ ОТРАСЛИ', null, true, true, false, true)
+  include ../modules/form/formNews

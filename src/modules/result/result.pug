@@ -10,29 +10,29 @@ include ../slider/slider
       .result__aside
         +slider()(data-slider='{"0":{"slidesPerView":1}}')
           a.result__item.slider__slide.popup__opener(href='#resultPopup'): +card()
-            img.result__image(src="modules/licenses/1.png")
+            img.result__image(src=require('src/modules/licenses/licenses_01.webp'))
             .result__name НАЗВАНИЕ ДОКУМЕНТА 1
           .result__item.slider__slide: +card()
-            img.result__image(src="modules/licenses/1.png")
+            img.result__image(src=require('src/modules/licenses/licenses_01.webp'))
             .result__name НАЗВАНИЕ ДОКУМЕНТА 2
           .result__item.slider__slide: +card()
-            img.result__image(src="modules/licenses/1.png")
+            img.result__image(src=require('src/modules/licenses/licenses_01.webp'))
             .result__name НАЗВАНИЕ ДОКУМЕНТА 3
           .result__item.slider__slide: +card()
-            img.result__image(src="modules/licenses/1.png")
+            img.result__image(src=require('src/modules/licenses/licenses_01.webp'))
             .result__name НАЗВАНИЕ ДОКУМЕНТА 4
           .result__item.slider__slide: +card()
-            img.result__image(src="modules/licenses/1.png")
+            img.result__image(src=require('src/modules/licenses/licenses_01.webp'))
             .result__name НАЗВАНИЕ ДОКУМЕНТА 5
           .result__item.slider__slide: +card()
-            img.result__image(src="modules/licenses/1.png")
+            img.result__image(src=require('src/modules/licenses/licenses_01.webp'))
             .result__name НАЗВАНИЕ ДОКУМЕНТА 6
 
 .hidden
   #resultPopup.resultPopup
     .resultPopup__license
       +card()
-        img.result__image(src="modules/licenses/1.png")
+        img.result__image(src=require('src/modules/licenses/licenses_01.webp'))
         .result__name НАЗВАНИЕ ДОКУМЕНТА 1
     .resultPopup__form
       h2.form__title СКАЧАЙТЕ ДОКУМЕНТ, ЧТОБЫ ОН ВСЕГДА БЫЛ ПОД РУКОЙ

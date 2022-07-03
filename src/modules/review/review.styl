@@ -1,0 +1,102 @@
+.review {
+  width: 100vw;
+  left: 50%;
+  position: relative;
+  transform: translateX(-50%);
+
+  &__container {
+    position: relative;
+  }
+
+  &__slider {
+    overflow: hidden;
+    margin: -15px;
+    @media (max-width: $breakpoint-sm) {
+      margin-left: -5px;
+      margin-right: -5px;
+    }
+  }
+
+  &__items {
+    display: flex;
+  }
+
+  &__item {
+    flex-shrink: 0;
+    padding: 10px;
+    width: 25%;
+    @media (max-width: $breakpoint-sm) {
+      padding: 5px;
+      width: 50%;
+    }
+  }
+
+  &__doc {
+    width: 100%
+    display: block;
+    position: relative;
+    padding: 0
+    margin: 0 auto
+    background: 50% 50% no-repeat;
+    background-size: cover;
+    cursor: pointer;
+    border: 1px solid #C4C4C4;
+    @media (max-width: $breakpoint-sm) {
+      //height: 215px;
+      max-width 400px
+    }
+
+    &:hover {
+      border-color: $blue;
+      & ^[0]__button {
+        opacity: 1;
+      }
+
+      & ^[0]__content {
+        opacity: 0;
+      }
+    }
+
+    img {
+      display: block;
+      width: 100%
+      height: auto
+    }
+  }
+
+  &__button {
+    width: 42px;
+    height: 42px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -21px;
+    margin-left: -21px;
+    background: $blue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    anim();
+    @media (max-width: $breakpoint-sm) {
+      opacity: 1;
+      width: 23px;
+      height: 23px;
+      top: 10px;
+      right: 10px;
+      left: auto;
+      margin: 0;
+      z-index: 1;
+    }
+
+    svg {
+      width: 24px;
+      height: 24px;
+      color: $white;
+      @media (max-width: $breakpoint-sm) {
+        width: 11px;
+        height: 11px;
+      }
+    }
+  }
+}

@@ -1,4 +1,3 @@
-
 header.header
   .header__sub
     .c
@@ -9,7 +8,7 @@ header.header
   .header__wrapper
     .header__container
       .c
-        a.header__logo(href='#'): img(src='modules/header/menu-logo.png')
+        a.header__logo(href='#'): img(src=require('src/modules/header/menu-logo.png'))
         //.header__text Lorem ipsum dolor sit amet,#[br]consectetuer adipiscing
         .header__items
           ul
@@ -57,10 +56,10 @@ header.header
           include menu
 
     .search
-        form.search__content
-          .c
-            input.search__input(placeholder='Введите ваш запрос')
-            button.search__button: svg: use(xlink:href="#magnifier")
+      form.search__content
+        .c
+          input.search__input(placeholder='Введите ваш запрос')
+          button.search__button: svg: use(xlink:href="#magnifier")
 
   .header__placeholder
 
