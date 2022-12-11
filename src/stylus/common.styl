@@ -456,6 +456,7 @@ p
       padding: 0
 
 .block
+  overflow: hidden;
   padding: 80px 0
   @media (max-width: $breakpoint-lg)
     padding: 40px 0
@@ -511,16 +512,20 @@ p
   font-size: 11px
   color: red
   top: 100%
+  left: 0
   margin-top: 4px
 
-.wpcf7-response-output
-  font-size: 12px
-  margin-top: 8px
-  text-align: center
-  color: red
+.invalid
+  .wpcf7-response-output
+    display: block;
+    font-size: 12px
+    margin-top: 15px
+    text-align: center
+    //color: $green
+    color: red
 
-  &.wpcf7-mail-sent-ok
-    color: $green
+.wpcf7-response-output
+  display: none
 
 .center
   text-align: center;

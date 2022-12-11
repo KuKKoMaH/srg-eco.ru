@@ -30,7 +30,7 @@
       height: 20px
       position: relative
       fill: $blue
-      @media (max-width: $breakpoint-sm)
+      +header-small()
         margin-left: 15px
 
       &:hover
@@ -65,7 +65,7 @@
     left: 0
     width: 100%
     background: #fbfbfb
-    padding: 58px 0
+    padding: 58px 10px
     overflow: auto
     -webkit-overflow-scrolling: touch
     opacity: 0
@@ -73,7 +73,7 @@
     anim()
     z-index: 2
     @media (max-width: $breakpoint-sm)
-      padding: 37px 0
+      padding: 37px 10px
       top: 60px
 
   &__row
@@ -193,6 +193,7 @@
     justify-content: center
     padding: 0
     margin-right: 10px
+    margin-bottom: 10px
     @media (max-width: $breakpoint-sm)
       width: 30px
       height: 30px
@@ -241,6 +242,7 @@
   &__title
     font-size: 25px
     margin-bottom: 22px
+    font-family: 'Bebas Neue', sans-serif;
 
   &__label
     color: $grey-dark

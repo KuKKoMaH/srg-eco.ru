@@ -1,7 +1,7 @@
 import './style'
 import 'jquery';
 import 'magnific-popup/dist/jquery.magnific-popup.js';
-// import 'jquery.maskedinput/src/jquery.maskedinput';
+import 'jquery.maskedinput/src/jquery.maskedinput';
 import SmoothScroll from 'smooth-scroll';
 // import 'selectize';
 import 'mark.js/dist/jquery.mark.min';
@@ -47,7 +47,7 @@ import './modules/review/review';
 //   maxItems: 1,
 // });
 
-// $('input[type="tel"]').mask("+7 (999) 999-99-99");
+$('input[type="tel"]').mask("+7 (999) 999-99-99");
 
 $('.popup__opener').on('click', ( e ) => {
   e.preventDefault();

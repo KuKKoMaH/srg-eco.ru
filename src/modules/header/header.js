@@ -31,10 +31,13 @@ checkMenuFixed();
 /* ================================================ */
 /* Меню */
 /* ================================================ */
+let active = null;
+let closeActive = null;
 $('.header__items > ul > li.menu-item-has-children > a').mouseenter(function () {
+  const $li = $(this).parents('li');
+  if (active && !active.is($li)) closeActive();
   hideSearch();
   hideMenu();
-  const $li = $(this).parents('li');
   $li.addClass('menu-item-active');
   setTimeout(() => {
     $li.addClass('menu-item-active-done');
@@ -42,7 +45,7 @@ $('.header__items > ul > li.menu-item-has-children > a').mouseenter(function () 
 
   let leaved = false;
   let lastY = 0;
-  const onMouseMove = ( e ) => {
+  const onMouseMove = (e) => {
     const { pageY } = e;
     if (leaved && pageY < lastY) {
       close();
@@ -64,7 +67,11 @@ $('.header__items > ul > li.menu-item-has-children > a').mouseenter(function () 
     $li.one('transitionend', () => {
       $li.removeClass('menu-item-active');
     });
+    active = null;
+    closeActive = null;
   };
+  active = $li;
+  closeActive = close;
 
   $(document).on('mousemove', onMouseMove);
   $li.on('mouseenter', onMouseEnter);
@@ -84,7 +91,7 @@ let searchVisible = false;
 
 $searchTrigger.on('click', () => toggleSearch());
 
-$body.on('click', ( e ) => {
+$body.on('click', (e) => {
   const $target = $(e.target);
   if (!$target.closest($searchContent).length) {
     hideSearch();
@@ -133,7 +140,7 @@ const $menuToggle = $('.menu__toggle');
 
 const isMenuVisible = () => $menuToggle.prop('checked');
 
-$body.on('click', ( e ) => {
+$body.on('click', (e) => {
   const $target = $(e.target);
   if (!$target.closest($menuContainer).length) {
     hideMenu();

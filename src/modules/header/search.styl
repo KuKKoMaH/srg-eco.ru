@@ -2,6 +2,7 @@
   +crit('header.css')
     &
       display: none
+
   & // хак
     display: block;
 
@@ -68,8 +69,10 @@
         height: 20px
         min-width: 20px
         position: relative
+        +header-small()
+          margin-left: 15px
         @media (max-width: $breakpoint-sm)
-          margin-left: 0
+          margin-left: auto
 
         &:hover
           svg
