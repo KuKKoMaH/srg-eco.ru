@@ -27,13 +27,14 @@
     position: relative
     margin-left: auto
     width: 380px
+    flex-shrink 0
     @media (max-width: $breakpoint-sm)
       width: 100%
 
   &__form
-    position: absolute
+    //position: absolute
     background: $grey-bright
-    top: -290px
+    margin-top: -400px
     //bottom: 0
     padding: 40px
 
@@ -41,6 +42,7 @@
       position: static
       padding: 35px
       margin-bottom: 38px
+      margin-top: 0
 
   &__input
     margin-bottom: 20px

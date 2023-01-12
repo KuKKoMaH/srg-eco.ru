@@ -283,37 +283,38 @@
 
               > ul
                 display: none;
-                //margin-top: 30px
-                //
-                //> li
-                //  margin-bottom: 20px
-                //
-                //  &.current-menu-item > a
-                //    color: $blue
-                //
-                //  > a
-                //    font-size: 13px
-                //    padding-bottom: 1px
-                //    anim()
-                //
-                //    &:hover
-                //      color: $blue
-                //
-                //
-                //  > ul
-                //    margin-top: 10px
-                //    anim()
-                //
-                //    > li
-                //      margin-bottom: 5px
-                //
-                //      > a
-                //        font-size: 11px
-                //        line-height: 16px
-                //        padding-bottom: 1px
-                //
-                //        &:hover
-                //          color: $blue
+
+  //margin-top: 30px
+  //
+  //> li
+  //  margin-bottom: 20px
+  //
+  //  &.current-menu-item > a
+  //    color: $blue
+  //
+  //  > a
+  //    font-size: 13px
+  //    padding-bottom: 1px
+  //    anim()
+  //
+  //    &:hover
+  //      color: $blue
+  //
+  //
+  //  > ul
+  //    margin-top: 10px
+  //    anim()
+  //
+  //    > li
+  //      margin-bottom: 5px
+  //
+  //      > a
+  //        font-size: 11px
+  //        line-height: 16px
+  //        padding-bottom: 1px
+  //
+  //        &:hover
+  //          color: $blue
 
   +crit('header.css')
     &__phones
@@ -338,12 +339,6 @@
     &__phone
       margin: 0 auto
       padding: 0 10px
-      text-decoration: none
-      font-size: 22px
-      background-image: none
-      font-weight: 600
-      white-space nowrap
-      color: $blue;
 
       &:last-child
         padding-bottom: 0
@@ -351,9 +346,24 @@
       @media (max-width: $breakpoint-sm)
         margin: 0
         padding: 0
-        color: $white;
-        font-size: 12px
 
+      a
+        text-decoration: none
+        font-size: 22px
+        background-image: none
+        font-weight: 600
+        white-space nowrap
+        color: $blue;
+        @media (max-width: $breakpoint-sm)
+          color: $white;
+          font-size: 12px
+
+    &__phone-text
+      text-align: center;
+      font-size: 12px
+      @media (max-width: $breakpoint-sm)
+        color: $white;
+        font-size: 10px
   //&__button
   //  margin-left: 20px
   //  @media (max-width: $breakpoint-md)
@@ -381,11 +391,14 @@
 
   +crit('header.css')
     &__label
-      font-size: 16px
+      font-size: 14px
       font-weight: 500
       color: $blue;
       @media (max-width: $breakpoint-sm)
         display: none;
+    &__label-text
+      font-size: 12px
+      color: $black;
 
   //font-size: 11px
   //max-width 200px

@@ -1,8 +1,12 @@
 header.header
   .header__sub
     .c
-      .header__label Охрана труда и производственная безопасность!
-      a.header__phone(href='tel:') 8 (800) 456-77-88
+      .header__label
+        |Охрана труда и производственная безопасность!
+        .header__label-text филиалы в Москве, Саратове и Новосибирске
+      .header__phone
+        a(href='tel:') 8 (800) 456-77-88
+        .header__phone-text пн-пт. с 9:00 до 18:00
       a.header__enter(href='#' target="_blank")
         | ВОЙТИ В СДО
         svg.menu__open: use(xlink:href="#enter")
