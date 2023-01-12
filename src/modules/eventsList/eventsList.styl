@@ -105,20 +105,24 @@
     height: 150px
     background-size: cover;
     background-position: 50% 50%;
+    display: flex;
+    flex-direction column
+    align-items flex-end
     anim()
     @media (max-width: $breakpoint-sm)
       height: 100%
       width: 110px
 
   &__date
-    position: absolute;
+    //position: absolute;
     right: 0
-    top: 20px
+    margin-top: 20px
     background: $blue
     padding: 4px 5px
     color: #ffffff
     font-size: 20px
     font-weight: 600
+    text-align: right;
     text-transform: uppercase;
     anim()
     @media (max-width: $breakpoint-sm)
@@ -128,9 +132,10 @@
       top: 10px
 
   &__tag
-    position: absolute;
+    //position: absolute;
     right: 0
-    top: 65px
+    margin-top: 8px
+    //top: 65px
     background: #F0BC5E
     padding: 5px 10px
     color: #000000
